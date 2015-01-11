@@ -11,7 +11,7 @@ Work in progress towards a life server set in the 60's.
 | COMPLETED  | Bank dialogs / create bank system. |
 | COMPLETED  | Shop system.  |
 | WIP  | Interaction system. |
-| WIP  | Inventory using the default arma 3 inventory.  |
+| COMPLETE  | Inventory using the default arma 3 inventory.  |
 | COMPLETE | Logging system. |
 | WIP | Mafia families. |
 | COMPLETE | Quest System. |
