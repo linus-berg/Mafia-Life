@@ -1,0 +1,14 @@
+closeDialog 0; 
+createDialog "ML_Quest_Dialog"; 
+((uiNamespace getVariable ["ML_Quest_Dialog", nil]) displayCtrl 1704) ctrlSetStructuredText parseText 
+"<t align='center' size='1.5'>Test</t><br/><t align='left' size='0.8' color='#484848'>This is an example quest. We are testing many things!<br />
+This is a quest window, here you will recieve information regarding your quest, if you chose to accept that is. Hello World.<br />
+You will need to collect 40:
+</t><img shadow='1' image='\ML_Images\Icons\Account_Coins_ca.paa' size='2'/>
+<t align='left' size='0.8' color='#484848'>
+To get these bags you will need to pull off a heist, it will not be easy!<br />
+I got weapons in storage if you wish to purchase some, the rewards for this will be 40,000 coins and three rifles.
+Bring me those coins!
+</t>
+";
+[((uiNamespace getVariable ["ML_Quest_Dialog", nil]) displayCtrl 1704)] call BIS_fnc_ctrlTextHeight;
