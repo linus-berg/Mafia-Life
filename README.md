@@ -1,5 +1,5 @@
 # Mafia-Life
-Mafia Life, a life server set in the 60's.
+a life server set in the 60's.
 ===============
 
 Work in progress towards a life server set in the 60's.
