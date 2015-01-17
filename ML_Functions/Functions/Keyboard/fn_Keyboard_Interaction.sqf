@@ -24,7 +24,7 @@ for [{_i=1}, {_i < 3}, {_i=_i+1}] do {
 	_handled = [player, _civ] call ML_fnc_Interaction_Client;
 	if (_handled) exitWith {};
 	
-	_handled = [player, _civ] call ML_fnc_Emporium;
+	_handled = [player, _civ] call ML_fnc_Vendor;
 	if (_handled) exitWith {};
 };
 

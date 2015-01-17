@@ -52,7 +52,7 @@ if !(uinamespace getvariable ["BIS_fnc_guiNewsfeed_disable",false]) then {
 		_ctrlHTML htmlLoad _newsOffline;
 		uinamespace setvariable ["BIS_fnc_guiNewsfeed_disable",true];
 	};
-
+	
 	_htmlLoaded
 } else {
 	false

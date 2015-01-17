@@ -1339,10 +1339,6 @@ class RscControlsGroup
 		};
 		width = 0.021;
 		autoScrollEnabled = 1;
-		arrowEmpty = "\ML_Images\GUI\Scroll_Arrow.paa"; // Arrow
-		arrowFull = "\ML_Images\GUI\Scroll_ArrowActive.paa"; // Arrow when clicked on
-		border = "\A3\ui_f\data\gui\cfg\scrollbar\border_ca.paa"; // Slider background (stretched vertically)
-		thumb = "\ML_Images\GUI\thumb_ca.paa"; // Dragging element (stretched vertically)
 	};
 	class HScrollbar
 	{
@@ -1354,10 +1350,6 @@ class RscControlsGroup
 			1
 		};
 		height = 0.028;
-		arrowEmpty = "\ML_Images\GUI\Scroll_Arrow.paa"; // Arrow
-		arrowFull = "\ML_Images\GUI\Scroll_ArrowActive.paa"; // Arrow when clicked on
-		border = "\A3\ui_f\data\gui\cfg\scrollbar\border_ca.paa"; // Slider background (stretched vertically)
-		thumb = "\ML_Images\GUI\thumb_ca.paa"; // Dragging element (stretched vertically)
 	};
 	class Controls
 	{
@@ -1542,4 +1534,21 @@ class ML_Quest_Button: RscShortcutButton
 	animTextureOver = "\ML_Images\GUI\button_active_ca.paa";
 	animTextureFocused = "\ML_Images\GUI\button_active_ca.paa";
 	animTexturePressed = "\ML_Images\GUI\button_active_ca.paa";
+};
+
+class ML_ControlsGroup: RscControlsGroup{
+	class VScrollbar
+	{
+		arrowEmpty = "\ML_Images\GUI\Scroll_Arrow.paa"; // Arrow
+		arrowFull = "\ML_Images\GUI\Scroll_ArrowActive.paa"; // Arrow when clicked on
+		border = "\A3\ui_f\data\gui\cfg\scrollbar\border_ca.paa"; // Slider background (stretched vertically)
+		thumb = "\ML_Images\GUI\thumb_ca.paa"; // Dragging element (stretched vertically)
+	};
+	class HScrollbar
+	{
+		arrowEmpty = "\ML_Images\GUI\Scroll_Arrow.paa"; // Arrow
+		arrowFull = "\ML_Images\GUI\Scroll_ArrowActive.paa"; // Arrow when clicked on
+		border = "\A3\ui_f\data\gui\cfg\scrollbar\border_ca.paa"; // Slider background (stretched vertically)
+		thumb = "\ML_Images\GUI\thumb_ca.paa"; // Dragging element (stretched vertically)
+	};
 };

@@ -8,7 +8,6 @@ class cfgFunctions {
 			};
 		};
 	};
-	
 	class Mafia_Life{
 		tag = ML;
 		//---Initialization---//
@@ -24,6 +23,14 @@ class cfgFunctions {
 		class Notifications{
 			file = "ML_Functions\Functions\Notifications";
 			class showNotification{};
+		};
+		//---
+		
+		//---Respawn---//
+		class Respawn{
+			file = "ML_Functions\Functions\Respawn";
+			class Respawn_Killed{};
+			class Respawn_Spawn{};
 		};
 		//---
 		
@@ -49,6 +56,13 @@ class cfgFunctions {
 		};
 		//---
 		
+		//---Sound---//
+		class Sound{
+			file = "ML_Functions\Functions\Sound";
+			class Sound_Randomize{};
+		};
+		//---
+		
 		//---Interaction---//
 		class Interaction{
 			file = "ML_Functions\Functions\Interaction";
@@ -58,9 +72,9 @@ class cfgFunctions {
 			class Teller{};
 			class Teller_Menu{};
 		};
-		class Interaction_Emporium{
-			file = "ML_Functions\Functions\Interaction\Emporium";
-			class Emporium{};
+		class Interaction_Vendor{
+			file = "ML_Functions\Functions\Interaction\Vendor";
+			class Vendor{};
 		};
 		class Interaction_Client{
 			file = "ML_Functions\Functions\Interaction\Client";
@@ -77,20 +91,21 @@ class cfgFunctions {
 		};
 		//---
 		
-		//---Emporiums---//
-		class Emporiums{
-			file = "ML_Functions\Functions\Emporiums";
-			class Emporium_Setup{};
-			class Emporium_SetupSell{};
-			class Emporium_Select{};
-			class Emporium_AddToCart{};
-			class Emporium_SetCurrent{};
-			class Emporium_GetCurrent{};
-			class Emporium_Purchase{};
-			class Emporium_ReturnConfig{};
-			class Emporium_Remove{};
-			class Emporium_Sell{};
-			class Emporium_GetItemInfo{};
+		//---Vendors---//
+		class Vendors{
+			file = "ML_Functions\Functions\Vendors";
+			class Vendor_Setup{};
+			class Vendor_SetupSell{};
+			class Vendor_Select{};
+			class Vendor_AddToCart{};
+			class Vendor_SetCurrent{};
+			class Vendor_GetCurrent{};
+			class Vendor_Purchase{};
+			class Vendor_ReturnConfig{};
+			class Vendor_Remove{};
+			class Vendor_Sell{};
+			class Vendor_GetItemInfo{};
+			class Vendor_GetSpawns{};
 		};
 		//---
 		
@@ -115,7 +130,7 @@ class cfgFunctions {
 		//---Permits---//
 		class Permits{
 			file = "ML_Functions\Functions\Permits";
-			class Permit_Add{};
+			class Permit_ClientAdd{};
 			class Permit_Get{};
 		};
 		//---

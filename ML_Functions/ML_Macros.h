@@ -1,12 +1,11 @@
 #define ML_LOG(MESSAGE) [__FILE__, __LINE__, ('LinLib Log: ' + MESSAGE)] call ML_fnc_Log;
 
-//---Emporium Functions---
-#define ML_STOCK(x) (x getVariable ["ML_Emporium_Items", []])
-#define ML_BOXSPAWN(x) objectFromNetId(x getVariable ["ML_Emporium_Box", ""])
-#define ML_VEHICLESPAWN(x) objectFromNetId(x getVariable ["ML_Emporium_Vehicle", ""])
-#define ML_EMPORIUMLIST (ML_Server getVariable ["ML_Emporium_List", []])
+//---Vendor Functions---
+#define ML_STOCK(x) (x getVariable ["ML_Vendor_Items", []])
+#define ML_VENDORLIST (ML_Server getVariable ["ML_Vendor_List", []])
 #define ML_QUESTLIST (ML_Server getVariable ["ML_Quest_Npc_List", []])
-#define ML_SIDE(x) (x getVariable ["ML_Emporium_Side", []])
+#define ML_SIDE(x) (x getVariable ["ML_Vendor_Side", []])
+#define ML_VENDOR(x) (format["ML_Vendor_%1", x])
 //---
 
 //---Encryption---

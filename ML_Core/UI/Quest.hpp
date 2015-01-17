@@ -41,7 +41,7 @@ class ML_Quest_Dialog{
 			action = "closeDialog 0;";
 			default = 0;
 		};
-		class ML_Quest_TextContainer: RscControlsGroup {
+		class ML_Quest_TextContainer: ML_ControlsGroup {
 			x = 0.412344 * safezoneW + safezoneX;
 			y = 0.313 * safezoneH + safezoneY;
 			w = 0.165 * safezoneW;

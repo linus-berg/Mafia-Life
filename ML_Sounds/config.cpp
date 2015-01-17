@@ -7,10 +7,6 @@ class CfgPatches {
 	};
 };
 
-class CfgSounds {
-	sounds[] = {};
-	class Quest_Complete{
-		sound[] = {"\ML_Sounds\Interface\Quest\iquestcomplete.ogg", 1, 1};
-		titles[] = {};
-	};
-};
+//---CfgSounds---
+#include <CFG\CfgSounds.hpp>
+//---

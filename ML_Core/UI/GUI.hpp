@@ -1,6 +1,6 @@
 #include "GUI.h"
 
-#include "Emporiums.hpp"
+#include "Vendors.hpp"
 #include "Account.hpp"
 #include "Interaction.hpp"
 #include "Quest.hpp"

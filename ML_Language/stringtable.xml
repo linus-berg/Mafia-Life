@@ -54,8 +54,8 @@
 			</Key>
 		</Container>
 		
-		<Container name="Emporium">
-			<Key ID="STR_ML_EMPORIUM_ADDTOCART">
+		<Container name="Vendor">
+			<Key ID="STR_ML_Vendor_ADDTOCART">
 				<Original>Add To Cart</Original>
 				<English>Add To Cart</English>
 				<Czech>Přidat do košíku</Czech>
@@ -67,7 +67,7 @@
 				<Russian>Добавить в корзину</Russian>
 				<Spanish>Añadir a la cesta</Spanish>
 			</Key>
-			<Key ID="STR_ML_EMPORIUM_REMOVE">
+			<Key ID="STR_ML_Vendor_REMOVE">
 				<Original>Remove</Original>
 				<English>Remove</English>
 				<Czech>Odstranit</Czech>
@@ -79,7 +79,7 @@
 				<Russian>Удалить</Russian>
 				<Spanish>Retire</Spanish>
 			</Key>
-			<Key ID="STR_ML_EMPORIUM_PURCHASE">
+			<Key ID="STR_ML_Vendor_PURCHASE">
 				<Original>Purchase</Original>
 				<English>Purchase</English>
 				<Czech>Nákup</Czech>
@@ -91,7 +91,7 @@
 				<Russian>Покупка</Russian>
 				<Spanish>Compra</Spanish>
 			</Key>
-			<Key ID="STR_ML_EMPORIUM_SELL">
+			<Key ID="STR_ML_Vendor_SELL">
 				<Original>Sell</Original>
 				<English>Sell</English>
 				<Czech>Prodejte</Czech>
@@ -103,7 +103,7 @@
 				<Russian>Продать</Russian>
 				<Spanish>Vender</Spanish>
 			</Key>
-			<Key ID="STR_ML_EMPORIUM_TOTAL">
+			<Key ID="STR_ML_Vendor_TOTAL">
 				<Original>Total Cost: €%1</Original>
 				<English>Total Cost: €%1</English>
 				<Czech>Celková cena: €%1</Czech>

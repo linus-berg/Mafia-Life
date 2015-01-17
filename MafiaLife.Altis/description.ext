@@ -5,8 +5,10 @@ showNotePad   = 1;
 showWatch     = 1;
 debriefing    = 1;
 respawn       = 3;
-respawnDelay  = 30;
+respawnDelay  = 10;
 respawnDialog = 0;
+respawnTemplates[] = {"MenuPosition", "ML_Respawn"};
+respawnTemplatesWest[] = {"MenuPosition", "MenuInventory", "ML_Respawn"};
 disabledAI = true;
 enableDebugConsole = 2;
 saving = 0;
@@ -23,5 +25,7 @@ class Header
 	maxPlayers=50;
 };
 
-
+//---Respawn Inventories---
+#include <CFG\CfgRespawnInventory.hpp>
+//---
 

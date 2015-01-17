@@ -11,11 +11,10 @@ class CfgPatches {
 	};
 };
 
-//---Mission classes---
-#include <CFG\CfgPermits.hpp>
-#include <CFG\CfgEmporiums.hpp>
-//---
-
 //---Functions---
 #include <CFG\CfgFunctions.hpp>
+//---
+
+//---Respawn---
+#include <CFG\CfgRespawnTemplates.hpp>
 //---

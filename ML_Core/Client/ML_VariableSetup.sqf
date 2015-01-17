@@ -7,7 +7,7 @@ tax = 5;
 //Coin Machines (Aka Tellers)
 coinmachines = [Atm1];
 
-//Emporiums------------------|
-//ML_CurrentEmporium 	= objNull;
-ML_EmporiumCart		= [];
-ML_EmporiumTotal	= 0;
+//Vendors------------------|
+//ML_CurrentVendor 	= objNull;
+ML_VendorCart		= [];
+ML_VendorTotal	= 0;
