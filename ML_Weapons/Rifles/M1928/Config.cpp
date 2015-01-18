@@ -3,7 +3,7 @@
 class CfgPatches {
 	class ML_Weapons_Rifles_M1928 {
 		units[] = {};
-		weapons[] = {"ML_M1928"};
+		weapons[] = {"ML_Weapon_M1928"};
 		requiredVersion=0.1;
 		requiredAddons[]={"A3_Weapons_F"};
 	};
@@ -22,7 +22,7 @@ class CfgWeapons
 		class GunParticles;
 	};
 
-	class ML_M1928_Base: Rifle_Base_F /// Just basic values common for all testing rifle variants
+	class ML_Weapon_M1928_Base: Rifle_Base_F /// Just basic values common for all testing rifle variants
 	{
 		magazines[] = {ML_30Rnd_M1928_Mag}; /// original custom made magazines
 		reloadAction = "GestureReloadMX"; /// MX hand animation actually fits this rifle well
@@ -59,8 +59,7 @@ class CfgWeapons
 		descriptionShort = "M1928"; /// displayed on mouseOver in Inventory
 		handAnim[] = {"OFP2_ManSkeleton", "\A3\Weapons_F_EPA\LongRangeRifles\DMR_01\data\Anim\dmr_01.rtm"}; /// MX hand animation actually fits this rifle well
 		dexterity = 1.8;
-		
-		selectionFireAnim = "muzzleFlash"; /// are we able to get rid of all the zaslehs?
+		selectionFireAnim = "zasleh"; /// are we able to get rid of all the zaslehs?
 		
 		modes[] = {Single, FullAuto, fullauto_medium, single_medium_optics1, single_far_optics2}; /// Includes fire modes for AI
 		
@@ -89,7 +88,7 @@ class CfgWeapons
 				soundBegin[] = {begin1,0.5, begin2,0.5}; /// custom made sounds
 			};
 			
-			reloadTime = 0.096; /// means some 625 rounds per minute
+			reloadTime = 0.083; /// means some 625 rounds per minute
 			dispersion = 0.00087; /// A bit less than 3 MOA
 			
 			recoil = "recoil_single_Test_rifle_01"; /// defined in cfgRecoils
@@ -183,18 +182,16 @@ class CfgWeapons
 		reloadMagazineSound[]={"\ML_Weapons\Rifles\M1928\sound\p90_boltpull.ogg",db-8,1, 30}; /// custom made sounds
 	};
 
-	class ML_M1928:ML_M1928_Base
+	class ML_Weapon_M1928:ML_Weapon_M1928_Base
 	{
 		scope = 2; /// should be visible and useable in game
 		displayName = "M1928"; /// some name
 		model = "\ML_Weapons\Rifles\M1928\M1928.p3d"; /// path to model
 
-		picture = "\Samples_f\Test_weapon_01\Data\UI\gear_test_weapon_01_X_CA.paa"; /// different accessories have M, S, T instead of X
+		picture = "\ML_Weapons\Rifles\M1928\Data\M1928.paa"; /// different accessories have M, S, T instead of X
 		UiPicture = "\A3\Weapons_F\Data\UI\icon_gl_CA.paa"; /// weapon with grenade launcher should be marked such way
 
 		//weaponInfoType = "RscWeaponZeroing"; /// display with zeroing is good for iron sights
-
-		muzzles[] = {this}; /// to be able to switch between bullet muzzle and TGL
 
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{

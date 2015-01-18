@@ -8,7 +8,7 @@ class CfgMagazines
 	{
 		scope = 2; /// or 2, to be precise
 		displayName = "M1928 Magazine";
-		picture = "\A3\Weapons_F\Data\placeholder_co.paa"; /// just some icon
+		picture = "\ML_Weapons\Ammo\Data\M1928\M1928_Mag.paa"; /// just some icon
 		ammo = ML_M1928_Ammo;
 		count = 30; /// 30 rounds is enough
 		initSpeed = 795; /// standard muzzle speed

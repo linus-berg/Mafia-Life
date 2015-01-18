@@ -5,7 +5,7 @@ private["_Vendor", "_Vendor_list"];
 _Vendor = _this;
 _Vendor_list = ML_STOCK(_Vendor);
 
-if(!((player call ML_fnc_Client_SideID) in ML_SIDE(_Vendor)))exitWith{systemChat "This Vendor is not for your current side"; false};
+if(!(str(side player) in ([(ML_SIDE(_Vendor)), ","] call BIS_fnc_splitString)))exitWith{systemChat "This Vendor is not for your current side"; false};
 if(!(createDialog "Vendor_dialog"))exitWith{ML_LOG("Dialogue error"); systemChat "Dialogue did not open. Please report this on our bug tracker"; false};
 
 playSound [(["Vendor", "Greetings"] call ML_fnc_Sound_Randomize), true];

@@ -8,11 +8,11 @@ class CfgPatches {
 };
 
 //---CfgAmmo---
-#include <CFG\CfgAmmo.hpp>
+#include <Ammo\CfgAmmo.hpp>
 //---
 
 //---CfgMagazines---
-#include <CFG\CfgMagazines.hpp>
+#include <Ammo\CfgMagazines.hpp>
 //---
 
 //---CfgRecoils---
