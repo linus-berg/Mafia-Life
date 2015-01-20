@@ -3,6 +3,10 @@
 private["_player"];
 _player = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
 
+if(ML_Creation_Req)then{
+	false call ML_fnc_Data_Create;
+};
+
 //removeAllWeapons _player;
 
 switch (true) do{

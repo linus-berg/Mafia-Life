@@ -1,7 +1,8 @@
 class Vendor_dialog{
 	idd = IDD_Vendor;
 	movingEnable = true;
-	controlsBackground[] = {Vendor_background};
+	controlsBackground[] = {Vendor_background, Vendor_FilterBG};
+	onLoad = "uiNamespace setVariable ['ML_Vendor_Dialog', (_this select 0)]";
 	objects[] = { };
 	//Vendor DIALOG
 	controls[]=
@@ -18,11 +19,20 @@ class Vendor_dialog{
 		Vendor_sell_action,
 		Vendor_total_cost,
 		Vendor_money_inventory,
-		Vendor_money_text
+		Vendor_money_text,
+		Vendor_Filter_Weapon,
+		Vendor_Filter_WeaponText,
+		Vendor_Filter_Magazine,
+		Vendor_Filter_MagazineText,
+		Vendor_Filter_Vehicle,
+		Vendor_Filter_VehicleText,
+		Vendor_Filter_Item,
+		Vendor_Filter_ItemText
 	};
 	////////////////////////////////////////////////////////
 	// GUI EDITOR OUTPUT START (by Linnet, v1.063, #Hedebe)
 	////////////////////////////////////////////////////////
+	
 	class Vendor_background: RscPicture
 	{
 		idc = IDC_Vendor_BACKGROUND;
@@ -150,7 +160,90 @@ class Vendor_dialog{
 		h = 0.022 * safezoneH;
 		sizeEx = (((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.7);
 	};
-	////////////////////////////////////////////////////////
-	// GUI EDITOR OUTPUT END
-	////////////////////////////////////////////////////////
+	
+	//VENDOR FILTER (NEW ADDITION)
+	class Vendor_FilterBG: RscPicture
+	{
+		idc = IDC_VENDOR_FILTERBG;
+		text = "\ML_Images\GUI\Account_ca.paa";
+		x = 0.221562 * safezoneW + safezoneX;
+		y = 0.434 * safezoneH + safezoneY;
+		w = 0.0721875 * safezoneW;
+		h = 0.143 * safezoneH;
+	};
+	class Vendor_Filter_Weapon: RscCheckbox
+	{
+		idc = IDC_VENDOR_FILTER_WEAPONS;
+		x = 0.226719 * safezoneW + safezoneX;
+		y = 0.445 * safezoneH + safezoneY;
+		w = 0.0154688 * safezoneW;
+		h = 0.022 * safezoneH;
+		checked = 1;
+		onCheckedChanged = "_this call ML_fnc_Vendor_Filter;";
+	};
+	class Vendor_Filter_WeaponText: RscText
+	{
+		idc = IDC_VENDOR_FILTER_WEAPONTEXT;
+		text = "Weapons"; //--- ToDo: Localize;
+		x = 0.242187 * safezoneW + safezoneX;
+		y = 0.445 * safezoneH + safezoneY;
+		w = 0.0515625 * safezoneW;
+		h = 0.022 * safezoneH;
+		font = "Friz";
+		SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.6)";
+	};
+	class Vendor_Filter_Magazine: Vendor_Filter_Weapon
+	{
+		idc = IDC_VENDOR_FILTER_MAGAZINES;
+		x = 0.226719 * safezoneW + safezoneX;
+		y = 0.478 * safezoneH + safezoneY;
+		w = 0.0154688 * safezoneW;
+		h = 0.022 * safezoneH;
+	};
+	class Vendor_Filter_MagazineText: Vendor_Filter_WeaponText
+	{
+		idc = IDC_VENDOR_FILTER_MAGAZINETEXT;
+		text = "Magazines"; //--- ToDo: Localize;
+		x = 0.242187 * safezoneW + safezoneX;
+		y = 0.478 * safezoneH + safezoneY;
+		w = 0.0515625 * safezoneW;
+		h = 0.022 * safezoneH;
+		font = "Friz";
+	};
+	class Vendor_Filter_Vehicle: Vendor_Filter_Weapon
+	{
+		idc = IDC_VENDOR_FILTER_VEHICLES;
+		x = 0.226719 * safezoneW + safezoneX;
+		y = 0.511 * safezoneH + safezoneY;
+		w = 0.0154688 * safezoneW;
+		h = 0.022 * safezoneH;
+	};
+	class Vendor_Filter_VehicleText: Vendor_Filter_WeaponText
+	{
+		idc = IDC_VENDOR_FILTER_VEHICLETEXT;
+		text = "Vehicles"; //--- ToDo: Localize;
+		x = 0.242187 * safezoneW + safezoneX;
+		y = 0.511 * safezoneH + safezoneY;
+		w = 0.0515625 * safezoneW;
+		h = 0.022 * safezoneH;
+		font = "Friz";
+	};
+	class Vendor_Filter_Item: Vendor_Filter_Weapon
+	{
+		idc = IDC_VENDOR_FILTER_ITEMS;
+		x = 0.226719 * safezoneW + safezoneX;
+		y = 0.544 * safezoneH + safezoneY;
+		w = 0.0154688 * safezoneW;
+		h = 0.022 * safezoneH;
+	};	
+	class Vendor_Filter_ItemText: Vendor_Filter_WeaponText
+	{
+		idc = IDC_VENDOR_FILTER_ITEMTEXT;
+		text = "Items"; //--- ToDo: Localize;
+		x = 0.242187 * safezoneW + safezoneX;
+		y = 0.544 * safezoneH + safezoneY;
+		w = 0.0515625 * safezoneW;
+		h = 0.022 * safezoneH;
+		font = "Friz";
+	};
 };

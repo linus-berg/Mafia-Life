@@ -5,3 +5,4 @@
 #include "Interaction.hpp"
 #include "Quest.hpp"
 #include "Quest_Log.hpp"
+#include "CreateUser.hpp"

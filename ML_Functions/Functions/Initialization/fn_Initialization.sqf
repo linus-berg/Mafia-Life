@@ -6,18 +6,21 @@ if(isNil "ML_Logging")then {
 
 If (isServer)exitWith{};
 
+ML_Creation_Req = false;
+
+call ML_fnc_Network_ClientSetup;
+
+["ML_Network_Client_Data_Load", netId(player)] call ML_fnc_Network_ClientToServer;
+
 ExecSQF("Loops\client_loop.sqf");
 ExecSQF("\ML_Core\Client\ML_VariableSetup.sqf");
 
 ExecFSM "Coins\Paycheck.fsm"; //This is the paycheck loop
 if (isNil "ML_Client_Account") then {
-	[player, "ML_Client_Account", (3000 call ML_fnc_Cipher)] call ML_fnc_Variable_Init;
-	[player, "ML_Client_Coins", (3000 call ML_fnc_Cipher)] call ML_fnc_Variable_Init;
-	[player, "ML_Client_Permits", []] call ML_fnc_Variable_Init;
-	[player, "ML_Quests_Current", []] call ML_fnc_Variable_Init;
-	[player, "ML_Quests_Completed", []] call ML_fnc_Variable_Init;
+
 };
 
 call ML_fnc_Client_Array;
 call ML_fnc_Keyboard_Setup;
+
 [ML_QUESTLIST] call ML_fnc_Quests_Setup;

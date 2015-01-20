@@ -48,7 +48,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=19;
+		items=20;
 		class Item0
 		{
 			side="CIV";
@@ -430,6 +430,25 @@ class Mission
 				};
 			};
 		};
+		class Item19
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={15366.752,0.040374741,14513.13};
+					azimut=361.91501;
+					id=19;
+					side="LOGIC";
+					vehicle="Logic";
+					leader=1;
+					skill=0.60000002;
+					text="ML_Network_Handlers";
+				};
+			};
+		};
 	};
 	class Vehicles
 	{
@@ -438,7 +457,7 @@ class Mission
 		{
 			position[]={14705.942,17.91,16798.066};
 			azimut=136.433;
-			id=19;
+			id=20;
 			side="EMPTY";
 			vehicle="Box_East_Wps_F";
 			skill=0.60000002;
@@ -449,7 +468,7 @@ class Mission
 		{
 			position[]={14698.453,17.91,16784.604};
 			azimut=135.299;
-			id=20;
+			id=21;
 			side="EMPTY";
 			vehicle="Land_HelipadCivil_F";
 			skill=0.60000002;
@@ -459,7 +478,7 @@ class Mission
 		{
 			position[]={15173.71,17.906782,17298.623};
 			azimut=45.102299;
-			id=21;
+			id=22;
 			side="EMPTY";
 			vehicle="Box_East_Wps_F";
 			skill=0.60000002;
@@ -470,7 +489,7 @@ class Mission
 		{
 			position[]={15185.097,17.926798,17291.676};
 			azimut=32.814602;
-			id=22;
+			id=23;
 			side="EMPTY";
 			vehicle="Land_HelipadCivil_F";
 			skill=0.60000002;
@@ -479,7 +498,7 @@ class Mission
 		class Item4
 		{
 			position[]={14727.015,17.91,16787.25};
-			id=23;
+			id=24;
 			side="EMPTY";
 			vehicle="B_Heli_Attack_01_F";
 			skill=0.60000002;
@@ -488,7 +507,7 @@ class Mission
 		{
 			position[]={3658.5803,7.7473464,13359.208};
 			azimut=-47.951099;
-			id=24;
+			id=25;
 			side="EMPTY";
 			vehicle="Box_East_Wps_F";
 			skill=0.60000002;
@@ -499,7 +518,7 @@ class Mission
 		{
 			position[]={3661.4058,7.5134525,13369.591};
 			azimut=-60.2388;
-			id=25;
+			id=26;
 			side="EMPTY";
 			vehicle="Land_HelipadCivil_F";
 			skill=0.60000002;
@@ -509,7 +528,7 @@ class Mission
 		{
 			position[]={14618.681,17.91,16598.109};
 			azimut=44.953701;
-			id=26;
+			id=27;
 			side="EMPTY";
 			vehicle="Land_HelipadCivil_F";
 			skill=0.60000002;
@@ -519,7 +538,7 @@ class Mission
 		{
 			position[]={14597.095,17.91,16775.959};
 			azimut=135.394;
-			id=27;
+			id=28;
 			side="EMPTY";
 			vehicle="Box_East_Wps_F";
 			skill=0.60000002;

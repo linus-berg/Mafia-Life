@@ -9,7 +9,7 @@ if((count _cart) <= 0)exitWith{systemChat "You have nothing in your cart";};
 if (_coins < _total) exitWith {systemChat "Not enough Coins!"; false};
 
 {
-	switch ([_x] call ML_fnc_Merchandise_GetCfg) do{
+	switch (_x call ML_fnc_Merchandise_GetCfg) do{
 		case "CfgMagazines": {
 			(_Vendor_spawn select 0) addItemCargoGlobal [_x, 1];
 		}; 

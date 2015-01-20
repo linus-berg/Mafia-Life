@@ -14,17 +14,7 @@ ML_VendorCart = [];
 ML_VendorTotal = 0;
 _Vendor call ML_fnc_Vendor_SetCurrent;
 
-
-private["_index"];
-{
-	if((_x select 2) == 1)then{
-		_index = lbAdd [IDC_Vendor_BUY_LIST, ((_x select 0) call ML_fnc_Merchandise_GetName)];
-		lbSetData [IDC_Vendor_BUY_LIST, _index, Str(_forEachIndex)];
-		lbSetValue [IDC_Vendor_BUY_LIST, _index, (_x select 1)];
-		lbSetPicture [IDC_Vendor_BUY_LIST, _index, ((_x select 0) call ML_fnc_Merchandise_GetPicture)];
-		lbSetTooltip [IDC_Vendor_BUY_LIST, _index, format["Price: %1€", (_x select 1)]];
-	};
-}forEach _Vendor_list;
+[true, true, true, true] call ML_fnc_Vendor_SetupBuy;
 
 _Vendor_list call ML_fnc_Vendor_SetupSell;
 

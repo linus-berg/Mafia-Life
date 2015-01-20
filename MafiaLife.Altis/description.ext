@@ -7,6 +7,7 @@ debriefing    = 1;
 respawn       = 3;
 respawnDelay  = 10;
 respawnDialog = 0;
+respawnOnStart = 0;
 respawnTemplates[] = {"MenuPosition", "ML_Respawn"};
 respawnTemplatesWest[] = {"MenuPosition", "MenuInventory", "ML_Respawn"};
 disabledAI = true;

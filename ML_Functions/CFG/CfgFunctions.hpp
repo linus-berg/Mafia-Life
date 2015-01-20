@@ -26,6 +26,24 @@ class cfgFunctions {
 		};
 		//---
 		
+		//---Network---//
+		class Network{
+			file = "ML_Functions\Functions\Network";
+			class Network_AddEvent{};
+			class Network_ClientSetup{};
+			class Network_Handle{};
+			class Network_ClientToServer{};
+		};
+		//---
+		
+		//---Data---//
+		class Data{
+			file = "ML_Functions\Functions\Data";
+			class Data_Create{};
+			class Data_Load{};
+		};
+		//---
+		
 		//---Respawn---//
 		class Respawn{
 			file = "ML_Functions\Functions\Respawn";
@@ -106,6 +124,8 @@ class cfgFunctions {
 			class Vendor_Sell{};
 			class Vendor_GetItemInfo{};
 			class Vendor_GetSpawns{};
+			class Vendor_SetupBuy{};
+			class Vendor_Filter{};
 		};
 		//---
 		
