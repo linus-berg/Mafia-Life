@@ -6,11 +6,11 @@ if(isNil "ML_Logging")then {
 
 If (isServer)exitWith{};
 
-ML_Creation_Req = false;
+ML_Register_Req = false;
 
 call ML_fnc_Network_ClientSetup;
 
-["ML_Network_Client_Data_Load", netId(player)] call ML_fnc_Network_ClientToServer;
+["ML_Network_Server_Data_Load", netId(player)] call ML_fnc_Network_ClientToServer;
 
 ExecSQF("Loops\client_loop.sqf");
 ExecSQF("\ML_Core\Client\ML_VariableSetup.sqf");

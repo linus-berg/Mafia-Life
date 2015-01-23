@@ -39,8 +39,9 @@ class cfgFunctions {
 		//---Data---//
 		class Data{
 			file = "ML_Functions\Functions\Data";
-			class Data_Create{};
 			class Data_Load{};
+			class Data_Setup{};
+			class Data_Register{};
 		};
 		//---
 		

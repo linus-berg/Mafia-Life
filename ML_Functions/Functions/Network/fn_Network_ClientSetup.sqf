@@ -3,15 +3,15 @@
 };
 
 [
-	"ML_Network_Server_Data_Return", 
+	"ML_Network_Client_Data_Return", 
 	{
 		_this call ML_fnc_Data_Load;
 	}
 ] call ML_fnc_Network_AddEvent;
 
 [
-	"ML_Network_Server_Data_Set", 
+	"ML_Network_Client_Data_Register", 
 	{
-		_this call ML_fnc_Data_Create;
+		ML_Register_Req = _this;
 	}
 ] call ML_fnc_Network_AddEvent;

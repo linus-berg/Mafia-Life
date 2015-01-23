@@ -1,91 +1,95 @@
-class ML_User_Create{
-	idd = IDD_USER_CREATE;
+class ML_User_Register{
+	idd = IDD_USER_REGISTER;
 	movingEnable = true;
-	controlsBackground[] = {ML_User_Create_BG};
-	onLoad = "uiNamespace setVariable ['ML_User_Create_Dialog', (_this select 0)]";
-	onDestroy = "SystemChat format ['%1', _this];";
+	controlsBackground[] = {ML_User_Register_BG};
+	onLoad = "uiNamespace setVariable ['ML_User_Register_Dialog', (_this select 0)]";
+	onUnload = "['ERROR_NO_REGISTER: 0x2001'] call BIS_fnc_error; if ((_this select 1) == 2)exitWith{endMission 'END1';};";
+	
 	objects[] = { };
 	controls[]=
 	{
-		ML_User_Create_Email,
-		ML_User_Create_Password,
-		ML_User_Create_Password_C,
-		ML_User_Create_Logo,
-		ML_User_Create_Account,
-		ML_User_Create_Exit,
-		ML_User_Create_TextContainer
+		ML_User_Register_Email,
+		ML_User_Register_Password,
+		ML_User_Register_Password_C,
+		ML_User_Register_Logo,
+		ML_User_Register_Account,
+		ML_User_Register_Exit,
+		ML_User_Register_TextContainer
 	};
 	////////////////////////////////////////////////////////
 	// GUI EDITOR OUTPUT START (by Linnet, v1.063, #Hedebe)
 	////////////////////////////////////////////////////////
 	
-	class ML_User_Create_BG: RscPicture
+	class ML_User_Register_BG: RscPicture
 	{
-		idc = IDC_USER_CREATE_BG;
+		idc = IDC_USER_REGISTER_BG;
 		text = "\ML_Images\GUI\Account_ca.paa";
 		x = 0.365938 * safezoneW + safezoneX;
 		y = 0.368 * safezoneH + safezoneY;
 		w = 0.28875 * safezoneW;
 		h = 0.33 * safezoneH;
 	};
-	class ML_User_Create_Email: RscEdit
+	class ML_User_Register_Email: RscEdit
 	{
-		idc = IDC_USER_CREATE_EMAIL;
+		idc = IDC_USER_REGISTER_EMAIL;
 		text = "Email"; //--- ToDo: Localize;
 		x = 0.37625 * safezoneW + safezoneX;
 		y = 0.522 * safezoneH + safezoneY;
 		w = 0.113437 * safezoneW;
 		h = 0.022 * safezoneH;
 		font = "Friz";
-		onChar = "SystemChat format ['%1', _this];";
-		onKeyDown = "SystemChat format ['%1', _this];";
+		
+		
 	};
-	class ML_User_Create_Password: ML_User_Create_Email
+	class ML_User_Register_Password: ML_User_Register_Email
 	{
-		idc = IDC_USER_CREATE_PASSWORD;
+		idc = IDC_USER_REGISTER_PASSWORD;
 		text = "Password"; //--- ToDo: Localize;
 		x = 0.37625 * safezoneW + safezoneX;
 		y = 0.566 * safezoneH + safezoneY;
 		w = 0.113437 * safezoneW;
 		h = 0.022 * safezoneH;
+		onSetFocus = "if(ctrlText (_this select 0) == 'Password')then{(_this select 0) ctrlSetText ''};";
 	};
-	class ML_User_Create_Password_C: ML_User_Create_Email
+	class ML_User_Register_Password_C: ML_User_Register_Email
 	{
-		idc = IDC_USER_CREATE_PASSWORD_C;
+		idc = IDC_USER_REGISTER_PASSWORD_C;
 		text = "Confirm Password"; //--- ToDo: Localize;
 		x = 0.37625 * safezoneW + safezoneX;
 		y = 0.599 * safezoneH + safezoneY;
 		w = 0.113437 * safezoneW;
 		h = 0.022 * safezoneH;
+		onSetFocus = "if(ctrlText (_this select 0) == 'Confirm Password')then{(_this select 0) ctrlSetText ''};";
 	};
-	class ML_User_Create_Logo: RscPicture
+	class ML_User_Register_Logo: RscPicture
 	{
-		idc = IDC_USER_CREATE_LOGO;
+		idc = IDC_USER_REGISTER_LOGO;
 		text = "#(argb,8,8,3)color(1,1,1,1)";
 		x = 0.37625 * safezoneW + safezoneX;
 		y = 0.379 * safezoneH + safezoneY;
 		w = 0.113437 * safezoneW;
 		h = 0.066 * safezoneH;
 	};
-	class ML_User_Create_Account: ML_Quest_Button
+	class ML_User_Register_Account: ML_Quest_Button
 	{
-		idc = IDC_USER_CREATE_ACCOUNT;
+		idc = IDC_USER_REGISTER_ACCOUNT;
 		text = "Create Account"; //--- ToDo: Localize;
 		x = 0.386563 * safezoneW + safezoneX;
 		y = 0.654 * safezoneH + safezoneY;
 		w = 0.0928125 * safezoneW;
 		h = 0.022 * safezoneH;
 	};
-	class ML_User_Create_Exit: ML_Quest_Button
+	class ML_User_Register_Exit: ML_Quest_Button
 	{
-		idc = IDC_USER_CREATE_EXIT;
+		idc = IDC_USER_REGISTER_EXIT;
 		text = "Exit"; //--- ToDo: Localize;
 		x = 0.597969 * safezoneW + safezoneX;
 		y = 0.654 * safezoneH + safezoneY;
 		w = 0.0360937 * safezoneW;
 		h = 0.022 * safezoneH;
+		action = "closeDialog 2;"
 	};
-	class ML_User_Create_TextContainer: ML_ControlsGroup {
+	class ML_User_Register_TextContainer: ML_ControlsGroup {
 			x = 0.510311 * safezoneW + safezoneX;
 			y = 0.379 * safezoneH + safezoneY;
 			w = 0.134062 * safezoneW;
@@ -99,9 +103,9 @@ class ML_User_Create{
 			};
 			class controls 
 			{
-				class ML_User_Create_Text: ML_StructText_Two
+				class ML_User_Register_Text: ML_StructText_Two
 				{
-					idc = IDC_USER_CREATE_TEXT;
+					idc = IDC_USER_REGISTER_TEXT;
 					x = 0;
 					y = 0;
 					w = 0.134062 * safezoneW;
