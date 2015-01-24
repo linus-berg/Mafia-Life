@@ -10,37 +10,32 @@ void ML::CallExtension(char *output, const int &output_size, const char *functio
 	const std::string params(function);
 	int Fnc_ID;
 	if (Poco::NumberParser::tryParse(params.substr(0, 1), Fnc_ID)){
-		const std::string::size_type found = params.find(":");
-		const std::string param = params.substr(found + 1);
+		const std::string::size_type found(params.find(":"));
+		const std::string param(params.substr(found + 1));
+		std::string returnArma("0");
 		switch (Fnc_ID){
-			case 1:{
-				strncpy_s(output, output_size, ReadValue(param).c_str(), _TRUNCATE);
+			case 1:{ //Json - Read value
+				returnArma = ML::ReadValue(param);
+				break;
 			}
-			case 2:{
-				std::string Valid;
-
-				if (RegEXCheck(param, "\\^[a-zA-Z0-9][a-zA-Z0-9\\_.]+@[a-zA-Z0-9_]+.[a-zA-Z0-9_.]+\\$")){
-					Valid = "1";
+			case 2:{ //Email - Validate
+				if (ML::RegEXCheck(param, "\^[_a-z0-9-]+(.[_a-z0-9-]+)*@[a-z0-9-]+(.[a-z0-9-]+)*(.[a-z]{2,4})\$")){
+					returnArma = "1";
+				}else{
+					returnArma = "0";
 				}
-				else{
-					Valid = "0";
-				}
-
-				strncpy_s(output, output_size, Valid.c_str(), _TRUNCATE);
+				break;
 			}
-			case 3:{
-				std::string Valid;
-
-				if (RegEXCheck(param, "(?!^[0-9]*$)(?!^[a-zA-Z]*$)^([a-zA-Z0-9]{6,15})$")){
-					Valid = "1";
+			case 3:{ //Password - Validate
+				if (ML::RegEXCheck(param, "(?!^[0-9]*$)(?!^[a-zA-Z]*$)^([a-zA-Z0-9]{6,15})$")){
+					returnArma = "1";
+				}else{
+					returnArma = "0";
 				}
-				else{
-					Valid = "0";
-				}
-
-				strncpy_s(output, output_size, Valid.c_str(), _TRUNCATE);
+				break;
 			}
 		}
+		strncpy_s(output, output_size, returnArma.c_str(), _TRUNCATE);
 	}
 	return;
 }
