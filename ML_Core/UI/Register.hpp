@@ -87,7 +87,7 @@ class ML_User_Register{
 		y = 0.654 * safezoneH + safezoneY;
 		w = 0.0360937 * safezoneW;
 		h = 0.022 * safezoneH;
-		action = "closeDialog 2;"
+		action = "closeDialog 2;";
 	};
 	class ML_User_Register_TextContainer: ML_ControlsGroup {
 			x = 0.510311 * safezoneW + safezoneX;

@@ -39,4 +39,15 @@ lbClear IDC_Vendor_BUY_LIST;
 		};
 	};
 }forEach _list;
-lbSetCurSel [IDC_Vendor_BUY_LIST, 0];
+
+if((lbSize IDC_Vendor_BUY_LIST) <= 0)then{
+	lbSetCurSel [IDC_Vendor_BUY_LIST, -1];
+	if((ctrlEnabled IDC_Vendor_ADD_CART))then{
+		ctrlEnable [IDC_Vendor_ADD_CART, false];
+	};
+}else{
+	if(!(ctrlEnabled IDC_Vendor_ADD_CART))then{
+		ctrlEnable [IDC_Vendor_ADD_CART, true];
+	};
+	lbSetCurSel [IDC_Vendor_BUY_LIST, 0];
+};

@@ -6,19 +6,16 @@ if(isNil "ML_Logging")then {
 
 If (isServer)exitWith{};
 
-ML_Register_Req = false;
+ML_Data_Register = false;
 
 call ML_fnc_Network_ClientSetup;
 
-["ML_Network_Server_Data_Load", netId(player)] call ML_fnc_Network_ClientToServer;
+["ML_Network_Server_Data_Init", netId(player)] call ML_fnc_Network_ClientToServer;
 
 ExecSQF("Loops\client_loop.sqf");
 ExecSQF("\ML_Core\Client\ML_VariableSetup.sqf");
 
 ExecFSM "Coins\Paycheck.fsm"; //This is the paycheck loop
-if (isNil "ML_Client_Account") then {
-
-};
 
 call ML_fnc_Client_Array;
 call ML_fnc_Keyboard_Setup;

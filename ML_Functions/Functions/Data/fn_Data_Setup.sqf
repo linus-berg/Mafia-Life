@@ -1,7 +1,7 @@
 #include "\ML_Core\UI\GUI.h"
 #include "\ML_Functions\ML_Macros.h"
 
-if (dialog) exitWith {
+if (Dialog) exitWith {
 	closeDialog 0; 
 	false
 };
@@ -13,6 +13,7 @@ if(!(createDialog "ML_User_Register"))exitWith{
 buttonSetAction [IDC_USER_REGISTER_ACCOUNT, format[
 		"
 			[ctrlText %1, ctrlText %2, ctrlText %3] call ML_fnc_Data_Register;
+			closeDialog 0;
 		",
 		IDC_USER_REGISTER_EMAIL,
 		IDC_USER_REGISTER_PASSWORD,

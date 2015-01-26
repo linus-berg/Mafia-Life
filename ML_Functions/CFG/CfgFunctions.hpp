@@ -42,6 +42,8 @@ class cfgFunctions {
 			class Data_Load{};
 			class Data_Setup{};
 			class Data_Register{};
+			class Data_SetGear{};
+			class Data_Sync{};
 		};
 		//---
 		
@@ -107,6 +109,8 @@ class cfgFunctions {
 			file = "ML_Functions\Functions\Inventory";
 			class Inventory_RemoveItem{};
 			class Inventory_HasItem{};
+			class Inventory_Return{};
+			class Inventory_ClearClient{};
 		};
 		//---
 		

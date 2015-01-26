@@ -1,4 +1,4 @@
-/*%FSM<COMPILE "C:\Users\Linus\Documents\Development\Arma\Poseidon\Data\Packages\Bin\fsmEditor\scriptedFSM.cfg, Paycheck">*/
+/*%FSM<COMPILE "C:\Program Files (x86)\Bohemia Interactive\Tools\FSM Editor Personal Edition\scriptedFSM.cfg, Paycheck">*/
 /*%FSM<HEAD>*/
 /*
 item0[] = {"Init_",0,250,-40.348839,-141.279068,49.651161,-91.279068,0.000000,"Init" \n ""};
@@ -21,7 +21,7 @@ link7[] = {6,7};
 link8[] = {7,8};
 link9[] = {8,3};
 globals[] = {0.000000,0,0,0,0,640,480,1,13,6316128,1,-407.487915,406.503418,545.820801,-150.355927,1064,910,1};
-window[] = {2,-1,-1,-1,-1,968,208,1648,208,3,1082};
+window[] = {2,-1,-1,-1,-1,994,234,1674,234,3,1082};
 *//*%FSM</HEAD>*/
 class FSM
 {
@@ -111,7 +111,7 @@ class FSM
       name = "Do_shit";
       init = /*%FSM<STATEINIT""">*/"[""ML_Info"", [ ""More Coins!"", ""\ML_Images\Icons\Inv_Coins_ca.paa"", format[""You recieved %1 Coins!"", Paycheck] ] ] call bis_fnc_showNotification;" \n
        "[player, 500] call ML_fnc_Account_Transact;" \n
-       ""/*%FSM</STATEINIT""">*/;
+       "player call ML_fnc_Data_Sync;"/*%FSM</STATEINIT""">*/;
       precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
       class Links
       {
@@ -153,7 +153,6 @@ class FSM
   initState="Init_";
   finalStates[] =
   {
-
   };
 };
 /*%FSM</COMPILE>*/
