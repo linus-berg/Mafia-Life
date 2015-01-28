@@ -5,6 +5,7 @@ class CfgPatches
 		units[] = {"ML_Items"};
 		weapons[] = {};
 		requiredVersion = 1.0;
+		requiredAddons[] = {"A3_Weapons_F"};
 	};
 };
 

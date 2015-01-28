@@ -1,4 +1,4 @@
-#define ML_LOG(MESSAGE) [__FILE__, __LINE__, ('LinLib Log: ' + MESSAGE)] call ML_fnc_Log;
+#define ML_LOG(MESSAGE) "ML_Client" callExtension format['4:%1', MESSAGE];
 
 //---Vendor Functions---
 #define ML_STOCK(x) (x getVariable ["ML_Vendor_Items", []])

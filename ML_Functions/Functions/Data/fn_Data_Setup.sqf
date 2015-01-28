@@ -6,7 +6,7 @@ if (Dialog) exitWith {
 	false
 };
 if(!(createDialog "ML_User_Register"))exitWith{
-	diag_log "Dialogue did not open. Please report this on our bug tracker"; 
+	ML_LOG("ML_User_Register: Dialogue did not open. Please report this on our bug tracker") 
 	false
 };
 
