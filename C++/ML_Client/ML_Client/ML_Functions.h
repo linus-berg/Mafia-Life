@@ -7,6 +7,5 @@ public:
 private:
 	std::string ReadValue(std::string input);
 	std::string ML_Error(int Error);
-	void ML_SetupLog();
 	bool RegEXCheck(std::string input, std::string RegEx);
 };

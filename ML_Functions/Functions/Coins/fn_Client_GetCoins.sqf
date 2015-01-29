@@ -10,6 +10,6 @@ _Result = 0;
 
 _Result = [_player, _client_coins_name] call ML_fnc_Variable_Get;
 
-_Result = [_Result] call ML_fnc_Decipher;
+_Result = [_Result] call ML_fnc_ToInt;
 
 _Result

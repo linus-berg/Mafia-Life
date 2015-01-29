@@ -1,13 +1,17 @@
+#define ELPP_DEFAULT_LOG_FILE "MafiaLife\\Logs\\MafiaLife.log"
+
 #include "ML_Functions.h"
 #include <string>
 #include <iostream>
 #include <Poco\NumberParser.h>
-#include <json.h>
+#include <json\json.h>
 #include <fstream>
 #include <regex>
+#include <easylogging++.h>
+
+INITIALIZE_EASYLOGGINGPP //Fix?
 
 void ML::CallExtension(char *output, const int &output_size, const char *function){
-	ML_SetupLog();
 	const std::string params(function);
 	int Fnc_ID;
 	if (Poco::NumberParser::tryParse(params.substr(0, 1), Fnc_ID)){
@@ -33,6 +37,11 @@ void ML::CallExtension(char *output, const int &output_size, const char *functio
 				}else{
 					returnArma = "0";
 				}
+				break;
+			}
+			case 4:{ //Password - Validate
+				LOG(INFO) << param;
+				returnArma = "1";
 				break;
 			}
 		}
@@ -81,8 +90,4 @@ std::string ML::ML_Error(int Error){
 	LocalFree(messageBuffer);
 
 	return message;
-}
-
-void ML::ML_SetupLog(){
-
 }

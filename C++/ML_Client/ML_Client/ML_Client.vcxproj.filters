@@ -27,9 +27,6 @@
     <ClInclude Include="ML_Functions.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="json\json.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">

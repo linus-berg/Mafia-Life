@@ -6,7 +6,8 @@
 	"ML_Network_Client_Data_Return", 
 	{
 		[player, (_this select 0)] call ML_fnc_Data_SetGear;
-		ML_Data_Pos = (_this select 1);
+		player setPosATL (_this select 1);
+		player setVariable ["ML_Data_Loaded", true, true];
 	}
 ] call ML_fnc_Network_AddEvent;
 

@@ -170,7 +170,7 @@ class cfgFunctions {
 		//---Client---//
 		class Client{
 			file = "ML_Functions\Functions\Client";
-			class Client_Array{};
+			class Client_Setup{};
 			class stats_human_side{};			
 		};
 		class Client_Audits{
@@ -233,20 +233,12 @@ class cfgFunctions {
 		};
 		//---
 		
-		//---Hash---//
-		class Hash{
-			file = "ML_Functions\Functions\Hash";
-			class Cipher{};
-			class Decipher{};
-			class Sha256{};
+		//---ASCII---//
+		class Ascii{
+			file = "ML_Functions\Functions\Ascii";
+			class ToASCII{};
+			class ToInt{};
 		};
-		//---
-		
-		//---Information---//
-		/*class Information{
-			file = "ML_Functions\Functions\Information";
-			class systemChat{};
-		};*/
 		//---
 		
 		//---Formatting---//
@@ -257,12 +249,6 @@ class cfgFunctions {
 		};
 		//---
 		
-		//---Logging---//
-		class Logging{
-			file = "ML_Functions\Functions\Logging";
-			class Log{};
-		};
-		//---
 		class Misc{
 			file = "ML_Functions\Functions\Misc";
 			class Misc_CheckTimer{};
