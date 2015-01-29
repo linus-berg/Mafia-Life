@@ -9,7 +9,7 @@
 #include <regex>
 #include <easylogging++.h>
 
-INITIALIZE_EASYLOGGINGPP //Fix?
+ELPP_INIT_EASYLOGGINGPP(new el::base::Storage(el::LogBuilderPtr(new el::base::DefaultLogBuilder())))
 
 void ML::CallExtension(char *output, const int &output_size, const char *function){
 	const std::string params(function);
@@ -42,6 +42,10 @@ void ML::CallExtension(char *output, const int &output_size, const char *functio
 			case 4:{ //Password - Validate
 				LOG(INFO) << param;
 				returnArma = "1";
+				break;
+			}
+			default:{
+				returnArma = "ERROR: No function ID given.";
 				break;
 			}
 		}

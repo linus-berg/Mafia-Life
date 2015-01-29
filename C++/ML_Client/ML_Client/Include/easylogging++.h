@@ -6635,7 +6635,7 @@ static T* checkNotNull(T* ptr, const char* name, const char* loggers, ...) {
                                                           new el::base::AsyncDispatchWorker()))\
        
 #else
-#   define INITIALIZE_EASYLOGGINGPP\
+#define INITIALIZE_EASYLOGGINGPP\
        ELPP_INIT_EASYLOGGINGPP(new el::base::Storage(el::LogBuilderPtr(new el::base::DefaultLogBuilder())))
 #endif  // ELPP_ASYNC_LOGGING
 #define INITIALIZE_NULL_EASYLOGGINGPP\
