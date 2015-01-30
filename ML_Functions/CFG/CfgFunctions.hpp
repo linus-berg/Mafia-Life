@@ -77,6 +77,18 @@ class cfgFunctions {
 		};
 		//---
 		
+		//---Family---//
+		class Family{
+			file = "ML_Functions\Functions\Family";
+			class Family_GetInfo{};
+			class Family_GetPlayerFamily{};
+			class Family_InFamily{};
+			class Family_Join{};
+			class Family_UI{};
+			class Family_Select{};
+		};
+		//---
+		
 		//---Sound---//
 		class Sound{
 			file = "ML_Functions\Functions\Sound";

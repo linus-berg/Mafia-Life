@@ -21,6 +21,7 @@ void ML::CallExtension(char *output, const int &output_size, const char *functio
 		switch (Fnc_ID){
 			case 1:{ //Json - Read value
 				returnArma = ML::ReadValue(param);
+				LOG(INFO) << param << ": " << returnArma;
 				break;
 			}
 			case 2:{ //Email - Validate

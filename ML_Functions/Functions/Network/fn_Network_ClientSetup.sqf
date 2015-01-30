@@ -17,3 +17,10 @@
 		ML_Data_Register = _this;
 	}
 ] call ML_fnc_Network_AddEvent;
+
+[
+	"ML_Network_Client_Family_Leader", 
+	{
+		(GroupFromNetID(_this select 0)) selectLeader (ObjectFromNetID (_this select 1));
+	}
+] call ML_fnc_Network_AddEvent;

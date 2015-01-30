@@ -1,5 +1,5 @@
 #define ML_LOG(MESSAGE) "ML_Client" callExtension format['4:%1', MESSAGE];
-
+#define _VERSION_ getNumber(configFile >> "CfgPatches" >> "ML_Core" >> "ClientVersion")
 //---Vendor Functions---
 #define ML_STOCK(x) (x getVariable ["ML_Vendor_Items", []])
 #define ML_VENDORLIST (ML_Server getVariable ["ML_Vendor_List", []])
@@ -16,7 +16,9 @@
 #define KEY(INPUT) parseNumber("ML_Client" callExtension format['1:%1', INPUT])
 //---
 
-
+//---Family---
+#define ML_RANK(x)  ((x getVariable ["ML_Family", []]) select 1)
+//--
 //---TLR---
 #define ExecSQF(FILE) [] call compile preprocessFileLineNumbers FILE
 #define ExecSQFwait(FILE) private["_handler"]; _handler = [] spawn (compile (preprocessFileLineNumbers FILE)); waitUntil{scriptDone _handler};
