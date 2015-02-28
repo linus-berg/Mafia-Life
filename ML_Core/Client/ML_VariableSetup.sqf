@@ -8,6 +8,6 @@ tax = 5;
 coinmachines = [Atm1];
 
 //Vendors------------------|
-//ML_CurrentVendor 	= objNull;
-ML_VendorCart		= [];
-ML_VendorTotal	= 0;
+//ML_CurrentVendor     = objNull;
+ML_VendorCart        = [];
+ML_VendorTotal    = 0;

@@ -1,7 +1,7 @@
 while {true} do {
-	private["_complete"];
-	_complete = ([player] call ML_fnc_Client_Human) || isServer;
-	if (_complete) exitWith {};
+    private["_complete"];
+    _complete = ([player] call ML_fnc_Client_Human) || isServer;
+    if (_complete) exitWith {};
 };
 
 private["_player"];

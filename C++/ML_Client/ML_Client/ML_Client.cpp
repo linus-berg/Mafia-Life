@@ -3,20 +3,19 @@
 
 #include "stdafx.h"
 #include "ML_Functions.h"
-#include <iostream>
 
 
 namespace {
-	ML *ML_F;
+    ML *ML_F;
 };
 
 extern "C"
 {
-	__declspec (dllexport) void __stdcall RVExtension(char *output, int outputSize, const char *function);
+    __declspec (dllexport) void __stdcall RVExtension(char *output, int outputSize, const char *function);
 }
 
 void __stdcall RVExtension(char *output, int outputSize, const char *function)
 {
-	outputSize -= 1;
-	ML_F->CallExtension(output, outputSize, function);
+    outputSize -= 1;
+    ML_F->CallExtension(output, outputSize, function);
 }

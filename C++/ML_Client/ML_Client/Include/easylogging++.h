@@ -320,7 +320,7 @@
 #   if defined(WIN32_LEAN_AND_MEAN)
 #      if defined(ELPP_WINSOCK2)
 #         include <winsock2.h>
-#	   else
+#       else
 #         include <winsock.h>
 #      endif // defined(ELPP_WINSOCK2)
 #   endif // defined(WIN32_LEAN_AND_MEAN)
@@ -5964,13 +5964,13 @@ public:
     static inline base::type::VerboseLevel verboseLevel(void) {
         return ELPP->vRegistry()->level();
     }
-	/// @brief Sets vmodules as specified (on the fly)
+    /// @brief Sets vmodules as specified (on the fly)
     static inline void setVModules(const char* modules) {
         if (ELPP->vRegistry()->vModulesEnabled()) {
             ELPP->vRegistry()->setModules(modules);
         }
     }
-	/// @brief Clears vmodules
+    /// @brief Clears vmodules
     static inline void clearVModules(void) {
         ELPP->vRegistry()->clearModules();
     }

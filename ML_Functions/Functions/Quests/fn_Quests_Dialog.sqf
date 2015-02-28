@@ -2,19 +2,19 @@
 #include "\ML_Functions\ML_Macros.h"
 
 if (dialog) exitWith {
-	closeDialog 0; 
-	false
+    closeDialog 0; 
+    false
 };
 if(!(createDialog "ML_Quest_Dialog"))exitWith{
-	ML_LOG("Dialogue error"); 
-	systemChat "Dialogue did not open. Please report this on our bug tracker"; 
-	false
+    ML_LOG("Dialogue error"); 
+    systemChat "Dialogue did not open. Please report this on our bug tracker"; 
+    false
 };
 
 private["_npc", "_caller", "_quest"];
-_npc 	= [_this, 0, 0, [objNull]] call BIS_fnc_param;
-_caller 	= [_this, 1, 0, [objNull]] call BIS_fnc_param;
-_quest 	= [_this, 3, 0, [[]]] call BIS_fnc_param;
+_npc     = [_this, 0, 0, [objNull]] call BIS_fnc_param;
+_caller     = [_this, 1, 0, [objNull]] call BIS_fnc_param;
+_quest     = [_this, 3, 0, [[]]] call BIS_fnc_param;
 
 buttonSetAction [IDC_QUEST_ACCEPT, format["closeDialog 0; [%1, %2, %3] call ML_fnc_Quests_Add;",_npc, _caller, _quest]];
 

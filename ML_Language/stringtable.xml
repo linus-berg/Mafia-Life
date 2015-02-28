@@ -1,147 +1,147 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ML_String">
-	<Package name="MafiaLife">
-		<Container name="Main Menu">
-			<Key ID="STR_ML_GUI_PLAY">
-				<Original>Play Mafia Life</Original>
-				<English>Play Mafia Life</English>
-				<Czech>Hra Mafia Life</Czech>
-				<French>Jouer Mafia Life</French>
-				<German>Mafia Life spielen</German>
-				<Italian>Gioca Mafia Life</Italian>
-				<Polish>Graj w Mafia Life</Polish>
-				<Portuguese>Jogar Mafia Life</Portuguese>
-				<Russian>Играть Mafia Life</Russian>
-				<Spanish>Jugar Mafia Life</Spanish>
-			</Key>
-		</Container>
-		<Container name="Account">
-			<Key ID="STR_ML_ACCOUNT_WITHDRAW">
-				<Original>Withdraw</Original>
-				<English>Withdraw</English>
-				<Czech>Natáhněte</Czech>
-				<French>Retirer</French>
-				<German>Auszahlen</German>
-				<Italian>Ritirare</Italian>
-				<Polish>Wycofać</Polish>
-				<Portuguese>Retire</Portuguese>
-				<Russian>Вывод</Russian>
-				<Spanish>Retirar</Spanish>
-			</Key>
-			<Key ID="STR_ML_ACCOUNT_DEPOSIT">
-				<Original>Deposit</Original>
-				<English>Deposit</English>
-				<Czech>Záloha</Czech>
-				<French>Dépôt</French>
-				<German>Einzahlen</German>
-				<Italian>Deposito</Italian>
-				<Polish>Depozyt</Polish>
-				<Portuguese>Depósito</Portuguese>
-				<Russian>Депозит</Russian>
-				<Spanish>Depósito</Spanish>
-			</Key>
-			<Key ID="STR_ML_ACCOUNT_DEPOSITED">
-				<Original>You have deposited €%1 into your bank account.</Original>
-				<English>You have deposited €%1 into your bank account.</English>
-				<Czech>Jste uloženy €%1 na Váš bankovní účet.</Czech>
-				<French>Vous avez déposé €%1 dans votre compte bancaire.</French>
-				<German>Sie haben %1 €auf Ihr Bankkonto eingezahlt.</German>
-				<Italian>Hai depositato €%1 nel tuo conto bancario.</Italian>
-				<Polish>Został złożony %1 €na konto bankowe.</Polish>
-				<Portuguese>Você depositado €%1 em sua conta bancária.</Portuguese>
-				<Russian>Вы сдали на хранение €%1 на ваш банковский счет.</Russian>
-				<Spanish>Usted ha depositado €%1 en su cuenta bancaria.</Spanish>
-			</Key>
-		</Container>
-		
-		<Container name="Vendor">
-			<Key ID="STR_ML_Vendor_ADDTOCART">
-				<Original>Add To Cart</Original>
-				<English>Add To Cart</English>
-				<Czech>Přidat do košíku</Czech>
-				<French>Ajouter au panier</French>
-				<German>In den Warenkorb legen</German>
-				<Italian>Aggiungi al carrello</Italian>
-				<Polish>Dodaj do koszyka</Polish>
-				<Portuguese>Adicionar ao carrinho</Portuguese>
-				<Russian>Добавить в корзину</Russian>
-				<Spanish>Añadir a la cesta</Spanish>
-			</Key>
-			<Key ID="STR_ML_Vendor_REMOVE">
-				<Original>Remove</Original>
-				<English>Remove</English>
-				<Czech>Odstranit</Czech>
-				<French>Supprimer</French>
-				<German>Entfernen</German>
-				<Italian>Rimuovere</Italian>
-				<Polish>Usuń</Polish>
-				<Portuguese>Remover</Portuguese>
-				<Russian>Удалить</Russian>
-				<Spanish>Retire</Spanish>
-			</Key>
-			<Key ID="STR_ML_Vendor_PURCHASE">
-				<Original>Purchase</Original>
-				<English>Purchase</English>
-				<Czech>Nákup</Czech>
-				<French>Achat</French>
-				<German>Kaufen</German>
-				<Italian>Acquisto</Italian>
-				<Polish>Kup</Polish>
-				<Portuguese>Compra</Portuguese>
-				<Russian>Покупка</Russian>
-				<Spanish>Compra</Spanish>
-			</Key>
-			<Key ID="STR_ML_Vendor_SELL">
-				<Original>Sell</Original>
-				<English>Sell</English>
-				<Czech>Prodejte</Czech>
-				<French>Vendre</French>
-				<German>Verkaufen</German>
-				<Italian>Vendere</Italian>
-				<Polish>Sprzedaj</Polish>
-				<Portuguese>Venda</Portuguese>
-				<Russian>Продать</Russian>
-				<Spanish>Vender</Spanish>
-			</Key>
-			<Key ID="STR_ML_Vendor_TOTAL">
-				<Original>Total Cost: €%1</Original>
-				<English>Total Cost: €%1</English>
-				<Czech>Celková cena: €%1</Czech>
-				<French>Coût total: €%1</French>
-				<German>Gesamtkosten: €%1</German>
-				<Italian>Costo totale: €%1</Italian>
-				<Polish>Koszt całkowity: €%1</Polish>
-				<Portuguese>Custo total: €%1</Portuguese>
-				<Russian>Полная стоимость: €%1</Russian>
-				<Spanish>Coste total:  €%1</Spanish>
-			</Key>
-		</Container>
-		
-		<Container name="ErrorMessages">
-			<Key ID="STR_ML_ERROR_DEPOSIT_MINIMUM">
-				<Original>The minimum amount for a bank transaction is €%1.</Original>
-				<English>The minimum amount for a bank transaction is €%1.</English>
-				<Czech>Minimální asi za bankovní transakce €%1.</Czech>
-				<French>Le minimum sur une transaction bancaire est €%1.</French>
-				<German>Der Mindestbetrag für eine Banktransaktion ist €%1.</German>
-				<Italian>Il minimo su per una transazione bancaria è €%1.</Italian>
-				<Polish>Minimalny o banku dla transakcji jest €%1.</Polish>
-				<Portuguese>O mínimo cerca de uma transação bancária é €%1.</Portuguese>
-				<Russian>Минимальная о для банка сделка €%1.</Russian>
-				<Spanish>El mínimo acerca de una transacción bancaria es €%1.</Spanish>
-			</Key>
-			<Key ID="STR_ML_ERROR_DEPOSIT_ENOUGH">
-				<Original>You do not have enough money in your inventory to deposit €%1.</Original>
-				<English>You do not have enough money in your inventory to deposit €%1.</English>
-				<Czech>Nemáte dostatek peněz ve vašem inventáři uložit €%1.</Czech>
-				<French>Vous n'avez pas assez d'argent dans votre inventaire pour déposer €%1.</French>
-				<German>Sie haben nicht genug Geld in ihrem Inventar, um €%1 einzuzahlen.</German>
-				<Italian>Non hai abbastanza soldi nel tuo inventario per depositare €%1.</Italian>
-				<Polish>Nie masz wystarczająco dużo pieniędzy w ekwipunku do złożenia €%1.</Polish>
-				<Portuguese>Você não tem dinheiro suficiente em seu inventário para depositar €%1.</Portuguese>
-				<Russian>Вы не хватает денег в вашем инвентаре, чтобы внести €%1.</Russian>
-				<Spanish>Usted no tiene suficiente dinero en su inventario para depositar €%1.</Spanish>
-			</Key>
-		</Container>
-	</Package>
+    <Package name="MafiaLife">
+        <Container name="Main Menu">
+            <Key ID="STR_ML_GUI_PLAY">
+                <Original>Play Mafia Life</Original>
+                <English>Play Mafia Life</English>
+                <Czech>Hra Mafia Life</Czech>
+                <French>Jouer Mafia Life</French>
+                <German>Mafia Life spielen</German>
+                <Italian>Gioca Mafia Life</Italian>
+                <Polish>Graj w Mafia Life</Polish>
+                <Portuguese>Jogar Mafia Life</Portuguese>
+                <Russian>Играть Mafia Life</Russian>
+                <Spanish>Jugar Mafia Life</Spanish>
+            </Key>
+        </Container>
+        <Container name="Account">
+            <Key ID="STR_ML_ACCOUNT_WITHDRAW">
+                <Original>Withdraw</Original>
+                <English>Withdraw</English>
+                <Czech>Natáhněte</Czech>
+                <French>Retirer</French>
+                <German>Auszahlen</German>
+                <Italian>Ritirare</Italian>
+                <Polish>Wycofać</Polish>
+                <Portuguese>Retire</Portuguese>
+                <Russian>Вывод</Russian>
+                <Spanish>Retirar</Spanish>
+            </Key>
+            <Key ID="STR_ML_ACCOUNT_DEPOSIT">
+                <Original>Deposit</Original>
+                <English>Deposit</English>
+                <Czech>Záloha</Czech>
+                <French>Dépôt</French>
+                <German>Einzahlen</German>
+                <Italian>Deposito</Italian>
+                <Polish>Depozyt</Polish>
+                <Portuguese>Depósito</Portuguese>
+                <Russian>Депозит</Russian>
+                <Spanish>Depósito</Spanish>
+            </Key>
+            <Key ID="STR_ML_ACCOUNT_DEPOSITED">
+                <Original>You have deposited €%1 into your bank account.</Original>
+                <English>You have deposited €%1 into your bank account.</English>
+                <Czech>Jste uloženy €%1 na Váš bankovní účet.</Czech>
+                <French>Vous avez déposé €%1 dans votre compte bancaire.</French>
+                <German>Sie haben %1 €auf Ihr Bankkonto eingezahlt.</German>
+                <Italian>Hai depositato €%1 nel tuo conto bancario.</Italian>
+                <Polish>Został złożony %1 €na konto bankowe.</Polish>
+                <Portuguese>Você depositado €%1 em sua conta bancária.</Portuguese>
+                <Russian>Вы сдали на хранение €%1 на ваш банковский счет.</Russian>
+                <Spanish>Usted ha depositado €%1 en su cuenta bancaria.</Spanish>
+            </Key>
+        </Container>
+        
+        <Container name="Vendor">
+            <Key ID="STR_ML_Vendor_ADDTOCART">
+                <Original>Add To Cart</Original>
+                <English>Add To Cart</English>
+                <Czech>Přidat do košíku</Czech>
+                <French>Ajouter au panier</French>
+                <German>In den Warenkorb legen</German>
+                <Italian>Aggiungi al carrello</Italian>
+                <Polish>Dodaj do koszyka</Polish>
+                <Portuguese>Adicionar ao carrinho</Portuguese>
+                <Russian>Добавить в корзину</Russian>
+                <Spanish>Añadir a la cesta</Spanish>
+            </Key>
+            <Key ID="STR_ML_Vendor_REMOVE">
+                <Original>Remove</Original>
+                <English>Remove</English>
+                <Czech>Odstranit</Czech>
+                <French>Supprimer</French>
+                <German>Entfernen</German>
+                <Italian>Rimuovere</Italian>
+                <Polish>Usuń</Polish>
+                <Portuguese>Remover</Portuguese>
+                <Russian>Удалить</Russian>
+                <Spanish>Retire</Spanish>
+            </Key>
+            <Key ID="STR_ML_Vendor_PURCHASE">
+                <Original>Purchase</Original>
+                <English>Purchase</English>
+                <Czech>Nákup</Czech>
+                <French>Achat</French>
+                <German>Kaufen</German>
+                <Italian>Acquisto</Italian>
+                <Polish>Kup</Polish>
+                <Portuguese>Compra</Portuguese>
+                <Russian>Покупка</Russian>
+                <Spanish>Compra</Spanish>
+            </Key>
+            <Key ID="STR_ML_Vendor_SELL">
+                <Original>Sell</Original>
+                <English>Sell</English>
+                <Czech>Prodejte</Czech>
+                <French>Vendre</French>
+                <German>Verkaufen</German>
+                <Italian>Vendere</Italian>
+                <Polish>Sprzedaj</Polish>
+                <Portuguese>Venda</Portuguese>
+                <Russian>Продать</Russian>
+                <Spanish>Vender</Spanish>
+            </Key>
+            <Key ID="STR_ML_Vendor_TOTAL">
+                <Original>Total Cost: €%1</Original>
+                <English>Total Cost: €%1</English>
+                <Czech>Celková cena: €%1</Czech>
+                <French>Coût total: €%1</French>
+                <German>Gesamtkosten: €%1</German>
+                <Italian>Costo totale: €%1</Italian>
+                <Polish>Koszt całkowity: €%1</Polish>
+                <Portuguese>Custo total: €%1</Portuguese>
+                <Russian>Полная стоимость: €%1</Russian>
+                <Spanish>Coste total:  €%1</Spanish>
+            </Key>
+        </Container>
+        
+        <Container name="ErrorMessages">
+            <Key ID="STR_ML_ERROR_DEPOSIT_MINIMUM">
+                <Original>The minimum amount for a bank transaction is €%1.</Original>
+                <English>The minimum amount for a bank transaction is €%1.</English>
+                <Czech>Minimální asi za bankovní transakce €%1.</Czech>
+                <French>Le minimum sur une transaction bancaire est €%1.</French>
+                <German>Der Mindestbetrag für eine Banktransaktion ist €%1.</German>
+                <Italian>Il minimo su per una transazione bancaria è €%1.</Italian>
+                <Polish>Minimalny o banku dla transakcji jest €%1.</Polish>
+                <Portuguese>O mínimo cerca de uma transação bancária é €%1.</Portuguese>
+                <Russian>Минимальная о для банка сделка €%1.</Russian>
+                <Spanish>El mínimo acerca de una transacción bancaria es €%1.</Spanish>
+            </Key>
+            <Key ID="STR_ML_ERROR_DEPOSIT_ENOUGH">
+                <Original>You do not have enough money in your inventory to deposit €%1.</Original>
+                <English>You do not have enough money in your inventory to deposit €%1.</English>
+                <Czech>Nemáte dostatek peněz ve vašem inventáři uložit €%1.</Czech>
+                <French>Vous n'avez pas assez d'argent dans votre inventaire pour déposer €%1.</French>
+                <German>Sie haben nicht genug Geld in ihrem Inventar, um €%1 einzuzahlen.</German>
+                <Italian>Non hai abbastanza soldi nel tuo inventario per depositare €%1.</Italian>
+                <Polish>Nie masz wystarczająco dużo pieniędzy w ekwipunku do złożenia €%1.</Polish>
+                <Portuguese>Você não tem dinheiro suficiente em seu inventário para depositar €%1.</Portuguese>
+                <Russian>Вы не хватает денег в вашем инвентаре, чтобы внести €%1.</Russian>
+                <Spanish>Usted no tiene suficiente dinero en su inventario para depositar €%1.</Spanish>
+            </Key>
+        </Container>
+    </Package>
 </Project>

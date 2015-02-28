@@ -14,7 +14,7 @@ private["_bank_amount"];
 _bank_amount = [_player] call ML_fnc_Account_Get;
 
 if (_amount > _bank_amount) exitWith {
-	systemChat format["You do not have enough money on your bank account to withdraw $%1", strM(_amount)];
+    systemChat format["You do not have enough money on your bank account to withdraw $%1", strM(_amount)];
 };
 
 [_player, -(_amount)] call ML_fnc_Account_Transact;

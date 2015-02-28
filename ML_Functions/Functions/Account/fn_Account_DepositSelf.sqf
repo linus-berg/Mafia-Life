@@ -18,7 +18,7 @@ private["_money"];
 _money = [_player] call ML_fnc_Client_GetCoins;
 
 if (_money < _amount) exitWith {
-	systemChat format[(localize "STR_ML_ERROR_DEPOSIT_ENOUGH"), strM(_amount)];
+    systemChat format[(localize "STR_ML_ERROR_DEPOSIT_ENOUGH"), strM(_amount)];
 };
 
 systemChat format[(localize "STR_ML_ACCOUNT_DEPOSITED"), strM(_amount)];

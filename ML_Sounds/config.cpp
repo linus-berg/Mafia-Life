@@ -1,10 +1,10 @@
 class CfgPatches {
-	class ML_Sounds {
-		units[] = {};
-		weapons[] = {};
-		requiredVersion = 0.1;
-		requiredAddons[] = {};
-	};
+    class ML_Sounds {
+        units[] = {};
+        weapons[] = {};
+        requiredVersion = 0.1;
+        requiredAddons[] = {};
+    };
 };
 
 //---CfgSounds---

@@ -9,21 +9,21 @@ if((count _cart) <= 0)exitWith{systemChat "You have nothing in your cart";};
 if (_coins < _total) exitWith {systemChat "Not enough Coins!"; false};
 
 {
-	switch (_x call ML_fnc_Merchandise_GetCfg) do{
-		case "CfgMagazines": {
-			(_Vendor_spawn select 0) addItemCargoGlobal [_x, 1];
-		}; 
-		case "CfgWeapons": {
-			(_Vendor_spawn select 0) addItemCargoGlobal [_x, 1];
-		}; 
-		case "CfgGlasses": {
-			(_Vendor_spawn select 0) addItemCargoGlobal [_x, 1];
-		}; 
-		case "CfgVehicles": {
-			private["_veh"];
-			_veh = createVehicle [_x, getposATL (_Vendor_spawn select 1),[], 0, "NONE"];
-		}; 
-	};
+    switch (_x call ML_fnc_Merchandise_GetCfg) do{
+        case "CfgMagazines": {
+            (_Vendor_spawn select 0) addItemCargoGlobal [_x, 1];
+        }; 
+        case "CfgWeapons": {
+            (_Vendor_spawn select 0) addItemCargoGlobal [_x, 1];
+        }; 
+        case "CfgGlasses": {
+            (_Vendor_spawn select 0) addItemCargoGlobal [_x, 1];
+        }; 
+        case "CfgVehicles": {
+            private["_veh"];
+            _veh = createVehicle [_x, getposATL (_Vendor_spawn select 1),[], 0, "NONE"];
+        }; 
+    };
 }count _cart;
 
 [player, -(ML_VendorTotal)] call ML_fnc_Client_SetCoins;

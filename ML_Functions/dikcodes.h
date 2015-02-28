@@ -74,7 +74,7 @@
 #define DIK_RCONTROL        0x9D
 #define DIK_BACK            0x0E           /* backspace */
 #define DIK_BACKSPACE       DIK_BACK
-#define DIK_RETURN          0x1C   	 	   /* Enter on main keyboard */
+#define DIK_RETURN          0x1C               /* Enter on main keyboard */
 #define DIK_NUMPADENTER     0x9C           /* Enter on numeric keypad */
 #define DIK_LMENU           0x38           /* left Alt */
 #define DIK_LALT            DIK_LMENU
