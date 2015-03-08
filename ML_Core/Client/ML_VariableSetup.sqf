@@ -5,7 +5,9 @@ Bank_Coins = 25000;
 Paycheck = 500;
 tax = 5;
 //Coin Machines (Aka Tellers)
-coinmachines = [Atm1];
+coinmachines = [
+  Atm1
+];
 
 //Vendors------------------|
 //ML_CurrentVendor   = objNull;

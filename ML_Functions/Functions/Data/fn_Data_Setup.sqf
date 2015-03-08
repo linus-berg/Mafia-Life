@@ -1,25 +1,21 @@
 #include "\ML_Core\UI\GUI.h"
 #include "\ML_Functions\ML_Macros.h"
 
-if (Dialog) exitWith {
+if ( Dialog ) exitWith {
   closeDialog 0; 
-  false
+  return false
 };
-if(!(createDialog "ML_User_Register"))exitWith{
-  ML_LOG("ML_User_Register: Dialogue did not open. Please report this on our bug tracker") 
-  false
+if !( createDialog "ML_User_Register" ) exitWith {
+  ML_LOG("ML_User_Register: Dialogue did not open. Please report this on our bug tracker") /* Ignore this line over 80 chars */ 
+  return false
 };
 
-buttonSetAction [IDC_USER_REGISTER_ACCOUNT, format[
-    "
-      [ctrlText %1, ctrlText %2, ctrlText %3] call ML_fnc_Data_Register;
-      closeDialog 0;
-    ",
-    IDC_USER_REGISTER_EMAIL,
-    IDC_USER_REGISTER_PASSWORD,
-    IDC_USER_REGISTER_PASSWORD_C
-  ]
-];
+buttonSetAction [IDC_USER_REGISTER_ACCOUNT, 
+                 format["[ctrlText %1, ctrlText %2, ctrlText %3] 
+                         call ML_fnc_Data_Register; closeDialog 0;",
+                 IDC_USER_REGISTER_EMAIL,
+                 IDC_USER_REGISTER_PASSWORD,
+                 IDC_USER_REGISTER_PASSWORD_C]];
 
 private["_text", "_ctrl"];
 _text = format["<t color='#FF4700' size='0.7'>
@@ -33,8 +29,9 @@ Useful Links<br />
 <a color='#FF7D0A' underline='true' href='https://github.com/Infectiondg/Mafia-Life'>Mafia Life</a><br />
 <a color='#FF7D0A' underline='true' href='https://github.com/Infectiondg/Mafia-Life'>Wiki</a><br />
 <a color='#FF7D0A' underline='true' href='https://github.com/Infectiondg/Mafia-Life'>Bug Reports</a><br />
-</t>", name player];
+</t>", name player]; /* TODO: Localize */
 disableSerialization;
-_ctrl = ((uiNamespace getVariable ["ML_User_Register_Dialog", nil]) displayCtrl IDC_USER_REGISTER_TEXT);
+_ctrl = ((uiNamespace getVariable ["ML_User_Register_Dialog", nil]) 
+         displayCtrl IDC_USER_REGISTER_TEXT);
 _ctrl ctrlSetStructuredText parseText _text;
 [_ctrl] call BIS_fnc_ctrlTextHeight;

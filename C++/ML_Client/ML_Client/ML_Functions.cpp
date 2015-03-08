@@ -37,7 +37,7 @@ void ML::CallExtension( char *output, const int &output_size,
                  *(.[a-z]{2,4})$";
       } else {
         /* Password RegEx string. */
-        RegEx = "(?!^[0-9]*$)\(?!^[a-zA-Z]*$)\^([a-zA-Z0-9]{6,15})$";
+        RegEx = "(?!^[0-9]*$)(?!^[a-zA-Z]*$)^([a-zA-Z0-9]{6,15})$";
       }
       /* Set it to the RegEx checker. */
       Fnc_ID = 2; 

@@ -67,17 +67,17 @@
 
 /* Controls */
 #define DIK_ESCAPE      0x01
-#define DIK_TAB       0x0F
+#define DIK_TAB         0x0F
 #define DIK_LSHIFT      0x2A
 #define DIK_RSHIFT      0x36
 #define DIK_LCONTROL    0x1D
 #define DIK_RCONTROL    0x9D
-#define DIK_BACK      0x0E       /* backspace */
-#define DIK_BACKSPACE     DIK_BACK
+#define DIK_BACK        0x0E       /* backspace */
+#define DIK_BACKSPACE   DIK_BACK
 #define DIK_RETURN      0x1C         /* Enter on main keyboard */
-#define DIK_NUMPADENTER   0x9C       /* Enter on numeric keypad */
+#define DIK_NUMPADENTER 0x9C       /* Enter on numeric keypad */
 #define DIK_LMENU       0x38       /* left Alt */
-#define DIK_LALT      DIK_LMENU
+#define DIK_LALT        DIK_LMENU
 #define DIK_SPACE       0x39
 #define DIK_CAPITAL     0x3A       /* capslock */
 #define DIK_CAPSLOCK    DIK_CAPITAL 
@@ -86,24 +86,24 @@
 #define DIK_RMENU       0xB8       /* right Alt */
 #define DIK_RALT      DIK_RMENU    /* right Alt */
 #define Graphics
-#define DIK_AT        0x91      /*           (NEC PC98) */
+#define DIK_AT          0x91      /*           (NEC PC98) */
 #define DIK_COLON       0x92      /*           (NEC PC98) */
-#define DIK_UNDERLINE     0x93      /*           (NEC PC98) */
+#define DIK_UNDERLINE   0x93      /*           (NEC PC98) */
 #define DIK_MINUS       0x0C      /* - on main keyboard */
 #define DIK_EQUALS      0x0D
 #define DIK_LBRACKET    0x1A
 #define DIK_RBRACKET    0x1B
-#define DIK_SEMICOLON     0x27
-#define DIK_APOSTROPHE    0x28
+#define DIK_SEMICOLON   0x27
+#define DIK_APOSTROPHE  0x28
 #define DIK_GRAVE       0x29      /* accent grave */
-#define DIK_BACKSLASH     0x2B
+#define DIK_BACKSLASH   0x2B
 #define DIK_COMMA       0x33
 #define DIK_PERIOD      0x34      /* . on main keyboard */
 #define DIK_SLASH       0x35      /* / on main keyboard */
 #define DIK_MULTIPLY    0x37      /* * on numeric keypad */
-#define DIK_NUMPADSTAR    DIK_MULTIPLY 
+#define DIK_NUMPADSTAR  DIK_MULTIPLY 
 #define DIK_SUBTRACT    0x4A      /* - on numeric keypad */
-#define DIK_ADD       0x4E      /* + on numeric keypad */
+#define DIK_ADD         0x4E      /* + on numeric keypad */
 #define DIK_DECIMAL     0x53      /* . on numeric keypad */
 #define DIK_NUMPADEQUALS  0x8D      /* = on numeric keypad (NEC PC98) */
 #define DIK_NUMPADMINUS   DIK_SUBTRACT    /* - on numeric keypad */
@@ -112,17 +112,17 @@
 #define DIK_NUMPADSLASH   DIK_DIVIDE      /* / on numeric keypad */
 
 /* KataKana */
-#define DIK_KANA      0x70  /* (Japanese keyboard)      */
-#define DIK_ABNT_C1     0x73  /* / ? on Portugese (Brazilian) keyboards */
-#define DIK_CONVERT     0x79  /* (Japanese keyboard)      */
+#define DIK_KANA          0x70  /* (Japanese keyboard)      */
+#define DIK_ABNT_C1       0x73  /* / ? on Portugese (Brazilian) keyboards */
+#define DIK_CONVERT       0x79  /* (Japanese keyboard)      */
 #define DIK_NOCONVERT     0x7B  /* (Japanese keyboard)      */
-#define DIK_YEN       0x7D  /* (Japanese keyboard)      */
-#define DIK_OEM_102     0x56  /* < > | on UK/Germany keyboards */
-#define DIK_ABNT_C2     0x7E  /* Numpad . on Portugese (Brazilian) keyboards */
+#define DIK_YEN           0x7D  /* (Japanese keyboard)      */
+#define DIK_OEM_102       0x56  /* < > | on UK/Germany keyboards */
+#define DIK_ABNT_C2       0x7E  /* Numpad . on Portugese (Brazilian) keyboards */
 #define DIK_PREVTRACK     0x90  /* Previous Track (DIK_CIRCUMFLEX on Japanese keyboard) */
-#define DIK_KANJI       0x94  /* (Japanese keyboard)      */
-#define DIK_STOP      0x95  /*           (NEC PC98) */
-#define DIK_AX        0x96  /*           (Japan AX) */
+#define DIK_KANJI         0x94  /* (Japanese keyboard)      */
+#define DIK_STOP          0x95  /*           (NEC PC98) */
+#define DIK_AX            0x96  /*           (Japan AX) */
 #define DIK_UNLABELED     0x97  /*            (J3100) */
 #define DIK_NUMPADCOMMA   0xB3  /* , on numeric keypad (NEC PC98) */
 

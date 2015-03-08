@@ -1,14 +1,14 @@
 #include "\ML_Core\UI\GUI.h"
 #include "\ML_Functions\ML_Macros.h"
 
-if (dialog) exitWith {
+if ( dialog ) exitWith {
   closeDialog 0; 
-  false
+  return false
 };
-if(!(createDialog "ML_Quest_Log_Dialog"))exitWith{
+if !( createDialog "ML_Quest_Log_Dialog" ) exitWith {
   ML_LOG("Dialogue error"); 
   systemChat "Dialogue did not open. Please report this on our bug tracker"; 
-  false
+  return false
 };
 
 private ["_caller", "_quests", "_quest", "_image", "_index"];
@@ -22,14 +22,14 @@ _quests = _caller getVariable ["ML_Quests_Current", []];
   lbSetValue [IDC_QUEST_LOG_QUEST_LIST, _index, (_x select 0)];
   lbSetData [IDC_QUEST_LOG_QUEST_LIST, _index, netId(_x select 1)];
   
-  if(([(_quest select 4), _caller] call ML_fnc_Quests_CheckComplete))then{
+  if ( [(_quest select 4), _caller] call ML_fnc_Quests_CheckComplete ) then {
     _image = "\ML_Images\GUI\True.paa";
   };
   
   lbSetPicture [IDC_QUEST_LOG_QUEST_LIST, _index, _image];
-}count _quests;
-if((count _quests) > 0)then{
+} count _quests;
+if ( (count _quests) > 0 ) then {
   lbSetCurSel [IDC_QUEST_LOG_QUEST_LIST, 0];
 };
 
-true
+return true

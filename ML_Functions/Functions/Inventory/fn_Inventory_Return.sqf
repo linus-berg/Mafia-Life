@@ -1,3 +1,5 @@
+#include "\ML_Functions\ML_Macros.h"
+
 private ["_player", "_return", "_container"];
 _player = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
 
@@ -31,4 +33,4 @@ _return pushBack (getWeaponCargo _container);
 _return pushBack (getMagazineCargo _container);
 _return pushBack (getItemCargo _container);
 
-_return
+return _return

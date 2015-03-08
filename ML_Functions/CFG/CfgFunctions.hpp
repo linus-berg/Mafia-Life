@@ -8,26 +8,26 @@ class cfgFunctions {
       };
     };
   };
-  class Mafia_Life{
+  class Mafia_Life {
     tag = ML;
     //---Initialization---//
-    class Initialization{
+    class Initialization {
       file = "ML_Functions\Functions\Initialization";
-      class Initialization{
+      class Initialization {
         postInit = 1;
       };
     };
     //---
         
     //---Notifications---//
-    class Notifications{
+    class Notifications {
       file = "ML_Functions\Functions\Notifications";
       class showNotification{};
     };
     //---
     
     //---Network---//
-    class Network{
+    class Network {
       file = "ML_Functions\Functions\Network";
       class Network_AddEvent{};
       class Network_ClientSetup{};
@@ -37,7 +37,7 @@ class cfgFunctions {
     //---
     
     //---Data---//
-    class Data{
+    class Data {
       file = "ML_Functions\Functions\Data";
       class Data_Load{};
       class Data_Setup{};
@@ -48,7 +48,7 @@ class cfgFunctions {
     //---
     
     //---Respawn---//
-    class Respawn{
+    class Respawn {
       file = "ML_Functions\Functions\Respawn";
       class Respawn_Killed{};
       class Respawn_Spawn{};
@@ -56,7 +56,7 @@ class cfgFunctions {
     //---
     
     //---Account---//
-    class Account{
+    class Account {
       file = "ML_Functions\Functions\Account";
       class Account_CheckMin{};
       class Account_Deposit{};
@@ -70,7 +70,7 @@ class cfgFunctions {
     //---
     
     //---Coins---//
-    class Coins{
+    class Coins {
       file = "ML_Functions\Functions\Coins";
       class Client_GetCoins{};
       class Client_SetCoins{};
@@ -78,7 +78,7 @@ class cfgFunctions {
     //---
     
     //---Family---//
-    class Family{
+    class Family {
       file = "ML_Functions\Functions\Family";
       class Family_GetInfo{};
       class Family_GetPlayerFamily{};
@@ -90,26 +90,26 @@ class cfgFunctions {
     //---
     
     //---Sound---//
-    class Sound{
+    class Sound {
       file = "ML_Functions\Functions\Sound";
       class Sound_Randomize{};
     };
     //---
     
     //---Interaction---//
-    class Interaction{
+    class Interaction {
       file = "ML_Functions\Functions\Interaction";
     };
-    class Interaction_Teller{
+    class Interaction_Teller {
       file = "ML_Functions\Functions\Interaction\Teller";
       class Teller{};
       class Teller_Menu{};
     };
-    class Interaction_Vendor{
+    class Interaction_Vendor {
       file = "ML_Functions\Functions\Interaction\Vendor";
       class Vendor{};
     };
-    class Interaction_Client{
+    class Interaction_Client {
       file = "ML_Functions\Functions\Interaction\Client";
       class Interaction_Client{};
       class Interaction_ClientMenu{};
@@ -117,7 +117,7 @@ class cfgFunctions {
     //---
     
     //---Inventory---//
-    class Inventory{
+    class Inventory {
       file = "ML_Functions\Functions\Inventory";
       class Inventory_RemoveItem{};
       class Inventory_HasItem{};
@@ -127,7 +127,7 @@ class cfgFunctions {
     //---
     
     //---Vendors---//
-    class Vendors{
+    class Vendors {
       file = "ML_Functions\Functions\Vendors";
       class Vendor_Setup{};
       class Vendor_SetupSell{};
@@ -147,7 +147,7 @@ class cfgFunctions {
     //---
     
     //---Merchandise---//
-    class Merchandise{
+    class Merchandise {
       file = "ML_Functions\Functions\Merchandise";
       class Merchandise_GetCfg{};
       class Merchandise_GetName{};
@@ -157,7 +157,7 @@ class cfgFunctions {
     //---
     
     //---Variables---//
-    class Variables{
+    class Variables {
       file = "ML_Functions\Functions\Variables";
       class Variable_Init{};
       class Variable_Get{};
@@ -165,7 +165,7 @@ class cfgFunctions {
     };
     
     //---Permits---//
-    class Permits{
+    class Permits {
       file = "ML_Functions\Functions\Permits";
       class Permit_ClientAdd{};
       class Permit_Get{};
@@ -173,19 +173,19 @@ class cfgFunctions {
     //---
     
     //---Array---//
-    class Array{
+    class Array {
       file = "ML_Functions\Functions\Array";
       class Array_ElementCount{};  
     };
     //---
     
     //---Client---//
-    class Client{
+    class Client {
       file = "ML_Functions\Functions\Client";
       class Client_Setup{};
       class stats_human_side{};      
     };
-    class Client_Audits{
+    class Client_Audits {
       file = "ML_Functions\Functions\Client\Audits";
       class Client_Exists{};
       class Client_Human{};
@@ -199,11 +199,11 @@ class cfgFunctions {
       class Client_IsArmed{};
       class Client_IsDefenceless{};
     };
-    class Client_Permits{
+    class Client_Permits {
       file = "ML_Functions\Functions\Client\Permits";
       class Client_HasPermit{};
     };
-    class Client_Actions{
+    class Client_Actions {
       file = "ML_Functions\Functions\Client\Actions";
       class Client_Kneecap{};
       class Client_Steal{};
@@ -211,7 +211,7 @@ class cfgFunctions {
     //---
     
     //---Quests---//
-    class Quest_Functions{
+    class Quest_Functions {
       file = "ML_Functions\Functions\Quests";
       class Quests_Add{};
       class Quests_AddAction{};
@@ -227,7 +227,7 @@ class cfgFunctions {
     //---
     
     //---GUI---//
-    class GUI_Functions{
+    class GUI_Functions {
       file = "ML_Functions\Functions\GUI\Functions";
       class GUI_ClientList{};
       class GUI_ClientListComplete{};
@@ -235,7 +235,7 @@ class cfgFunctions {
     //---
     
     //---Keyboard---//
-    class Keyboard_Functions{
+    class Keyboard_Functions {
       file = "ML_Functions\Functions\Keyboard";
       class Keyboard_SetupKeys{};
       class Keyboard_Setup{};
@@ -246,7 +246,7 @@ class cfgFunctions {
     //---
     
     //---ASCII---//
-    class Ascii{
+    class Ascii {
       file = "ML_Functions\Functions\Ascii";
       class ToASCII{};
       class ToInt{};
@@ -254,14 +254,14 @@ class cfgFunctions {
     //---
     
     //---Formatting---//
-    class Formatting{
+    class Formatting {
       file = "ML_Functions\Functions\Formatting";
       class Int_ToString{};
       class String_ToInt{};
     };
     //---
     
-    class Misc{
+    class Misc {
       file = "ML_Functions\Functions\Misc";
       class Misc_CheckTimer{};
     };

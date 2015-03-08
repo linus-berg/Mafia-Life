@@ -6,11 +6,12 @@ _this spawn {
   
   _player = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
   
-  if ( !([_player] call ML_fnc_Client_Human) ) exitWith {};
+  if !( [_player] call ML_fnc_Client_Human ) exitWith {};
   if ( _player != player ) exitWith {};
 
-  if ( !(createDialog "Account") ) exitWith {
-    hint "Dialog Error!";
+  if !( createDialog "Account" ) exitWith {
+    SystemChat "Dialog Error, Please report this on the bug tracker and provide your .RPT file."; /* Ignore: line over 80 chars */
+    ML_LOG("ERROR: Dialog Error");
   };
 
   private["_my_index"];

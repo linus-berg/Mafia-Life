@@ -24,8 +24,10 @@
 //---TLR---
 #define ExecSQF(FILE) [] call compile preprocessFileLineNumbers FILE
 #define ExecSQFwait(FILE) private["_handler"]; \
-    _handler = [] spawn (compile (preprocessFileLineNumbers FILE)); \ 
-    waitUntil{scriptDone _handler};
+    _handler = [] spawn (compile (preprocessFileLineNumbers FILE)); waitUntil{scriptDone _handler}; 
 #define strM(x) ([x, ","] call ML_fnc_Int_ToString)
 #define strN(x) ([x, ""] call ML_fnc_Int_ToString)
 //---
+
+/* Redundant, only added to improve readability in the code. */
+#define return

@@ -1,3 +1,5 @@
+#include "\ML_Functions\ML_Macros.h"
+
 "ML_Network_Client" addPublicVariableEventHandler {
   (_this select 1) call ML_fnc_Network_Handle
 };
@@ -21,6 +23,7 @@
 [
   "ML_Network_Client_Family_Leader", 
   {
-    (GroupFromNetID(_this select 0)) selectLeader (ObjectFromNetID (_this select 1));
+    (GroupFromNetID(_this select 0)) selectLeader 
+    (ObjectFromNetID (_this select 1));
   }
 ] call ML_fnc_Network_AddEvent;

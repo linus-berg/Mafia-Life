@@ -4,4 +4,5 @@
 private["_client"];
 _client = [_this, 0, objNull, [ObjNull]] call BIS_fnc_param;
 
-(((_client getVariable ["ML_Family", []]) select 0) call ML_fnc_Family_GetInfo)
+return (((_client getVariable ["ML_Family", []]) select 0) 
+        call ML_fnc_Family_GetInfo)

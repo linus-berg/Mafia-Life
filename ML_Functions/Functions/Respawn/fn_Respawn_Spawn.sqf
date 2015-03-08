@@ -3,7 +3,7 @@
 private["_player"];
 _player = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
 
-switch (true) do{
+switch ( true ) do {
   case isCop: {
   };
   case isCiv: {

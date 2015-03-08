@@ -1,3 +1,5 @@
+#include "\ML_Functions\ML_Macros.h"
+
 private["_handled", "_key", "_shift", "_ctrl", "_alt"];
 _handled = false;
 
@@ -15,4 +17,4 @@ switch _key do {
   };
 };
 
-_handled
+return _handled
