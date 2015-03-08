@@ -9,43 +9,73 @@
 #include <regex>
 #include <easylogging++.h>
 
-ELPP_INIT_EASYLOGGINGPP(new el::base::Storage(el::LogBuilderPtr(new el::base::DefaultLogBuilder())))
+ELPP_INIT_EASYLOGGINGPP(
+  new el::base::Storage( el::LogBuilderPtr(new el::base::DefaultLogBuilder()) )
+)
 
-void ML::CallExtension(char *output, const int &output_size, const char *function){
-  const std::string params(function);
-  int Fnc_ID;
-  if (Poco::NumberParser::tryParse(params.substr(0, 1), Fnc_ID)){
+void ML::CallExtension( char *output, const int &output_size, 
+                        const char *function ) {
+  /* Supplied string from Arma */
+  const std::string params(function); 
+  /* Function to call */
+  int Fnc_ID; 
+  /* Default return */
+  std::string returnArma("0"); 
+
+  if ( Poco::NumberParser::tryParse(params.substr(0, 1), Fnc_ID) ) {
+    /* Split string at first found ':'. */
     const std::string::size_type found(params.find(":"));
-    const std::string param(params.substr(found + 1));
-    std::string returnArma("0");
-    switch (Fnc_ID){
-      case 1:{ //Json - Read value
+    const std::string param(params.substr(found + 1)); 
+    /* Initialize RegEx variable. */
+    std::string RegEx; 
+
+    /* If function is a RegEx Check (2 or 3). */
+    if ( Fnc_ID == 2 || Fnc_ID == 3 ) {
+      if ( Fnc_ID == 2 ) {
+        /* E-Mail RegEx string. */
+        RegEx = "^[_a-z0-9-]+(.[_a-z0-9-]+)*@[a-z0-9-]+(.[a-z0-9-]+)\
+                 *(.[a-z]{2,4})$";
+      } else {
+        /* Password RegEx string. */
+        RegEx = "(?!^[0-9]*$)\(?!^[a-zA-Z]*$)\^([a-zA-Z0-9]{6,15})$";
+      }
+      /* Set it to the RegEx checker. */
+      Fnc_ID = 2; 
+    }
+
+    switch ( Fnc_ID ) {
+      /* Reads keybinds in JSON format from the Mafia Life config file. */
+      case 1: {
         returnArma = ML::ReadValue(param);
         LOG(INFO) << param << ": " << returnArma;
         break;
       }
-      case 2:{ //Email - Validate
-        if (ML::RegEXCheck(param, "\^[_a-z0-9-]+(.[_a-z0-9-]+)*@[a-z0-9-]+(.[a-z0-9-]+)*(.[a-z]{2,4})\$")){
+
+      /* 
+        Returns true or false if 
+        e-mail or password is valid according to the REGEX check.
+      */
+      case 2: {   
+        if ( ML::RegEXCheck(param, RegEx) ) {
           returnArma = "1";
-        }else{
+        } else {
           returnArma = "0";
         }
         break;
       }
-      case 3:{ //Password - Validate
-        if (ML::RegEXCheck(param, "(?!^[0-9]*$)(?!^[a-zA-Z]*$)^([a-zA-Z0-9]{6,15})$")){
-          returnArma = "1";
-        }else{
-          returnArma = "0";
-        }
-        break;
-      }
-      case 4:{
+
+      /*
+        Logs Mafia Life variables and information to MafiaLife.log.
+        (always returns 1)
+      */
+      case 0: {
         LOG(INFO) << param;
         returnArma = "1";
         break;
       }
-      default:{
+
+      /* If no real function ID was given. */
+      default: {
         returnArma = "ERROR: No function ID given.";
         break;
       }
@@ -55,44 +85,31 @@ void ML::CallExtension(char *output, const int &output_size, const char *functio
   return;
 }
 
-//Check if input matches RegEx string.
-bool ML::RegEXCheck(std::string input, std::string RegEx){
-  return (std::regex_match(input, std::regex(RegEx)));
+/* Check if input matches RegEx string. */
+bool ML::RegEXCheck( std::string input, std::string RegEx ) {
+  return std::regex_match(input, std::regex(RegEx));
 }
 
-//Read value from Json file.
-std::string ML::ReadValue(std::string input){
+/* Read value from Json file. */
+std::string ML::ReadValue( std::string input ) {
   Json::Value root;
   Json::Reader reader;
   std::ifstream ML_Config("ML_Config.json", std::ifstream::binary);
 
-  //TODO: Parse multiple files for other configs, currently not needed.
+  /* TODO: Parse multiple files for other configs, currently not needed. */
 
-  //Return error
-  if (!(reader.parse(ML_Config, root, false))){
-    return "Critical: Failed to parse JSON.\n" + reader.getFormattedErrorMessages();
+  /* Return error */
+  if ( !reader.parse(ML_Config, root, false) ) {
+    return "Critical: Failed to parse JSON.\n" + 
+            reader.getFormattedErrorMessages();
   }
 
   const Json::Value key = root[input];
 
-  //If the key is not null, we return it, else we return error.
-  if (!(key.isNull())){
+  /* If the key is not null, we return it, else we return error. */
+  if (!key.isNull()) {
     return key.asString();
-  }
-  else{
+  } else {
     return "Error: No key found.";
   }
-}
-
-//Recieve any thrown errors.
-std::string ML::ML_Error(int Error){
-  LPSTR messageBuffer = NULL;
-
-  size_t size = FormatMessageA(FORMAT_MESSAGE_ALLOCATE_BUFFER | FORMAT_MESSAGE_FROM_SYSTEM | FORMAT_MESSAGE_IGNORE_INSERTS,
-    NULL, Error, MAKELANGID(LANG_NEUTRAL, SUBLANG_DEFAULT), (LPSTR)&messageBuffer, 0, NULL);
-
-  std::string message(messageBuffer, size);
-  LocalFree(messageBuffer);
-
-  return message;
 }
