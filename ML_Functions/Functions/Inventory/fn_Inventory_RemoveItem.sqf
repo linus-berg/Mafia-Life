@@ -7,19 +7,19 @@ _items = (itemsWithMagazines _player);
 
 switch(true) do
 {
-    case (_item in _assigned) : {_player unlinkItem  _item;};
-    case (_item in _items) : {
-            for "_i" from 1 to _amount do {
-                _player removeItem _item;
-            };
-        };
-    default {
-        if((_player hasWeapon _item))then{
-            _player removeWeaponGlobal _item;
-        }else{
-            false
-        };
+  case (_item in _assigned) : {_player unlinkItem  _item;};
+  case (_item in _items) : {
+      for "_i" from 1 to _amount do {
+        _player removeItem _item;
+      };
     };
+  default {
+    if((_player hasWeapon _item))then{
+      _player removeWeaponGlobal _item;
+    }else{
+      false
+    };
+  };
 };
 
 true

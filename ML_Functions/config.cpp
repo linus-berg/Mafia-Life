@@ -3,12 +3,12 @@
 // Separate rootclasses: Disabled, Automatic comments: Enabled
 
 class CfgPatches {
-    class ML_Functions {
-        units[] = {};
-        weapons[] = {};
-        requiredVersion = 0.1;
-        requiredAddons[] = {"A3_Functions_F"};
-    };
+  class ML_Functions {
+    units[] = {};
+    weapons[] = {};
+    requiredVersion = 0.1;
+    requiredAddons[] = {"A3_Functions_F"};
+  };
 };
 
 //---Functions---

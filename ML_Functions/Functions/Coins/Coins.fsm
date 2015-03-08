@@ -28,127 +28,127 @@ class FSM
   fsmName = "Paycheck";
   class States
   {
-    /*%FSM<STATE "Init_">*/
-    class Init_
+  /*%FSM<STATE "Init_">*/
+  class Init_
+  {
+    name = "Init_";
+    init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+    precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+    class Links
     {
-      name = "Init_";
-      init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
-      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
-      class Links
-      {
-        /*%FSM<LINK "_">*/
-        class _
-        {
-          priority = 0.000000;
-          to="Set_time";
-          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-          condition=/*%FSM<CONDITION""">*/"!isnil ""bis_fnc_init"""/*%FSM</CONDITION""">*/;
-          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
-        };
-        /*%FSM</LINK>*/
-      };
-    };
-    /*%FSM</STATE>*/
-    /*%FSM<STATE "Set_time">*/
-    class Set_time
-    {
-      name = "Set_time";
-      init = /*%FSM<STATEINIT""">*/"private [""_lastpaycheck ""];" \n
-       "diag_log (""Paycheck Begun."");" \n
-       "" \n
-       "_lastpaycheck = time;" \n
-       ""/*%FSM</STATEINIT""">*/;
-      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
-      class Links
-      {
-        /*%FSM<LINK "True_">*/
-        class True_
-        {
-          priority = 0.000000;
-          to="Wait";
-          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-          condition=/*%FSM<CONDITION""">*/"true"/*%FSM</CONDITION""">*/;
-          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
-        };
-        /*%FSM</LINK>*/
-      };
-    };
-    /*%FSM</STATE>*/
-    /*%FSM<STATE "Wait">*/
-    class Wait
-    {
-      name = "Wait";
-      init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
-      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
-      class Links
-      {
-        /*%FSM<LINK "Check">*/
-        class Check
-        {
-          priority = 2.000000;
-          to="Do_shit";
-          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-          condition=/*%FSM<CONDITION""">*/"((time - _lastpaycheck) > 10)"/*%FSM</CONDITION""">*/;
-          action=/*%FSM<ACTION""">*/"_lastpaycheck = time;"/*%FSM</ACTION""">*/;
-        };
-        /*%FSM</LINK>*/
-        /*%FSM<LINK "True">*/
-        class True
-        {
-          priority = 0.000000;
-          to="_";
-          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-          condition=/*%FSM<CONDITION""">*/"true"/*%FSM</CONDITION""">*/;
-          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
-        };
-        /*%FSM</LINK>*/
-      };
-    };
-    /*%FSM</STATE>*/
-    /*%FSM<STATE "Do_shit">*/
-    class Do_shit
-    {
-      name = "Do_shit";
-      init = /*%FSM<STATEINIT""">*/"[""ML_Info"", [ ""More Coins!"", ""\ML_Images\Icons\Inv_Coins_ca.paa"", format[""You recieved %1 Coins!"", Paycheck] ] ] call bis_fnc_showNotification;" \n
-       "[player, 500] call ML_fnc_Account_Transact;" \n
-       "player call ML_fnc_Data_Sync;"/*%FSM</STATEINIT""">*/;
-      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
-      class Links
-      {
-        /*%FSM<LINK "True">*/
-        class True
-        {
-          priority = 0.000000;
-          to="_";
-          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-          condition=/*%FSM<CONDITION""">*/"true"/*%FSM</CONDITION""">*/;
-          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
-        };
-        /*%FSM</LINK>*/
-      };
-    };
-    /*%FSM</STATE>*/
-    /*%FSM<STATE "_">*/
+    /*%FSM<LINK "_">*/
     class _
     {
-      name = "_";
-      init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
-      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
-      class Links
-      {
-        /*%FSM<LINK "True_">*/
-        class True_
-        {
-          priority = 0.000000;
-          to="Wait";
-          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-          condition=/*%FSM<CONDITION""">*/"true"/*%FSM</CONDITION""">*/;
-          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
-        };
-        /*%FSM</LINK>*/
-      };
+      priority = 0.000000;
+      to="Set_time";
+      precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+      condition=/*%FSM<CONDITION""">*/"!isnil ""bis_fnc_init"""/*%FSM</CONDITION""">*/;
+      action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
     };
-    /*%FSM</STATE>*/
+    /*%FSM</LINK>*/
+    };
+  };
+  /*%FSM</STATE>*/
+  /*%FSM<STATE "Set_time">*/
+  class Set_time
+  {
+    name = "Set_time";
+    init = /*%FSM<STATEINIT""">*/"private [""_lastpaycheck ""];" \n
+     "diag_log (""Paycheck Begun."");" \n
+     "" \n
+     "_lastpaycheck = time;" \n
+     ""/*%FSM</STATEINIT""">*/;
+    precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+    class Links
+    {
+    /*%FSM<LINK "True_">*/
+    class True_
+    {
+      priority = 0.000000;
+      to="Wait";
+      precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+      condition=/*%FSM<CONDITION""">*/"true"/*%FSM</CONDITION""">*/;
+      action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+    };
+    /*%FSM</LINK>*/
+    };
+  };
+  /*%FSM</STATE>*/
+  /*%FSM<STATE "Wait">*/
+  class Wait
+  {
+    name = "Wait";
+    init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+    precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+    class Links
+    {
+    /*%FSM<LINK "Check">*/
+    class Check
+    {
+      priority = 2.000000;
+      to="Do_shit";
+      precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+      condition=/*%FSM<CONDITION""">*/"((time - _lastpaycheck) > 10)"/*%FSM</CONDITION""">*/;
+      action=/*%FSM<ACTION""">*/"_lastpaycheck = time;"/*%FSM</ACTION""">*/;
+    };
+    /*%FSM</LINK>*/
+    /*%FSM<LINK "True">*/
+    class True
+    {
+      priority = 0.000000;
+      to="_";
+      precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+      condition=/*%FSM<CONDITION""">*/"true"/*%FSM</CONDITION""">*/;
+      action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+    };
+    /*%FSM</LINK>*/
+    };
+  };
+  /*%FSM</STATE>*/
+  /*%FSM<STATE "Do_shit">*/
+  class Do_shit
+  {
+    name = "Do_shit";
+    init = /*%FSM<STATEINIT""">*/"[""ML_Info"", [ ""More Coins!"", ""\ML_Images\Icons\Inv_Coins_ca.paa"", format[""You recieved %1 Coins!"", Paycheck] ] ] call bis_fnc_showNotification;" \n
+     "[player, 500] call ML_fnc_Account_Transact;" \n
+     "player call ML_fnc_Data_Sync;"/*%FSM</STATEINIT""">*/;
+    precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+    class Links
+    {
+    /*%FSM<LINK "True">*/
+    class True
+    {
+      priority = 0.000000;
+      to="_";
+      precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+      condition=/*%FSM<CONDITION""">*/"true"/*%FSM</CONDITION""">*/;
+      action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+    };
+    /*%FSM</LINK>*/
+    };
+  };
+  /*%FSM</STATE>*/
+  /*%FSM<STATE "_">*/
+  class _
+  {
+    name = "_";
+    init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+    precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+    class Links
+    {
+    /*%FSM<LINK "True_">*/
+    class True_
+    {
+      priority = 0.000000;
+      to="Wait";
+      precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+      condition=/*%FSM<CONDITION""">*/"true"/*%FSM</CONDITION""">*/;
+      action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+    };
+    /*%FSM</LINK>*/
+    };
+  };
+  /*%FSM</STATE>*/
   };
   initState="Init_";
   finalStates[] =

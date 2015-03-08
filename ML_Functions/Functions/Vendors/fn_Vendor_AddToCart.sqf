@@ -17,18 +17,18 @@ if((_cur_cart+_amount) >= 50)then{_amount = 50-_cur_cart;};
 if(_amount > 50)then{systemChat "You can only purchase a maximum of 50 items at once"; _amount = 50;};
 
 if(!(_permit call ML_fnc_Client_HasPermit))exitWith{
-    systemChat "You do not have the required permit."; 
-    false
+  systemChat "You do not have the required permit."; 
+  false
 };
 
 for "_i" from 1 to _amount do {
-    ML_VendorCart pushBack _item;
-    ML_VendorTotal = ML_VendorTotal + _price;
+  ML_VendorCart pushBack _item;
+  ML_VendorTotal = ML_VendorTotal + _price;
 
-    _index = lbAdd [IDC_Vendor_CART_LIST, (_item call ML_fnc_Merchandise_GetName)];
-    lbSetData [IDC_Vendor_CART_LIST, _index, _item];
-    lbSetValue [IDC_Vendor_CART_LIST, _index, _price];
-    lbSetPicture [IDC_Vendor_CART_LIST, _index, (_item call ML_fnc_Merchandise_GetPicture)];
-    ctrlSetText [IDC_Vendor_TOTAL_COST, format[(localize "STR_ML_Vendor_TOTAL"), strM(ML_VendorTotal)]];
+  _index = lbAdd [IDC_Vendor_CART_LIST, (_item call ML_fnc_Merchandise_GetName)];
+  lbSetData [IDC_Vendor_CART_LIST, _index, _item];
+  lbSetValue [IDC_Vendor_CART_LIST, _index, _price];
+  lbSetPicture [IDC_Vendor_CART_LIST, _index, (_item call ML_fnc_Merchandise_GetPicture)];
+  ctrlSetText [IDC_Vendor_TOTAL_COST, format[(localize "STR_ML_Vendor_TOTAL"), strM(ML_VendorTotal)]];
 };
 true

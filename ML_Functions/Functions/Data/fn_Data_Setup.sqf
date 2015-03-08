@@ -2,23 +2,23 @@
 #include "\ML_Functions\ML_Macros.h"
 
 if (Dialog) exitWith {
-    closeDialog 0; 
-    false
+  closeDialog 0; 
+  false
 };
 if(!(createDialog "ML_User_Register"))exitWith{
-    ML_LOG("ML_User_Register: Dialogue did not open. Please report this on our bug tracker") 
-    false
+  ML_LOG("ML_User_Register: Dialogue did not open. Please report this on our bug tracker") 
+  false
 };
 
 buttonSetAction [IDC_USER_REGISTER_ACCOUNT, format[
-        "
-            [ctrlText %1, ctrlText %2, ctrlText %3] call ML_fnc_Data_Register;
-            closeDialog 0;
-        ",
-        IDC_USER_REGISTER_EMAIL,
-        IDC_USER_REGISTER_PASSWORD,
-        IDC_USER_REGISTER_PASSWORD_C
-    ]
+    "
+      [ctrlText %1, ctrlText %2, ctrlText %3] call ML_fnc_Data_Register;
+      closeDialog 0;
+    ",
+    IDC_USER_REGISTER_EMAIL,
+    IDC_USER_REGISTER_PASSWORD,
+    IDC_USER_REGISTER_PASSWORD_C
+  ]
 ];
 
 private["_text", "_ctrl"];

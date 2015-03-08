@@ -4,11 +4,11 @@ _item = [_this, 1, "", ["", []]] call BIS_fnc_param;
 _items = (assignedItems _player) + (itemsWithMagazines _player);
 _return = false;
 
-if ((typeName _item) == "ARRAY") then {    
-    {
-        if((_x in _items))exitWith{_return = true;};
-    }count _item;
+if ((typeName _item) == "ARRAY") then {  
+  {
+    if((_x in _items))exitWith{_return = true;};
+  }count _item;
 }else{
-    _return = (_item in _items);
+  _return = (_item in _items);
 };
 _return

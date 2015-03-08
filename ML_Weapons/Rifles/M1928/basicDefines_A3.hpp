@@ -20,27 +20,27 @@
 #define CanSeePeripheral 32
 
 //lock acquiring
-#define manualLA      0
+#define manualLA    0
 #define automaticLA   1
 
 //lockable target type
-#define lockGroundTT      0
+#define lockGroundTT    0
 #define lockAirGroundTT   1
-#define lockAirTT         2
-#define lockGround      0
+#define lockAirTT     2
+#define lockGround    0
 #define lockAirGround   1
-#define lockAir         2
+#define lockAir     2
 
 //missile lock type
 #define fireAndForgetLT   0
-#define keepLockedLT      1
-#define manualLT          2
+#define keepLockedLT    1
+#define manualLT      2
 
 #define SPEED_STATIC 1e10
 
-#define LockNo        0
-#define LockCadet    1
-#define LockYes        2
+#define LockNo    0
+#define LockCadet  1
+#define LockYes    2
 
 enum {StabilizedInAxesNone,StabilizedInAxisX,StabilizedInAxisY,StabilizedInAxesBoth, StabilizedInAxesXYZ};
 
@@ -50,17 +50,17 @@ enum {StabilizedInAxesNone,StabilizedInAxisX,StabilizedInAxisY,StabilizedInAxesB
 #define StabilizedInAxesBoth 3
 #define StabilizedInAxesXYZ 4
 
-#define CM_none        0
+#define CM_none    0
 #define CM_Lock_Visual 1
-#define CM_Lock_IR     2
+#define CM_Lock_IR   2
 #define CM_Lock_Laser  4
 #define CM_Lock_Radar  8
-#define CM_Missile     16
+#define CM_Missile   16
 
 
 #define CMImmunity_GOOD 0.9
 #define CMImmunity_MIDDLE 0.65
-#define CMImmunity_BAD    0.5
+#define CMImmunity_BAD  0.5
 
 #define mag_xx(a,b) class _xx_##a {magazine = a; count = b;}
 #define weap_xx(a,b) class _xx_##a {weapon = a; count = b;}
@@ -76,17 +76,17 @@ enum {StabilizedInAxesNone,StabilizedInAxisX,StabilizedInAxisY,StabilizedInAxesB
 #define HEADGEAR_SLOT 605
 #define UNIFORM_SLOT 801
 
-#define HMD_SLOT       616
+#define HMD_SLOT     616
 #define BINOCULAR_SLOT 617
 #define MEDIKIT_SLOT   619
-#define RADIO_SLOT    611
+#define RADIO_SLOT  611
 
-#define VEST_SLOT      701
+#define VEST_SLOT    701
 #define BACKPACK_SLOT  901
 
 #define LOAD(weight,capacity) maximumLoad = ##capacity##; \
-                              mass = ##weight##;
-                              
+                mass = ##weight##;
+                
 #define HeadArmourCoef 2.5
 #define BodyArmourCoef 10
 #define HandArmourCoef 5

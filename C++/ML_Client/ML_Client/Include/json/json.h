@@ -206,12 +206,12 @@ typedef unsigned int UInt;
 typedef int LargestInt;
 typedef unsigned int LargestUInt;
 #undef JSON_HAS_INT64
-#else                 // if defined(JSON_NO_INT64)
+#else         // if defined(JSON_NO_INT64)
 // For Microsoft Visual use specific types as long long is not supported
 #if defined(_MSC_VER) // Microsoft Visual Studio
 typedef __int64 Int64;
 typedef unsigned __int64 UInt64;
-#else                 // if defined(_MSC_VER) // Other platforms, use long long
+#else         // if defined(_MSC_VER) // Other platforms, use long long
 typedef long long int Int64;
 typedef unsigned long long int UInt64;
 #endif // if defined(_MSC_VER)
@@ -402,17 +402,17 @@ namespace Json {
  */
 enum ValueType {
   nullValue = 0, ///< 'null' value
-  intValue,      ///< signed integer value
-  uintValue,     ///< unsigned integer value
-  realValue,     ///< double value
+  intValue,    ///< signed integer value
+  uintValue,   ///< unsigned integer value
+  realValue,   ///< double value
   stringValue,   ///< UTF-8 string value
   booleanValue,  ///< bool value
-  arrayValue,    ///< array value (ordered list)
-  objectValue    ///< object value (collection of name/value pairs).
+  arrayValue,  ///< array value (ordered list)
+  objectValue  ///< object value (collection of name/value pairs).
 };
 
 enum CommentPlacement {
-  commentBefore = 0,      ///< a comment placed on the line before a value
+  commentBefore = 0,    ///< a comment placed on the line before a value
   commentAfterOnSameLine, ///< a comment just after a value on the same line
   commentAfter, ///< a comment on the line after a value (only make sense for
   /// root value)
@@ -528,26 +528,26 @@ private:
 #ifndef JSON_VALUE_USE_INTERNAL_MAP
   class CZString {
   public:
-    enum DuplicationPolicy {
-      noDuplication = 0,
-      duplicate,
-      duplicateOnCopy
-    };
-    CZString(ArrayIndex index);
-    CZString(const char* cstr, DuplicationPolicy allocate);
-    CZString(const CZString& other);
-    ~CZString();
-    CZString& operator=(CZString other);
-    bool operator<(const CZString& other) const;
-    bool operator==(const CZString& other) const;
-    ArrayIndex index() const;
-    const char* c_str() const;
-    bool isStaticString() const;
+  enum DuplicationPolicy {
+    noDuplication = 0,
+    duplicate,
+    duplicateOnCopy
+  };
+  CZString(ArrayIndex index);
+  CZString(const char* cstr, DuplicationPolicy allocate);
+  CZString(const CZString& other);
+  ~CZString();
+  CZString& operator=(CZString other);
+  bool operator<(const CZString& other) const;
+  bool operator==(const CZString& other) const;
+  ArrayIndex index() const;
+  const char* c_str() const;
+  bool isStaticString() const;
 
   private:
-    void swap(CZString& other);
-    const char* cstr_;
-    ArrayIndex index_;
+  void swap(CZString& other);
+  const char* cstr_;
+  ArrayIndex index_;
   };
 
 public:
@@ -562,13 +562,13 @@ public:
 public:
   /** \brief Create a default Value of the given type.
 
-    This is a very useful constructor.
-    To create an empty array, pass arrayValue.
-    To create an empty object, pass objectValue.
-    Another Value can then be set to this one by assignment.
+  This is a very useful constructor.
+  To create an empty array, pass arrayValue.
+  To create an empty object, pass objectValue.
+  Another Value can then be set to this one by assignment.
 This is useful since clear() and resize() will not alter types.
 
-    Examples:
+  Examples:
 \code
 Json::Value null_value; // null
 Json::Value arr_value(Json::arrayValue); // []
@@ -778,8 +778,8 @@ Json::Value obj_value(Json::objectValue); // {}
   Members getMemberNames() const;
 
   //# ifdef JSON_USE_CPPTL
-  //      EnumMemberNames enumMemberNames() const;
-  //      EnumValues enumValues() const;
+  //    EnumMemberNames enumMemberNames() const;
+  //    EnumValues enumValues() const;
   //# endif
 
   /// Comments must be //... or /* ... */
@@ -818,18 +818,18 @@ private:
   inline bool isMemberNameStatic() const { return memberNameIsStatic_ == 0; }
 
   inline void setMemberNameIsStatic(bool isStatic) {
-    memberNameIsStatic_ = isStatic ? 1 : 0;
+  memberNameIsStatic_ = isStatic ? 1 : 0;
   }
 #endif // # ifdef JSON_VALUE_USE_INTERNAL_MAP
 
 private:
   struct CommentInfo {
-    CommentInfo();
-    ~CommentInfo();
+  CommentInfo();
+  ~CommentInfo();
 
-    void setComment(const char* text);
+  void setComment(const char* text);
 
-    char* comment_;
+  char* comment_;
   };
 
   // struct MemberNamesTransform
@@ -837,21 +837,21 @@ private:
   //   typedef const char *result_type;
   //   const char *operator()( const CZString &name ) const
   //   {
-  //      return name.c_str();
+  //    return name.c_str();
   //   }
   //};
 
   union ValueHolder {
-    LargestInt int_;
-    LargestUInt uint_;
-    double real_;
-    bool bool_;
-    char* string_;
+  LargestInt int_;
+  LargestUInt uint_;
+  double real_;
+  bool bool_;
+  char* string_;
 #ifdef JSON_VALUE_USE_INTERNAL_MAP
-    ValueInternalArray* array_;
-    ValueInternalMap* map_;
+  ValueInternalArray* array_;
+  ValueInternalMap* map_;
 #else
-    ObjectValues* map_;
+  ObjectValues* map_;
 #endif
   } value_;
   ValueType type_ : 8;
@@ -882,9 +882,9 @@ public:
 
 private:
   enum Kind {
-    kindNone = 0,
-    kindIndex,
-    kindKey
+  kindNone = 0,
+  kindIndex,
+  kindKey
   };
   std::string key_;
   ArrayIndex index_;
@@ -905,11 +905,11 @@ private:
 class JSON_API Path {
 public:
   Path(const std::string& path,
-       const PathArgument& a1 = PathArgument(),
-       const PathArgument& a2 = PathArgument(),
-       const PathArgument& a3 = PathArgument(),
-       const PathArgument& a4 = PathArgument(),
-       const PathArgument& a5 = PathArgument());
+     const PathArgument& a1 = PathArgument(),
+     const PathArgument& a2 = PathArgument(),
+     const PathArgument& a3 = PathArgument(),
+     const PathArgument& a4 = PathArgument(),
+     const PathArgument& a5 = PathArgument());
 
   const Value& resolve(const Value& root) const;
   Value resolve(const Value& root, const Value& defaultValue) const;
@@ -923,9 +923,9 @@ private:
 
   void makePath(const std::string& path, const InArgs& in);
   void addPathInArg(const std::string& path,
-                    const InArgs& in,
-                    InArgs::const_iterator& itInArg,
-                    PathArgument::Kind kind);
+          const InArgs& in,
+          InArgs::const_iterator& itInArg,
+          PathArgument::Kind kind);
   void invalidPath(const std::string& path, int location);
 
   Args args_;
@@ -940,40 +940,40 @@ private:
    class DefaultValueMapAllocator : public ValueMapAllocator
    {
    public: // overridden from ValueMapAllocator
-      virtual ValueInternalMap *newMap()
-      {
-         return new ValueInternalMap();
-      }
+    virtual ValueInternalMap *newMap()
+    {
+     return new ValueInternalMap();
+    }
 
-      virtual ValueInternalMap *newMapCopy( const ValueInternalMap &other )
-      {
-         return new ValueInternalMap( other );
-      }
+    virtual ValueInternalMap *newMapCopy( const ValueInternalMap &other )
+    {
+     return new ValueInternalMap( other );
+    }
 
-      virtual void destructMap( ValueInternalMap *map )
-      {
-         delete map;
-      }
+    virtual void destructMap( ValueInternalMap *map )
+    {
+     delete map;
+    }
 
-      virtual ValueInternalLink *allocateMapBuckets( unsigned int size )
-      {
-         return new ValueInternalLink[size];
-      }
+    virtual ValueInternalLink *allocateMapBuckets( unsigned int size )
+    {
+     return new ValueInternalLink[size];
+    }
 
-      virtual void releaseMapBuckets( ValueInternalLink *links )
-      {
-         delete [] links;
-      }
+    virtual void releaseMapBuckets( ValueInternalLink *links )
+    {
+     delete [] links;
+    }
 
-      virtual ValueInternalLink *allocateMapLink()
-      {
-         return new ValueInternalLink();
-      }
+    virtual ValueInternalLink *allocateMapLink()
+    {
+     return new ValueInternalLink();
+    }
 
-      virtual void releaseMapLink( ValueInternalLink *link )
-      {
-         delete link;
-      }
+    virtual void releaseMapLink( ValueInternalLink *link )
+    {
+     delete link;
+    }
    };
  * \endcode
  */
@@ -995,11 +995,11 @@ public:
 class JSON_API ValueInternalLink {
 public:
   enum {
-    itemPerLink = 6
+  itemPerLink = 6
   }; // sizeof(ValueInternalLink) = 128 on 32 bits architecture.
   enum InternalFlags {
-    flagAvailable = 0,
-    flagUsed = 1
+  flagAvailable = 0,
+  flagUsed = 1
   };
 
   ValueInternalLink();
@@ -1039,11 +1039,11 @@ public:
 
 #ifndef JSONCPP_DOC_EXCLUDE_IMPLEMENTATION
   struct IteratorState {
-    IteratorState() : map_(0), link_(0), itemIndex_(0), bucketIndex_(0) {}
-    ValueInternalMap* map_;
-    ValueInternalLink* link_;
-    BucketIndex itemIndex_;
-    BucketIndex bucketIndex_;
+  IteratorState() : map_(0), link_(0), itemIndex_(0), bucketIndex_(0) {}
+  ValueInternalMap* map_;
+  ValueInternalLink* link_;
+  BucketIndex itemIndex_;
+  BucketIndex bucketIndex_;
   };
 #endif // ifndef JSONCPP_DOC_EXCLUDE_IMPLEMENTATION
 
@@ -1071,15 +1071,15 @@ public:
   void remove(const char* key);
 
   void doActualRemove(ValueInternalLink* link,
-                      BucketIndex index,
-                      BucketIndex bucketIndex);
+            BucketIndex index,
+            BucketIndex bucketIndex);
 
   ValueInternalLink*& getLastLinkInBucket(BucketIndex bucketIndex);
 
   Value& setNewItem(const char* key,
-                    bool isStatic,
-                    ValueInternalLink* link,
-                    BucketIndex index);
+          bool isStatic,
+          ValueInternalLink* link,
+          BucketIndex index);
 
   Value& unsafeAdd(const char* key, bool isStatic, HashKey hashedKey);
 
@@ -1126,18 +1126,18 @@ class JSON_API ValueInternalArray {
 
 public:
   enum {
-    itemsPerPage = 8
+  itemsPerPage = 8
   }; // should be a power of 2 for fast divide and modulo.
   typedef Value::ArrayIndex ArrayIndex;
   typedef unsigned int PageIndex;
 
 #ifndef JSONCPP_DOC_EXCLUDE_IMPLEMENTATION
   struct IteratorState // Must be a POD
-      {
-    IteratorState() : array_(0), currentPageIndex_(0), currentItemIndex_(0) {}
-    ValueInternalArray* array_;
-    Value** currentPageIndex_;
-    unsigned int currentItemIndex_;
+    {
+  IteratorState() : array_(0), currentPageIndex_(0), currentItemIndex_(0) {}
+  ValueInternalArray* array_;
+  Value** currentPageIndex_;
+  unsigned int currentItemIndex_;
   };
 #endif // ifndef JSONCPP_DOC_EXCLUDE_IMPLEMENTATION
 
@@ -1205,25 +1205,25 @@ virtual void destruct( ValueInternalArray *array )
 }
 
 virtual void reallocateArrayPageIndex( Value **&indexes,
-                                       ValueInternalArray::PageIndex
+                     ValueInternalArray::PageIndex
 &indexCount,
-                                       ValueInternalArray::PageIndex
+                     ValueInternalArray::PageIndex
 minNewIndexCount )
 {
    ValueInternalArray::PageIndex newIndexCount = (indexCount*3)/2 + 1;
    if ( minNewIndexCount > newIndexCount )
-      newIndexCount = minNewIndexCount;
+    newIndexCount = minNewIndexCount;
    void *newIndexes = realloc( indexes, sizeof(Value*) * newIndexCount );
    if ( !newIndexes )
-      throw std::bad_alloc();
+    throw std::bad_alloc();
    indexCount = newIndexCount;
    indexes = static_cast<Value **>( newIndexes );
 }
 virtual void releaseArrayPageIndex( Value **indexes,
-                                    ValueInternalArray::PageIndex indexCount )
+                  ValueInternalArray::PageIndex indexCount )
 {
    if ( indexes )
-      free( indexes );
+    free( indexes );
 }
 
 virtual Value *allocateArrayPage()
@@ -1235,7 +1235,7 @@ ValueInternalArray::itemsPerPage ) );
 virtual void releaseArrayPage( Value *value )
 {
    if ( value )
-      free( value );
+    free( value );
 }
 };
    \endcode
@@ -1249,22 +1249,22 @@ public:
   /** \brief Reallocate array page index.
    * Reallocates an array of pointer on each page.
    * \param indexes [input] pointer on the current index. May be \c NULL.
-   *                [output] pointer on the new index of at least
-   *                         \a minNewIndexCount pages.
+   *        [output] pointer on the new index of at least
+   *             \a minNewIndexCount pages.
    * \param indexCount [input] current number of pages in the index.
-   *                   [output] number of page the reallocated index can handle.
-   *                            \b MUST be >= \a minNewIndexCount.
+   *           [output] number of page the reallocated index can handle.
+   *              \b MUST be >= \a minNewIndexCount.
    * \param minNewIndexCount Minimum number of page the new index must be able
    * to
-   *                         handle.
+   *             handle.
    */
   virtual void
   reallocateArrayPageIndex(Value**& indexes,
-                           ValueInternalArray::PageIndex& indexCount,
-                           ValueInternalArray::PageIndex minNewIndexCount) = 0;
+               ValueInternalArray::PageIndex& indexCount,
+               ValueInternalArray::PageIndex minNewIndexCount) = 0;
   virtual void
   releaseArrayPageIndex(Value** indexes,
-                        ValueInternalArray::PageIndex indexCount) = 0;
+            ValueInternalArray::PageIndex indexCount) = 0;
   virtual Value* allocateArrayPage() = 0;
   virtual void releaseArrayPage(Value* value) = 0;
 };
@@ -1293,7 +1293,7 @@ public:
   bool operator!=(const SelfType& other) const { return !isEqual(other); }
 
   difference_type operator-(const SelfType& other) const {
-    return computeDistance(other);
+  return computeDistance(other);
   }
 
   /// Return either the index or the member name of the referenced value as a
@@ -1327,8 +1327,8 @@ private:
   bool isNull_;
 #else
   union {
-    ValueInternalArray::IteratorState array_;
-    ValueInternalMap::IteratorState map_;
+  ValueInternalArray::IteratorState array_;
+  ValueInternalMap::IteratorState map_;
   } iterator_;
   bool isArray_;
 #endif
@@ -1363,25 +1363,25 @@ public:
   SelfType& operator=(const ValueIteratorBase& other);
 
   SelfType operator++(int) {
-    SelfType temp(*this);
-    ++*this;
-    return temp;
+  SelfType temp(*this);
+  ++*this;
+  return temp;
   }
 
   SelfType operator--(int) {
-    SelfType temp(*this);
-    --*this;
-    return temp;
+  SelfType temp(*this);
+  --*this;
+  return temp;
   }
 
   SelfType& operator--() {
-    decrement();
-    return *this;
+  decrement();
+  return *this;
   }
 
   SelfType& operator++() {
-    increment();
-    return *this;
+  increment();
+  return *this;
   }
 
   reference operator*() const { return deref(); }
@@ -1419,25 +1419,25 @@ public:
   SelfType& operator=(const SelfType& other);
 
   SelfType operator++(int) {
-    SelfType temp(*this);
-    ++*this;
-    return temp;
+  SelfType temp(*this);
+  ++*this;
+  return temp;
   }
 
   SelfType operator--(int) {
-    SelfType temp(*this);
-    --*this;
-    return temp;
+  SelfType temp(*this);
+  --*this;
+  return temp;
   }
 
   SelfType& operator--() {
-    decrement();
-    return *this;
+  decrement();
+  return *this;
   }
 
   SelfType& operator++() {
-    increment();
-    return *this;
+  increment();
+  return *this;
   }
 
   reference operator*() const { return deref(); }
@@ -1508,9 +1508,9 @@ public:
    *
    */
   struct StructuredError {
-    size_t offset_start;
-    size_t offset_limit;
-    std::string message;
+  size_t offset_start;
+  size_t offset_limit;
+  std::string message;
   };
 
   /** \brief Constructs a Reader allowing all features
@@ -1527,13 +1527,13 @@ public:
    * document.
    * \param document UTF-8 encoded string containing the document to read.
    * \param root [out] Contains the root value of the document if it was
-   *             successfully parsed.
+   *       successfully parsed.
    * \param collectComments \c true to collect comment and allow writing them
    * back during
-   *                        serialization, \c false to discard comments.
-   *                        This parameter is ignored if
+   *            serialization, \c false to discard comments.
+   *            This parameter is ignored if
    * Features::allowComments_
-   *                        is \c false.
+   *            is \c false.
    * \return \c true if the document was successfully parsed, \c false if an
    * error occurred.
    */
@@ -1546,22 +1546,22 @@ public:
    document to read.
    * \param endDoc Pointer on the end of the UTF-8 encoded string of the
    document to read.
-   \               Must be >= beginDoc.
+   \         Must be >= beginDoc.
    * \param root [out] Contains the root value of the document if it was
-   *             successfully parsed.
+   *       successfully parsed.
    * \param collectComments \c true to collect comment and allow writing them
    back during
-   *                        serialization, \c false to discard comments.
-   *                        This parameter is ignored if
+   *            serialization, \c false to discard comments.
+   *            This parameter is ignored if
    Features::allowComments_
-   *                        is \c false.
+   *            is \c false.
    * \return \c true if the document was successfully parsed, \c false if an
    error occurred.
    */
   bool parse(const char* beginDoc,
-             const char* endDoc,
-             Value& root,
-             bool collectComments = true);
+       const char* endDoc,
+       Value& root,
+       bool collectComments = true);
 
   /// \brief Parse from input stream.
   /// \see Json::operator>>(std::istream&, Json::Value&).
@@ -1571,9 +1571,9 @@ public:
    * document.
    * \return Formatted error message with the list of errors with their location
    * in
-   *         the parsed document. An empty string is returned if no error
+   *     the parsed document. An empty string is returned if no error
    * occurred
-   *         during parsing.
+   *     during parsing.
    * \deprecated Use getFormattedErrorMessages() instead (typo fix).
    */
   JSONCPP_DEPRECATED("Use getFormattedErrorMessages instead")
@@ -1583,18 +1583,18 @@ public:
    * document.
    * \return Formatted error message with the list of errors with their location
    * in
-   *         the parsed document. An empty string is returned if no error
+   *     the parsed document. An empty string is returned if no error
    * occurred
-   *         during parsing.
+   *     during parsing.
    */
   std::string getFormattedErrorMessages() const;
 
   /** \brief Returns a vector of structured erros encounted while parsing.
    * \return A (possibly empty) vector of StructuredError objects. Currently
-   *         only one error can be returned, but the caller should tolerate
+   *     only one error can be returned, but the caller should tolerate
    * multiple
-   *         errors.  This can occur if the parser recovers from a non-fatal
-   *         parse error and then encounters additional errors.
+   *     errors.  This can occur if the parser recovers from a non-fatal
+   *     parse error and then encounters additional errors.
    */
   std::vector<StructuredError> getStructuredErrors() const;
 
@@ -1623,34 +1623,34 @@ public:
 
 private:
   enum TokenType {
-    tokenEndOfStream = 0,
-    tokenObjectBegin,
-    tokenObjectEnd,
-    tokenArrayBegin,
-    tokenArrayEnd,
-    tokenString,
-    tokenNumber,
-    tokenTrue,
-    tokenFalse,
-    tokenNull,
-    tokenArraySeparator,
-    tokenMemberSeparator,
-    tokenComment,
-    tokenError
+  tokenEndOfStream = 0,
+  tokenObjectBegin,
+  tokenObjectEnd,
+  tokenArrayBegin,
+  tokenArrayEnd,
+  tokenString,
+  tokenNumber,
+  tokenTrue,
+  tokenFalse,
+  tokenNull,
+  tokenArraySeparator,
+  tokenMemberSeparator,
+  tokenComment,
+  tokenError
   };
 
   class Token {
   public:
-    TokenType type_;
-    Location start_;
-    Location end_;
+  TokenType type_;
+  Location start_;
+  Location end_;
   };
 
   class ErrorInfo {
   public:
-    Token token_;
-    std::string message_;
-    Location extra_;
+  Token token_;
+  std::string message_;
+  Location extra_;
   };
 
   typedef std::deque<ErrorInfo> Errors;
@@ -1674,18 +1674,18 @@ private:
   bool decodeDouble(Token& token);
   bool decodeDouble(Token& token, Value& decoded);
   bool decodeUnicodeCodePoint(Token& token,
-                              Location& current,
-                              Location end,
-                              unsigned int& unicode);
+                Location& current,
+                Location end,
+                unsigned int& unicode);
   bool decodeUnicodeEscapeSequence(Token& token,
-                                   Location& current,
-                                   Location end,
-                                   unsigned int& unicode);
+                   Location& current,
+                   Location end,
+                   unsigned int& unicode);
   bool addError(const std::string& message, Token& token, Location extra = 0);
   bool recoverFromError(TokenType skipUntilToken);
   bool addErrorAndRecover(const std::string& message,
-                          Token& token,
-                          TokenType skipUntilToken);
+              Token& token,
+              TokenType skipUntilToken);
   void skipUntilSpace();
   Value& currentValue();
   Char getNextChar();
@@ -1724,9 +1724,9 @@ private:
  \verbatim
  {
  "dir": {
-     "file": {
-     // The input stream JSON would be nested here.
-     }
+   "file": {
+   // The input stream JSON would be nested here.
+   }
  }
  }
  \endverbatim
@@ -1831,18 +1831,18 @@ private:
  *
  * The rules for line break and indent are as follow:
  * - Object value:
- *     - if empty then print {} without indent and line break
- *     - if not empty the print '{', line break & indent, print one value per
+ *   - if empty then print {} without indent and line break
+ *   - if not empty the print '{', line break & indent, print one value per
  *line
- *       and then unindent and line break and print '}'.
+ *     and then unindent and line break and print '}'.
  * - Array value:
- *     - if empty then print [] without indent and line break
- *     - if the array contains no object value, empty array or some other value
+ *   - if empty then print [] without indent and line break
+ *   - if the array contains no object value, empty array or some other value
  *types,
- *       and all the values fit on one lines, then print the array on a single
+ *     and all the values fit on one lines, then print the array on a single
  *line.
- *     - otherwise, it the values do not fit on one line, or the array contains
- *       object or non empty array, then print one value per line.
+ *   - otherwise, it the values do not fit on one line, or the array contains
+ *     object or non empty array, then print one value per line.
  *
  * If the Value have comments then they are outputed according to their
  *#CommentPlacement.
@@ -1887,22 +1887,22 @@ private:
 
 /** \brief Writes a Value in <a HREF="http://www.json.org">JSON</a> format in a
  human friendly way,
-     to a stream rather than to a string.
+   to a stream rather than to a string.
  *
  * The rules for line break and indent are as follow:
  * - Object value:
- *     - if empty then print {} without indent and line break
- *     - if not empty the print '{', line break & indent, print one value per
+ *   - if empty then print {} without indent and line break
+ *   - if not empty the print '{', line break & indent, print one value per
  line
- *       and then unindent and line break and print '}'.
+ *     and then unindent and line break and print '}'.
  * - Array value:
- *     - if empty then print [] without indent and line break
- *     - if the array contains no object value, empty array or some other value
+ *   - if empty then print [] without indent and line break
+ *   - if the array contains no object value, empty array or some other value
  types,
- *       and all the values fit on one lines, then print the array on a single
+ *     and all the values fit on one lines, then print the array on a single
  line.
- *     - otherwise, it the values do not fit on one line, or the array contains
- *       object or non empty array, then print one value per line.
+ *   - otherwise, it the values do not fit on one line, or the array contains
+ *     object or non empty array, then print one value per line.
  *
  * If the Value have comments then they are outputed according to their
  #CommentPlacement.
@@ -1999,7 +1999,7 @@ JSON_API std::ostream& operator<<(std::ostream&, const Value& root);
 
 #if JSON_USE_EXCEPTION
 #include <stdexcept>
-#define JSON_ASSERT(condition)                                                 \
+#define JSON_ASSERT(condition)                         \
   assert(condition); // @todo <= change this into an exception throw
 #define JSON_FAIL_MESSAGE(message) throw std::runtime_error(message);
 #else // JSON_USE_EXCEPTION
@@ -2009,18 +2009,18 @@ JSON_API std::ostream& operator<<(std::ostream&, const Value& root);
 // release bugs we write to invalid memory in order to crash hard, so that a
 // debugger or crash reporter gets the chance to take over. We still call exit()
 // afterward in order to tell the compiler that this macro doesn't return.
-#define JSON_FAIL_MESSAGE(message)                                             \
-  {                                                                            \
-    assert(false&& message);                                                   \
-    strcpy(reinterpret_cast<char*>(666), message);                             \
-    exit(123);                                                                 \
+#define JSON_FAIL_MESSAGE(message)                       \
+  {                                      \
+  assert(false&& message);                           \
+  strcpy(reinterpret_cast<char*>(666), message);               \
+  exit(123);                                 \
   }
 
 #endif
 
-#define JSON_ASSERT_MESSAGE(condition, message)                                \
-  if (!(condition)) {                                                          \
-    JSON_FAIL_MESSAGE(message)                                                 \
+#define JSON_ASSERT_MESSAGE(condition, message)                \
+  if (!(condition)) {                              \
+  JSON_FAIL_MESSAGE(message)                         \
   }
 
 #endif // CPPTL_JSON_ASSERTIONS_H_INCLUDED

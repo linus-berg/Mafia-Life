@@ -1,5 +1,7 @@
-#define ML_LOG(MESSAGE) "ML_Client" callExtension format['4:%1', MESSAGE];
-#define _VERSION_ getNumber(configFile >> "CfgPatches" >> "ML_Core" >> "ClientVersion")
+#define ML_LOG(MESSAGE) "ML_Client" callExtension format['0:%1', MESSAGE];
+#define _VERSION_ getNumber( \
+  configFile >> "CfgPatches" >> "ML_Core" >> "ClientVersion")
+  
 //---Vendor Functions---
 #define ML_STOCK(x) (x getVariable ["ML_Vendor_Items", []])
 #define ML_VENDORLIST (ML_Server getVariable ["ML_Vendor_List", []])
@@ -21,7 +23,9 @@
 //--
 //---TLR---
 #define ExecSQF(FILE) [] call compile preprocessFileLineNumbers FILE
-#define ExecSQFwait(FILE) private["_handler"]; _handler = [] spawn (compile (preprocessFileLineNumbers FILE)); waitUntil{scriptDone _handler};
+#define ExecSQFwait(FILE) private["_handler"]; \
+    _handler = [] spawn (compile (preprocessFileLineNumbers FILE)); \ 
+    waitUntil{scriptDone _handler};
 #define strM(x) ([x, ","] call ML_fnc_Int_ToString)
 #define strN(x) ([x, ""] call ML_fnc_Int_ToString)
 //---

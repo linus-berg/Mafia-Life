@@ -2,9 +2,9 @@ disableSerialization;
 private["_display"];
 _display = displayNull;
 waitUntil {
-    _display = findDisplay 46;
-    if (isNull _display) exitWith {false};
-    true
+  _display = findDisplay 46;
+  if (isNull _display) exitWith {false};
+  true
 };
 ML_Keyboard_Status = true;
 

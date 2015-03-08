@@ -3,10 +3,10 @@
 // Separate rootclasses: Disabled, Automatic comments: Enabled
 
 class CfgPatches {
-    class ML_Language_F {
-        units[] = {};
-        weapons[] = {};
-        requiredVersion = 0.1;
-        requiredAddons[] = {};
-    };
+  class ML_Language_F {
+    units[] = {};
+    weapons[] = {};
+    requiredVersion = 0.1;
+    requiredAddons[] = {};
+  };
 };

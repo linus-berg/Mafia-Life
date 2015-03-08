@@ -1,14 +1,14 @@
 class CfgAddons
 {
-    class PreloadBanks{};
-    class PreloadAddons
+  class PreloadBanks{};
+  class PreloadAddons
+  {
+    class Mafia_Life
     {
-        class Mafia_Life
-        {
-            list[] = 
-            {
-                "ML_Images"
-            };
-        };
+      list[] = 
+      {
+        "ML_Images"
+      };
     };
+  };
 };

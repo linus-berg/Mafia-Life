@@ -1,10 +1,10 @@
 showCompass   = 1;
-showGPS       = 1;
-showMap       = 1;
+showGPS     = 1;
+showMap     = 1;
 showNotePad   = 1;
-showWatch     = 1;
-debriefing    = 1;
-respawn       = 3;
+showWatch   = 1;
+debriefing  = 1;
+respawn     = 3;
 respawnDelay  = 10;
 respawnDialog = 0;
 respawnOnStart = 0;
@@ -21,9 +21,9 @@ corpseRemovalMaxTime = 60;
 
 class Header
 {
-    gameType= Life;
-    minPlayers=1;
-    maxPlayers=50;
+  gameType= Life;
+  minPlayers=1;
+  maxPlayers=50;
 };
 
 //---Respawn Inventories---

@@ -12,9 +12,9 @@ if (_player != player) exitWith {};
 if (_amount <= 0) exitWith {};
 
 if ([_amount] call ML_fnc_Account_CheckMin) exitWith {};
-    
+  
 if (_player == _target) exitWith {
-    (_this call ML_fnc_Account_DepositSelf)
+  (_this call ML_fnc_Account_DepositSelf)
 };
 
-(_this call ML_fnc_Account_DepositOther)    
+(_this call ML_fnc_Account_DepositOther)  

@@ -8,9 +8,9 @@ _config = _config + primaryWeaponItems _caller;
 _config = _config + (itemsWithMagazines _caller);
 
 {
-    if(([_config, (_x select 0)] call ML_fnc_Array_ElementCount) < (_x select 1))exitWith{
-        _complete = false;
-    };
+  if(([_config, (_x select 0)] call ML_fnc_Array_ElementCount) < (_x select 1))exitWith{
+    _complete = false;
+  };
 }count _req;
 
 _complete
