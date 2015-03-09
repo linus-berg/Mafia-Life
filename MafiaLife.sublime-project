@@ -1,4 +1,14 @@
 {
+	"build_systems":
+	[
+		{
+			"file_regex": "^[ ]*File \"(...*?)\", line ([0-9]*)",
+			"name": "Anaconda Python Builder",
+			"selector": "source.python",
+			"shell_cmd": "python -u \"$file\""
+		}
+	],
+	"detect_indentation": false,
 	"folders":
 	[
 		{
@@ -6,7 +16,6 @@
 			"path": "."
 		}
 	],
-    "detect_indentation": false,
-    "tabSize": 2,
-    "translate_tabs_to_spaces": true
+	"tabSize": 2,
+	"translate_tabs_to_spaces": true
 }
