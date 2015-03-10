@@ -14,8 +14,9 @@ if ( secondaryWeapon player != "" ) then {
 if ( handgunWeapon player != "" ) then {
   _config pushBack (handgunWeapon player);
 };
-_config = _config + primaryWeaponItems player;
-_config = _config + (itemsWithMagazines player) + (assignedItems player);
+_config append primaryWeaponItems player;
+_config append itemsWithMagazines player; 
+_config append assignedItems player;
 
 lbClear IDC_Vendor_SELL_LIST;
 {

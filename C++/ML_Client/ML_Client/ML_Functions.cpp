@@ -10,11 +10,11 @@
 #include <easylogging++.h>
 
 ELPP_INIT_EASYLOGGINGPP(
-  new el::base::Storage( el::LogBuilderPtr(new el::base::DefaultLogBuilder()) )
+    new el::base::Storage(el::LogBuilderPtr(new el::base::DefaultLogBuilder()))
 )
 
-void ML::CallExtension( char *output, const int &output_size, 
-                        const char *function ) {
+void ML::CallExtension(char *output, const int &output_size, 
+                       const char *function) {
   /* Supplied string from Arma */
   const std::string params(function); 
   /* Function to call */
@@ -43,7 +43,7 @@ void ML::CallExtension( char *output, const int &output_size,
       Fnc_ID = 2; 
     }
 
-    switch ( Fnc_ID ) {
+    switch (Fnc_ID) {
       /* Reads keybinds in JSON format from the Mafia Life config file. */
       case 1: {
         returnArma = ML::ReadValue(param);
@@ -86,12 +86,12 @@ void ML::CallExtension( char *output, const int &output_size,
 }
 
 /* Check if input matches RegEx string. */
-bool ML::RegEXCheck( std::string input, std::string RegEx ) {
+bool ML::RegEXCheck(std::string input, std::string RegEx) {
   return std::regex_match(input, std::regex(RegEx));
 }
 
 /* Read value from Json file. */
-std::string ML::ReadValue( std::string input ) {
+std::string ML::ReadValue(std::string input) {
   Json::Value root;
   Json::Reader reader;
   std::ifstream ML_Config("ML_Config.json", std::ifstream::binary);
@@ -107,7 +107,7 @@ std::string ML::ReadValue( std::string input ) {
   const Json::Value key = root[input];
 
   /* If the key is not null, we return it, else we return error. */
-  if (!key.isNull()) {
+  if ( !key.isNull() ) {
     return key.asString();
   } else {
     return "Error: No key found.";

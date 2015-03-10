@@ -10,7 +10,7 @@ class cfgFunctions {
   };
   class Mafia_Life {
     tag = ML;
-    //---Initialization---//
+    /*---Initialization---*/
     class Initialization {
       file = "ML_Functions\Functions\Initialization";
       class Initialization {
