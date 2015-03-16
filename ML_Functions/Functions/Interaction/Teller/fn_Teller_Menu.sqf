@@ -6,10 +6,10 @@ _this spawn {
   
   _player = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
   
-  if !( [_player] call ML_fnc_Client_Human ) exitWith {};
-  if ( _player != player ) exitWith {};
+  if (![_player] call ML_fnc_Client_Human) exitWith {};
+  if (_player != player) exitWith {};
 
-  if !( createDialog "Account" ) exitWith {
+  if (!createDialog "Account") exitWith {
     SystemChat "Dialog Error, Please report this on the bug tracker and provide your .RPT file."; /* Ignore: line over 80 chars */
     ML_LOG("ERROR: Dialog Error");
   };
@@ -18,7 +18,7 @@ _this spawn {
 
   _my_index = [IDC_ACCOUNT_PLAYERS] call ML_fnc_GUI_ClientListComplete;
 
-  if ( _my_index >= 0 ) then {
+  if (_my_index >= 0) then {
     lbSetCurSel [IDC_ACCOUNT_PLAYERS, _my_index];
   };
   
@@ -34,7 +34,7 @@ _this spawn {
                            call ML_fnc_Account_Withdraw; closedialog 0;", 
                           _player, IDC_ACCOUNT_AMOUNT]];
 
-  while { ctrlVisible IDC_ACCOUNT_DEPOSIT } do {
+  while {ctrlVisible IDC_ACCOUNT_DEPOSIT} do {
     private["_money", "_bank"];
     _money = [_player] call ML_fnc_Client_GetCoins;
     _bank = [_player] call ML_fnc_Account_Get;
@@ -42,7 +42,7 @@ _this spawn {
     CtrlSetText [IDC_ACCOUNT_COINS, format ["%1€", strM(_bank)]];
     private["_amount"];
     _amount = [ctrlText 2] call ML_fnc_String_ToInt;
-    if ( _amount < 0 ) then {
+    if (_amount < 0) then {
       _amount = 0
     };
     sleep 0.3;
