@@ -23,8 +23,8 @@ _this spawn {
   
   buttonSetAction [IDC_ACCOUNT_DEPOSIT, 
                    format["[%1, 
-                           (missionNamespace getVariable(
-                               lbData [%2, lbCurSel %2])),
+                           (missionNamespace getVariable(lbData [%2,
+                                                         lbCurSel %2])),
                            [ctrlText %3] call ML_fnc_String_ToInt]
                            call ML_fnc_Account_Deposit; closedialog 0;", 
                           _player, IDC_ACCOUNT_PLAYERS, IDC_ACCOUNT_AMOUNT]];
