@@ -10,7 +10,6 @@ _this spawn {
   if (_player != player) exitWith {};
 
   if (!createDialog "Account") exitWith {
-    SystemChat "Dialog Error, Please report this on the bug tracker and provide your .RPT file."; /* Ignore: line over 80 chars */
     ML_LOG("ERROR: Dialog Error");
   };
 
