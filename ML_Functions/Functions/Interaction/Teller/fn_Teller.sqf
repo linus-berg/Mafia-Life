@@ -10,7 +10,7 @@ if !( [_player] call ML_fnc_Client_Human ) exitWith {
 if ( [_target] call ML_fnc_Client_Human ) exitWith {
   return false
 };
-if !( _target in coinmachines ) exitWith {
+if ( (_target getVariable ["ml_teller_id", 0]) == 0 ) exitWith {
   return false
 };
 

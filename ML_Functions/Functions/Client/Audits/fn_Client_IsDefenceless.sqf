@@ -3,7 +3,7 @@
 private["_player"];
 _player = _this;
 
-if !( [_player] call ML_fnc_Client_Human ) exitWith {
+if !([_player] call ML_fnc_Client_Human) exitWith {
   return false
 };
 

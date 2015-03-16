@@ -9,24 +9,26 @@ _password_c = [_this, 2, "", [""]] call BIS_fnc_param;
 _passed = 0;
 
 _passed = parseNumber("ML_Client" callExtension format['2:%1', _email]);
-if ( _passed == 0 ) exitWith {
+if (_passed == 0) exitWith {
   systemChat "Your input is not a valid email address."; /* TODO: Localize */
   return false
 };
 
-if ( _password != _password_c ) exitWith { 
+if (_password != _password_c) exitWith { 
   systemChat "Your passwords do not match";  /* TODO: Localize */
   return false
 };
 
 _passed = parseNumber("ML_Client" callExtension format['3:%1', _password]);
-if ( _passed == 0 ) exitWith {
-  systemChat "Invalid password, it needs to contain six to fifteen characters,
-              and one number."; /* TODO: Localize */
+if (_passed == 0) exitWith {
+  systemChat 
+      "Invalid password, it needs to contain six to fifteen characters,
+       and one number.";
   return false
 };
 
-["ML_Network_Server_Data_Register", [netId(player), true, _email, _password]]
- call ML_fnc_Network_ClientToServer;
+CALL_F(ML_fnc_Network_ClientToServer, 
+       ["ML_Network_Server_Data_Register",
+        [netId(player), true, _email, _password]]);
 
 return true

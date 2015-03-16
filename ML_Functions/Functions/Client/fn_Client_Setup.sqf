@@ -1,9 +1,9 @@
 #include "\ML_Functions\ML_Macros.h"
 
-while { true } do {
+while {true} do {
   private["_complete"];
   _complete = ([player] call ML_fnc_Client_Human) || isServer;
-  if ( _complete ) exitWith {};
+  if (_complete) exitWith {};
 };
 
 private["_player"];
@@ -15,6 +15,13 @@ isIns = [_player] call ML_fnc_Client_SideIns;
 
 _player setVariable ["ML_Role", _player, true];
 _player setVariable ["ML_RoleString", Str(_player), true];
-_player setVariable ["ML_RoleNumber", 
-                     [Str(_player), 4] call BIS_fnc_trimString, 
+_player setVariable ["ML_RoleNumber", [Str _player, 4] call BIS_fnc_trimString,
                      true];
+
+Coins = 0;
+Bank_Coins = 25000;
+Paycheck = 500;
+tax = 5;
+//ML_CurrentVendor   = objNull;
+ML_VendorCart    = [];
+ML_VendorTotal  = 0;

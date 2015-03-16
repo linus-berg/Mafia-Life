@@ -2,9 +2,8 @@
 
 private["_player"];
 _player = _this;
-if ( (primaryWeapon _player) != "" || 
-     (secondaryWeapon _player) != "" || 
-     (handgunWeapon _player) != "" ) exitWith {
+if ((primaryWeapon _player) != "" || (secondaryWeapon _player) != "" ||
+    (handgunWeapon _player) != "") exitWith {
   return true
 };
 

@@ -1,7 +1,7 @@
-showCompass   = 1;
+showCompass = 1;
 showGPS     = 1;
 showMap     = 1;
-showNotePad   = 1;
+showNotePad = 1;
 showWatch   = 1;
 debriefing  = 1;
 respawn     = 3;

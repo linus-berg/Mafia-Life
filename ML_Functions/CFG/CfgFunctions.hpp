@@ -264,6 +264,7 @@ class cfgFunctions {
     class Misc {
       file = "ML_Functions\Functions\Misc";
       class Misc_CheckTimer{};
+      class Misc_Debug{};
     };
   };
 };

@@ -1,6 +1,6 @@
 #include "\ML_Functions\ML_Macros.h"
 
-if( _this <= 0 ) exitWith {
+if(_this <= 0) exitWith {
   return true
 };
 

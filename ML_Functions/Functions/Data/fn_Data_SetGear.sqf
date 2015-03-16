@@ -3,11 +3,11 @@
 private ["_client", "_gear", "_uniform", "_vest", "_backpack", "_goggles",
          "_headgear", "_assignedItems", "_primary", "_primary_i", "_handgun",
          "_handgun_i", "_container", "_uniform_w", "_uniform_m", "_uniform_i",
-         "_backpack_w", "_backpack_m", "_backpack_i", "_vest_w", "_vest_m", 
+         "_backpack_w", "_backpack_m", "_backpack_i", "_vest_w", "_vest_m",
          "_vest_i"];
 _client = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
 _gear = [_this, 1, [], [[]]] call BIS_fnc_param;
-if( (count _gear) <= 0 ) exitWith {
+if((count _gear) <= 0) exitWith {
   SystemChat "ERROR: No gear list provided."; 
   return false
 };
@@ -22,19 +22,19 @@ _handgun = _gear select 8;
 
 call ML_fnc_Inventory_ClearClient;
 
-if( _goggles != "" ) then {
+if(_goggles != "") then {
   _client forceAddUniform _uniform;
 };
-if( _headgear != "" ) then {
+if(_headgear != "") then {
   _client addHeadgear _headgear;
 };
-if( (count _assignedItems) != 0 ) then {
+if((count _assignedItems) != 0) then {
   {
     _client linkItem _x;
   } count _assignedItems;
 };
 
-if( _uniform != "" ) then {
+if(_uniform != "") then {
   _client forceAddUniform _uniform;
   _uniform_w = _gear select 10;
   _uniform_m = _gear select 11;
@@ -52,7 +52,7 @@ if( _uniform != "" ) then {
   } forEach (_uniform_i select 0);
 };
 
-if( _backpack != "" ) then {
+if(_backpack != "") then {
   _client addBackpack _backpack;
   _backpack_w = _gear select 13;
   _backpack_m = _gear select 14;
@@ -71,7 +71,7 @@ if( _backpack != "" ) then {
   } forEach (_backpack_i select 0);
 };
 
-if( _vest != "" ) then {
+if(_vest != "") then {
   _client addVest _vest;
   _vest_w = _gear select 16;
   _vest_m = _gear select 17;
@@ -89,21 +89,21 @@ if( _vest != "" ) then {
 };
 
 
-if( _primary != "" ) then {
+if(_primary != "") then {
   _client addWeapon _primary;
   _primary_i = _gear select 7;
   {
-    if( _x != "" ) then {
+    if(_x != "") then {
       _client addPrimaryWeaponItem _x;
     };
   } count _primary_i;
 };
 
-if( _handgun != "" ) then {
+if(_handgun != "") then {
   _client addWeapon _handgun;
   _handgun_i = _gear select 9;
   {
-    if( _x != "" ) then {
+    if(_x != "") then {
       _client addHandgunItem _x;
     };
   } count _handgun_i;

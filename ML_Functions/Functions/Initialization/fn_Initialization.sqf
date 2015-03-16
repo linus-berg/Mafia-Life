@@ -20,7 +20,7 @@ ExecFSM "\ML_Functions\Functions\Coins\Coins.FSM";
 //---
 
 //Development scripts, will not be in final version.
-ExecSQF("\ML_Core\Client\ML_VariableSetup.sqf"); //Remove this and load ATMs from server.
+//ExecSQF("\ML_Core\Client\ML_VariableSetup.sqf"); //Remove this and load ATMs from server.
 //---
 
 /*
