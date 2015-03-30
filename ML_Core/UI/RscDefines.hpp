@@ -1326,42 +1326,26 @@ class RscButtonMenuCancel
   };
   text = "Cancel";
 };
-class RscControlsGroup
-{
-  class VScrollbar
-  {
-    color[] = 
-    {
-      1,
-      1,
-      1,
-      1
-    };
+
+class RscControlsGroup {
+  class VScrollbar {
+    color[] = {1, 1, 1, 1};
     width = 0.021;
     autoScrollEnabled = 1;
-    arrowEmpty = "\ML_Images\GUI\Scroll_Arrow.paa"; // Arrow
-    arrowFull = "\ML_Images\GUI\Scroll_ArrowActive.paa"; // Arrow when clicked on
-    border = "\A3\ui_f\data\gui\cfg\scrollbar\border_ca.paa"; // Slider background (stretched vertically)
-    thumb = "\ML_Images\GUI\thumb_ca.paa"; // Dragging element (stretched vertically)
+    arrowEmpty = "\ML_Images\GUI\Scroll_Arrow.paa";
+    arrowFull = "\ML_Images\GUI\Scroll_ArrowActive.paa";
+    border = "\A3\ui_f\data\gui\cfg\scrollbar\border_ca.paa";
+    thumb = "\ML_Images\GUI\thumb_ca.paa";
   };
-  class HScrollbar
-  {
-    color[] = 
-    {
-      1,
-      1,
-      1,
-      1
-    };
+  class HScrollbar {
+    color[] = {1, 1, 1, 1};
     height = 0.028;
-    arrowEmpty = "\ML_Images\GUI\Scroll_Arrow.paa"; // Arrow
-    arrowFull = "\ML_Images\GUI\Scroll_ArrowActive.paa"; // Arrow when clicked on
-    border = "\A3\ui_f\data\gui\cfg\scrollbar\border_ca.paa"; // Slider background (stretched vertically)
-    thumb = "\ML_Images\GUI\thumb_ca.paa"; // Dragging element (stretched vertically)
+    arrowEmpty = "\ML_Images\GUI\Scroll_Arrow.paa";
+    arrowFull = "\ML_Images\GUI\Scroll_ArrowActive.paa";
+    border = "\A3\ui_f\data\gui\cfg\scrollbar\border_ca.paa";
+    thumb = "\ML_Images\GUI\thumb_ca.paa";
   };
-  class Controls
-  {
-  };
+  class Controls {};
   type = 15;
   idc = -1;
   x = 0;
@@ -1370,193 +1354,4 @@ class RscControlsGroup
   h = 1;
   shadow = 0;
   style = 16;
-};
-
-class ML_Button: RscShortcutButton
-{
-  class TextPos
-  {
-    left = 0;
-    top = 0;
-    right = 0;
-    bottom = 0;
-  };
-  class Attributes
-  {
-    align = "center";
-    color = "#fab000";
-  };
-  animTextureDefault = "\ML_Images\GUI\button_ca.paa";
-  animTextureNormal = "\ML_Images\GUI\button_ca.paa";
-  animTextureDisabled = "\ML_Images\GUI\button_ca.paa";
-  animTextureOver = "\ML_Images\GUI\button_active_ca.paa";
-  animTextureFocused = "\ML_Images\GUI\button_active_ca.paa";
-  animTexturePressed = "\ML_Images\GUI\button_active_ca.paa";
-};
-
-class ML_InterAct_Button: RscButton
-{
-  colorText[] = 
-  {
-    0.282,
-    0.282,
-    0.282,
-    1
-  };
-  colorDisabled[] = 
-  {
-    0,
-    0,
-    0,
-    0.25
-  };
-  colorBackground[] = 
-  {
-    0,
-    0,
-    0,
-    0
-  };
-  colorBackgroundDisabled[] = 
-  {
-    0,
-    0,
-    0,
-    0
-  };
-  colorBackgroundActive[] = 
-  {
-    0,
-    0,
-    0,
-    0
-  };
-  colorFocused[] = 
-  {
-    0,
-    0,
-    0,
-    0
-  };
-  colorShadow[] = 
-  {
-    0,
-    0,
-    0,
-    0
-  };
-  colorBorder[] = 
-  {
-    0,
-    0,
-    0,
-    0
-  };
-  style = 2 + 0x00;
-  shadow = 0;
-  font = "ComicSans";
-  sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
-  
-};
-class ML_RscEdit: RscEdit
-{
-  colorBackground[] = 
-  {
-    0,
-    0,
-    0,
-    1
-  };
-  colorText[] = 
-  {
-    0.282,
-    0.282,
-    0.282,
-    1
-  };
-  shadow = 0;
-  style = "0x00";
-  font = "ComicSans";
-};
-
-class ML_StructText: RscStructuredText
-{
-  colorText[] = 
-  {
-    1,
-    1,
-    1,
-    1
-  };
-  class Attributes
-  {
-    font = "ComicSans";
-    color = "#484848";
-    align = "left";
-    shadow = 0;
-  };
-  lineSpacing = 0.5;
-  shadow = 0;
-  size = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
-};
-
-class ML_StructText_Two: RscStructuredText
-{
-  class Attributes
-  {
-    font = "Friz";
-    //color = "#484848";
-    align = "left";
-    shadow = 0;
-  };
-  lineSpacing = 0.5;
-  shadow = 0;
-  size = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
-};
-
-class ML_Quest_Button: RscShortcutButton
-{
-  class TextPos
-  {
-    left = 0;
-    top = 0;
-    right = 0;
-    bottom = 0;
-  };
-  
-  class Attributes
-  {
-    font = "Friz";
-    color = "#484848";
-    align = "center";
-    shadow = 0;
-  };
-  color[] = {0.98,0.69,0,1};
-  colorFocused[] = {1, 1, 1, 1};
-  color2[] = {1, 1, 1, 1};
-  colorDisabled[] = {1, 1, 1, 0.25};
-  sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.5)";
-  animTextureDefault = "\ML_Images\GUI\button_ca.paa";
-  animTextureNormal = "\ML_Images\GUI\button_ca.paa";
-  animTextureDisabled = "\ML_Images\GUI\button_ca.paa";
-  animTextureOver = "\ML_Images\GUI\button_active_ca.paa";
-  animTextureFocused = "\ML_Images\GUI\button_active_ca.paa";
-  animTexturePressed = "\ML_Images\GUI\button_active_ca.paa";
-};
-
-class ML_ControlsGroup: RscControlsGroup{
-  class VScrollbar
-  {
-    arrowEmpty = "\ML_Images\GUI\Scroll_Arrow.paa"; // Arrow
-    arrowFull = "\ML_Images\GUI\Scroll_ArrowActive.paa"; // Arrow when clicked on
-    border = "\A3\ui_f\data\gui\cfg\scrollbar\border_ca.paa"; // Slider background (stretched vertically)
-    thumb = "\ML_Images\GUI\thumb_ca.paa"; // Dragging element (stretched vertically)
-  };
-  class HScrollbar
-  {
-    arrowEmpty = "\ML_Images\GUI\Scroll_Arrow.paa"; // Arrow
-    arrowFull = "\ML_Images\GUI\Scroll_ArrowActive.paa"; // Arrow when clicked on
-    border = "\A3\ui_f\data\gui\cfg\scrollbar\border_ca.paa"; // Slider background (stretched vertically)
-    thumb = "\ML_Images\GUI\thumb_ca.paa"; // Dragging element (stretched vertically)
-  };
 };

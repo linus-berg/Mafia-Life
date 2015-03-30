@@ -8,7 +8,7 @@ waitUntil {
   if ( isNull _display ) exitWith {
     return false
   };
-  true
+  return true
 };
 ML_Keyboard_Status = true;
 
