@@ -18,5 +18,4 @@ _current_coins = [_client_coins] call ML_fnc_ToInt;
 
 _amount = _amount + _current_coins;
 
-return CALL_F(ML_fnc_Variable_Set, 
-              [_player, "ML_Client_Coins", CALL_F(ML_fnc_ToAscii, _amount)]);
+return ([_player, "ML_Client_Coins", (_amount call ML_fnc_ToAscii)] call ML_fnc_Variable_Set)

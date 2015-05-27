@@ -15,7 +15,7 @@ if (count (_quest select 6) > 0) then {
 
 _npc removeAction (missionNameSpace getVariable [(format["%1_Quest_Action_HandIn", (_quest select 0)]), 0]);
 
-CALL_F(ML_fnc_Quests_Rewards, [(_quest select 4), (_quest select 5), (_quest select 7), (_quest select 8), _caller]);
+[(_quest select 4), (_quest select 5), (_quest select 7), (_quest select 8), _caller] call ML_fnc_Quests_Rewards;
 
 
 _quests = (_caller getVariable ["ML_Quests_Current", []]);

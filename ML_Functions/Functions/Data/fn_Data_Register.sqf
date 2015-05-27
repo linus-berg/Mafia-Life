@@ -27,8 +27,6 @@ if (_passed == 0) exitWith {
   return false
 };
 
-CALL_F(ML_fnc_Network_ClientToServer, 
-       ["ML_Network_Server_Data_Register",
-        [netId(player), true, _email, _password]]);
+["ML_Network_Server_Data_Register", [netId player, true, _email, _password]] call ML_fnc_Network_ClientToServer;
 
 return true
