@@ -4,7 +4,7 @@
 private["_index", "_price"];
 _index = [_this, 0, 0, [0]] call BIS_fnc_param;
 _price = [_this, 1, 0, [0]] call BIS_fnc_param;
-if ( _index == -1 ) exitWith {
+if (_index == -1) exitWith {
   systemChat "No Item selected";
 };
 

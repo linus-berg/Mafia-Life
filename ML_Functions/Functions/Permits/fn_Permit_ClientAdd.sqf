@@ -4,7 +4,7 @@ private["_player", "_permit_id", "_permits"];
 _player = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
 _permit_id = [_this, 1, 0, [0]] call BIS_fnc_param;
 
-if !( [_player] call ML_fnc_Client_Human ) exitWith {
+if !([_player] call ML_fnc_Client_Human) exitWith {
   return 0
 };
 

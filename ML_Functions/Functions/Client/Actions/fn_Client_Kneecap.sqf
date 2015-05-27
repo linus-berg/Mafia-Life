@@ -1,7 +1,7 @@
 #include "\ML_Functions\ML_Macros.h"
 
 if (!(player call ML_fnc_Client_IsArmed) &&
-    !([player, [ "sc_hammer", "sc_tire_iron", "sc_wrench", "sc_axe" ]]
+    !([player, ML_Items_Lethal]
         call ML_fnc_Inventory_HasItem))
   exitWith {
   systemChat "You are unarmed."; 

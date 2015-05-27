@@ -6,12 +6,12 @@ _variable_name = [_this, 1, "", [""]] call BIS_fnc_param;
 
 private["_variable_value"];
 _variable_value = _player getVariable _variable_name;
-_variable_value = if ( isNil "_variable_value" ) then {
+_variable_value = if (isNil "_variable_value") then {
                     [] 
                   } else {
                     _variable_value
                   };
-_variable_value = if ( typeName _variable_value != "ARRAY" ) then {
+_variable_value = if (typeName _variable_value != "ARRAY") then {
                     [] 
                   } else {
                     _variable_value

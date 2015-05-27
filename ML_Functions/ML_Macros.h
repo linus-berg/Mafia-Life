@@ -32,9 +32,9 @@
 #define M_NAMESPACE(var,defaultvar) missionNamespace getVariable [var, defaultvar]
 
 #ifdef ML_DEBUG
-    #define CALL_F(fnc,vars) (vars call fnc) call ML_fnc_Misc_Debug
+  #define CALL_F(fnc,vars) (vars call fnc) call ML_fnc_Misc_Debug
 #else
-    #define CALL_F(fnc,vars) vars call fnc
+  #define CALL_F(fnc,vars) vars call fnc
 #endif
 
 /* Redundant, only added to improve readability in the code. */

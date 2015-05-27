@@ -7,17 +7,17 @@ _cart = ML_VendorCart;
 _total = ML_VendorTotal;
 _coins = [player] call ML_fnc_Client_GetCoins;
 
-if ( (count _cart) <= 0 ) exitWith {
+if ((count _cart) <= 0) exitWith {
   systemChat "You have nothing in your cart";
 };
 
-if ( _coins < _total ) exitWith {
+if (_coins < _total) exitWith {
   systemChat "Not enough Coins!";
   return false
 };
 
 {
-  switch ( _x call ML_fnc_Merchandise_GetCfg ) do {
+  switch (_x call ML_fnc_Merchandise_GetCfg) do {
     case "CfgMagazines": {
       (_Vendor_spawn select 0) addItemCargoGlobal [_x, 1];
     }; 

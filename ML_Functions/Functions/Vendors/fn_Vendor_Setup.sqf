@@ -5,12 +5,12 @@ private["_Vendor", "_Vendor_list"];
 _Vendor = _this;
 _Vendor_list = ML_STOCK(_Vendor);
 
-if !( str(side player) in 
-      ([(ML_SIDE(_Vendor)), ","] call BIS_fnc_splitString) ) exitWith {
+if !(str(side player) in 
+    ([(ML_SIDE(_Vendor)), ","] call BIS_fnc_splitString)) exitWith {
   systemChat "This Vendor is not for your current side"; 
   return false
 };
-if !( createDialog "Vendor_dialog" ) exitWith {
+if !(createDialog "Vendor_dialog") exitWith {
   ML_LOG("Dialogue error"); 
   systemChat "Dialogue did not open. Please report this on our bug tracker"; 
   return false

@@ -3,10 +3,10 @@
 private["_ctrl"];
 _ctrl = _this;
 
-if !( ML_Keyboard_Status ) exitWith {
+if !(ML_Keyboard_Status) exitWith {
   return false
 };
-if ( Dialog ) exitWith {
+if (Dialog) exitWith {
   closeDialog 0; 
   return false
 };
@@ -31,16 +31,16 @@ for [{_i=1}, {_i < 3}, {_i=_i+1}] do {
   _atm  = _atms select 0;
 
   _handled = [player, _atm] call ML_fnc_Teller;
-  if ( _handled ) exitWith {};
+  if (_handled) exitWith {};
   
   _handled = [player, _civ] call ML_fnc_Interaction_Client;
-  if ( _handled ) exitWith {};
+  if (_handled) exitWith {};
   
   _handled = [player, _civ] call ML_fnc_Vendor;
-  if ( _handled ) exitWith {};
+  if (_handled) exitWith {};
 };
 
-if( _handled ) exitWith {
+if(_handled) exitWith {
   return true
 };
 

@@ -5,7 +5,7 @@ private["_display"];
 _display = displayNull;
 waitUntil {
   _display = findDisplay 46;
-  if ( isNull _display ) exitWith {
+  if (isNull _display) exitWith {
     return false
   };
   return true

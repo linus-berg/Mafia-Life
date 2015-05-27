@@ -2,7 +2,6 @@
 
 #include "ML_Functions.h"
 #include <cstring>
-#include <iostream>
 #include <Poco\NumberParser.h>
 #include <json\json.h>
 #include <fstream>

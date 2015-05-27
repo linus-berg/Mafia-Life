@@ -3,7 +3,7 @@
 private["_merch"];
 _merch = [_this, 0, "", [""]] call BIS_fnc_param;
 
-switch ( true ) do {
+switch (true) do {
   case (isClass (configFile >> "CfgMagazines" >> _merch)): {
     return ("CfgMagazines")
   };

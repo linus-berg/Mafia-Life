@@ -6,7 +6,7 @@ _index   = [_this, 0, 0, [0]] call BIS_fnc_param;
 _price   = [_this, 1, 0, [0]] call BIS_fnc_param;
 _item   = [_this, 2, "", [""]] call BIS_fnc_param;
 
-switch ( [_item] call ML_fnc_Merchandise_GetCfg ) do {
+switch ([_item] call ML_fnc_Merchandise_GetCfg) do {
   case "CfgMagazines": {
     [player, _item, 1] call ML_fnc_Inventory_RemoveItem;
   }; 

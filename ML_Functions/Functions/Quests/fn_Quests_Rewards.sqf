@@ -1,8 +1,9 @@
 #include "\ML_Functions\ML_Macros.h"
 
-private ["_Rewards", "_BoxSpawn", "_VehicleSpawn"];
+private ["_Coins", "_Rewards", "_BoxSpawn", "_VehicleSpawn"];
 
-_Rewards = [_this, 0, 0, [[]]] call BIS_fnc_param;
+_Coins = [_this, 0, 0, [[]]] call BIS_fnc_param;
+_Rewards = [_this, 1, 0, [[]]] call BIS_fnc_param;
 _BoxSpawn = [_this, 1, 0, [""]] call BIS_fnc_param;
 _VehicleSpawn = [_this, 2, 0, [""]] call BIS_fnc_param;
 _Caller = [_this, 3, 0, [ObjNull]] call BIS_fnc_param;
@@ -10,8 +11,14 @@ _Caller = [_this, 3, 0, [ObjNull]] call BIS_fnc_param;
 _BoxSpawn = (missionNameSpace getVariable [_BoxSpawn, ObjNull]);
 _VehicleSpawn = (missionNameSpace getVariable [_VehicleSpawn, ObjNull]);
 
+CALL_F(ML_fnc_Client_SetCoins, [_Caller, _Coins]);
+
+if (count _Rewards == 0) exitWith {
+  return true
+};
+
 {
-  switch ( [(_x select 0)] call ML_fnc_Merchandise_GetCfg ) do {
+  switch ([(_x select 0)] call ML_fnc_Merchandise_GetCfg) do {
     case "CfgVehicles": {
       private["_veh", "_i"];
       for "_i" from 1 to (_x select 1) do {
@@ -19,7 +26,6 @@ _VehicleSpawn = (missionNameSpace getVariable [_VehicleSpawn, ObjNull]);
       };
     };
     case "ML_Item": {
-      [_Caller, (_x select 1)] call ML_fnc_Client_SetCoins;
     };
     default {
       _BoxSpawn addItemCargoGlobal [(_x select 0), (_x select 1)];

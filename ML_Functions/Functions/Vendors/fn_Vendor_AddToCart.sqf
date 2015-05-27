@@ -11,27 +11,27 @@ _price = [_this, 1, 0, [0]] call BIS_fnc_param;
 _amount = [_this, 2, 0, [0]] call BIS_fnc_param;
 _cur_cart = (count ML_VendorCart);
 
-if ( _item == "" ) exitWith {
+if (_item == "") exitWith {
   systemChat "No item selected!"; 
   return false
 };
-if ( _cur_cart >= 50 ) exitWith {
+if (_cur_cart >= 50) exitWith {
   systemChat "Your cart is full.";
   return false
 };
-if ( _amount <= 0 ) exitWith {
+if (_amount <= 0) exitWith {
   systemChat "Enter a positive amount"; 
   return false
 };
-if ( (_cur_cart+_amount) >= 50 ) then {
+if ((_cur_cart+_amount) >= 50) then {
   _amount = 50-_cur_cart;
 };
-if ( _amount > 50 ) then {
+if (_amount > 50) then {
   systemChat "You can only purchase a maximum of 50 items at once"; 
   _amount = 50;
 };
 
-if !( _permit call ML_fnc_Client_HasPermit ) exitWith {
+if !(_permit call ML_fnc_Client_HasPermit) exitWith {
   systemChat "You do not have the required permit."; 
   return false
 };

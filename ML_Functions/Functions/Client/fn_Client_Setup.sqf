@@ -17,11 +17,9 @@ _player setVariable ["ML_Role", _player, true];
 _player setVariable ["ML_RoleString", Str(_player), true];
 _player setVariable ["ML_RoleNumber", [Str _player, 4] call BIS_fnc_trimString,
                      true];
-
-Coins = 0;
-Bank_Coins = 25000;
+                     
 Paycheck = 500;
-tax = 5;
-//ML_CurrentVendor   = objNull;
+
+ML_Items_Lethal = ["ML_Tyreiron"];
 ML_VendorCart    = [];
 ML_VendorTotal  = 0;

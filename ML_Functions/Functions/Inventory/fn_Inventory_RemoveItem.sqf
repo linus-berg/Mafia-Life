@@ -7,7 +7,7 @@ _amount = [_this, 2, "", [0]] call BIS_fnc_param;
 _assigned = (assignedItems _player);
 _items = (itemsWithMagazines _player);
 
-switch ( true ) do {
+switch (true) do {
   case (_item in _assigned): {
     _player unlinkItem  _item;
   };
@@ -17,7 +17,7 @@ switch ( true ) do {
     };
   };
   default {
-    if ( _player hasWeapon _item ) then {
+    if (_player hasWeapon _item) then {
       _player removeWeaponGlobal _item;
     } else {
       return false

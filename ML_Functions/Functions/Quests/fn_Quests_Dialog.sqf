@@ -1,11 +1,11 @@
 #include "\ML_Core\UI\GUI.h"
 #include "\ML_Functions\ML_Macros.h"
 
-if ( dialog ) exitWith {
+if (dialog) exitWith {
   closeDialog 0; 
   return false
 };
-if !( createDialog "ML_Quest_Dialog" ) exitWith {
+if !(createDialog "ML_Quest_Dialog") exitWith {
   ML_LOG("Dialogue error"); 
   systemChat "Dialogue did not open. Please report this on our bug tracker"; 
   return false

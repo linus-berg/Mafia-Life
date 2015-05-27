@@ -13,8 +13,8 @@ _show_items = [_this, 3, true, [true]] call BIS_fnc_param;
 lbClear IDC_Vendor_BUY_LIST;
 
 {
-  if ( _x select 2 == 1 ) then {
-    switch ( _x call ML_fnc_Merchandise_GetCfg ) do {
+  if (_x select 2 == 1) then {
+    switch (_x call ML_fnc_Merchandise_GetCfg) do {
       case "CfgWeapons": {
         _add = _show_weapons;
       };
@@ -31,7 +31,7 @@ lbClear IDC_Vendor_BUY_LIST;
         _add = _show_items;
       };
     };
-    if ( _add ) then {
+    if (_add) then {
       _index = lbAdd [IDC_Vendor_BUY_LIST, 
                       ((_x select 0) call ML_fnc_Merchandise_GetName)];
       lbSetData [IDC_Vendor_BUY_LIST, _index, Str(_forEachIndex)];
@@ -44,13 +44,13 @@ lbClear IDC_Vendor_BUY_LIST;
   };
 } forEach _list;
 
-if ( lbSize IDC_Vendor_BUY_LIST <= 0 ) then {
+if (lbSize IDC_Vendor_BUY_LIST <= 0) then {
   lbSetCurSel [IDC_Vendor_BUY_LIST, -1];
-  if ( ctrlEnabled IDC_Vendor_ADD_CART ) then {
+  if (ctrlEnabled IDC_Vendor_ADD_CART) then {
     ctrlEnable [IDC_Vendor_ADD_CART, false];
   };
 } else {
-  if !( ctrlEnabled IDC_Vendor_ADD_CART ) then {
+  if !(ctrlEnabled IDC_Vendor_ADD_CART) then {
     ctrlEnable [IDC_Vendor_ADD_CART, true];
   };
   lbSetCurSel [IDC_Vendor_BUY_LIST, 0];

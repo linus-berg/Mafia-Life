@@ -2,11 +2,11 @@
 
 ML_LOG("_______MAFIA LIFE V." + str _VERSION_ + "_______")
 enableSaving [false, false];
-if ( isNil "ML_Logging" ) then {
+if (isNil "ML_Logging") then {
   ML_Logging = true;
 };
 
-If ( isServer )exitWith{};
+If (isServer)exitWith{};
 
 ML_LOG("Initializing Mafia Life Client")
 

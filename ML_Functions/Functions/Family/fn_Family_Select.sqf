@@ -17,7 +17,7 @@ _text = format [
 _members = _family select 3;
 
 {
-  if !( isNull ((_x select 1) call BIS_fnc_getUnitByUid) ) then {
+  if !(isNull ((_x select 1) call BIS_fnc_getUnitByUid)) then {
     _text = format["%1<t color='#ABD473'>%2</t><br />", _text, (_x select 0)];
   } else {
     _text = format["%1%2<br />", _text, (_x select 0)];

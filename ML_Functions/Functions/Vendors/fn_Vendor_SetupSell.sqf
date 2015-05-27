@@ -5,13 +5,13 @@ private["_Vendor_list", "_config"];
 _Vendor_list = _this;
 _config = [];
 
-if ( primaryWeapon player != "" ) then {
+if (primaryWeapon player != "") then {
   _config pushBack (primaryWeapon player);
 };
-if ( secondaryWeapon player != "" ) then {
+if (secondaryWeapon player != "") then {
   _config pushBack (secondaryWeapon player);
 };
-if ( handgunWeapon player != "" ) then {
+if (handgunWeapon player != "") then {
   _config pushBack (handgunWeapon player);
 };
 _config append primaryWeaponItems player;
@@ -20,8 +20,8 @@ _config append assignedItems player;
 
 lbClear IDC_Vendor_SELL_LIST;
 {
-  if ( _x select 3 == 1 ) then {
-    if ( (_x select 0) in _config ) then {
+  if (_x select 3 == 1) then {
+    if ((_x select 0) in _config) then {
       for "_i" from 1 to ([_config, 
                            (_x select 0)] call ML_fnc_Array_ElementCount) do {
         _index = lbAdd [IDC_Vendor_SELL_LIST, 
