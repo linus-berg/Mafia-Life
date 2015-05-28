@@ -2,9 +2,12 @@
 #define UNIFORM_SLOT 801
 #define BACKPACK_SLOT 901
 
-class CfgWeapons {
-  class ItemCore;
-  class ML_Item : ItemCore {
+class CfgMagazines {
+  //class ItemCore;
+  class Default;
+
+  class CA_Magazine;
+  class ML_Item : CA_Magazine {
     model = "\A3\weapons_F\ammo\mag_univ.p3d";
     scope = 2;
     count = 1;
@@ -28,7 +31,7 @@ class CfgWeapons {
   };
   class ML_Item_TyreIron : ML_Item {
     displayName = "Tyre iron";
-    picture = "\ML_Images\Items\Inventory\Tyre_iron.paa";
+    picture = "\ML_Images\Items\Inventory\Tyreiron.paa";
     descriptionShort = "Tyre iron, used only to change wheels, right?";
   };
   class ML_Item_Cigarette : ML_Item {

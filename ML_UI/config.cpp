@@ -60,6 +60,16 @@ class RscControlsGroup {};
 
 class RscPictureKeepAspect : RscPicture {};
 
+class RscListBox {};
+
+class RscDisplayInventory {
+  class controls {
+    class GroundContainer : RscListBox {
+      onLBDblClick = "_this call ML_fnc_Item_Handle; diag_log _this;";
+    };
+  };
+};
+
 class RscDisplayMain : RscStandardDisplay {
   class controls {
     class Title : RscTitle {

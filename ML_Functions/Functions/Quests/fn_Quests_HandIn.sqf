@@ -5,12 +5,18 @@ private ["_npc", "_caller", "_quest", "_quests", "_index", "_completed",
 _npc   = [_this, 0, 0, [ObjNull]] call BIS_fnc_param;
 _caller   = [_this, 1, 0, [ObjNull]] call BIS_fnc_param;
 _quest     = [_this, 3, 0, [[]]] call BIS_fnc_param;
+_completed = false;
 
 if (count (_quest select 6) > 0) then {
-  if (!([_quest select 6, _caller] call ML_fnc_Quests_CheckComplete)) exitWith {
+  if (!([_quest select 6, _caller] call ML_fnc_Quests_CheckComplete)) then {
     SystemChat "You do not have the required items!";
-    return false
-  };
+  } else {
+    _completed = true;
+  }
+};
+
+if (!_completed) exitWith {
+  return false
 };
 
 _npc removeAction (missionNameSpace getVariable [(format["%1_Quest_Action_HandIn", (_quest select 0)]), 0]);

@@ -26,7 +26,7 @@ private["_ctrl", "_txt"];
 _ctrl = ((uiNamespace getVariable ["ML_Quest_Dialog", nil]) displayCtrl 
          IDC_QUEST_TEXT);
 
-_txt = ([(_quest select 1), (_quest select 2)] call ML_fnc_Quests_FormatText);
+_txt = ([(_quest select 2), (_quest select 3)] call ML_fnc_Quests_FormatText);
 
 _ctrl ctrlSetStructuredText parseText _txt;
 

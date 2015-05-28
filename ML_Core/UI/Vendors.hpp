@@ -13,6 +13,14 @@ class Vendor_dialog {
     h = 0.462 * safezoneH;
     colorbackground[] = {0.243, 0.11, 0.071, 1};
   };
+  class Vendor_FilterBG : IGUIBack {
+    idc = IDC_VENDOR_FILTERBG;
+    x = 0.221562 * safezoneW + safezoneX;
+    y = 0.434 * safezoneH + safezoneY;
+    w = 0.0721875 * safezoneW;
+    h = 0.143 * safezoneH;
+    colorbackground[] = {0.243, 0.11, 0.071, 1};
+  };
   class controls {
     class Vendor_buy_list : RscListbox {
       idc = IDC_Vendor_BUY_LIST;
@@ -123,14 +131,6 @@ class Vendor_dialog {
       h = 0.022 * safezoneH;
       font = "SegoeUI";
       sizeEx = (((((safezoneW / safezoneH)min 1.2) / 1.2) / 25) * 0.7);
-    };
-    class Vendor_FilterBG : IGUIBack {
-      idc = IDC_VENDOR_FILTERBG;
-      x = 0.221562 * safezoneW + safezoneX;
-      y = 0.434 * safezoneH + safezoneY;
-      w = 0.0721875 * safezoneW;
-      h = 0.143 * safezoneH;
-      colorbackground[] = {0.243, 0.11, 0.071, 1};
     };
     class Vendor_Filter_Weapon : RscCheckbox {
       idc = IDC_VENDOR_FILTER_WEAPONS;

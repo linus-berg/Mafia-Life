@@ -48,7 +48,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=25;
+		items=27;
 		class Item0
 		{
 			side="CIV";
@@ -547,15 +547,55 @@ class Mission
 				};
 			};
 		};
+		class Item25
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={12340.515,24.307899,15670.916};
+					azimut=71.335403;
+					id=25;
+					side="CIV";
+					vehicle="C_man_1";
+					leader=1;
+					skill=0.60000002;
+					text="ML_Vendor_General";
+					init="this allowDamage false; this stop true; this disableAI ""AUTOTARGET""; this disableAI ""TARGET""; this disableAI ""MOVE""; this disableAI ""ANIM""; this disableAI ""FSM""; this enableSimulation false; ";
+				};
+			};
+		};
+		class Item26
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={14034.652,25.412491,18758.668};
+					azimut=123.586;
+					id=26;
+					side="CIV";
+					vehicle="C_man_1";
+					leader=1;
+					skill=0.60000002;
+					text="ML_Vendor_VehicleParts";
+					init="this allowDamage false; this stop true; this disableAI ""AUTOTARGET""; this disableAI ""TARGET""; this disableAI ""MOVE""; this disableAI ""ANIM""; this disableAI ""FSM""; this enableSimulation false; ";
+				};
+			};
+		};
 	};
 	class Vehicles
 	{
-		items=13;
+		items=15;
 		class Item0
 		{
 			position[]={4567.0352,299.78006,21393.031};
 			azimut=40.213402;
-			id=25;
+			id=27;
 			side="EMPTY";
 			vehicle="Box_East_Wps_F";
 			skill=0.60000002;
@@ -566,7 +606,7 @@ class Mission
 		{
 			position[]={4581.2275,299.61453,21387.043};
 			azimut=39.079399;
-			id=26;
+			id=28;
 			side="EMPTY";
 			vehicle="Land_HelipadCivil_F";
 			skill=0.60000002;
@@ -576,7 +616,7 @@ class Mission
 		{
 			position[]={15173.71,17.906782,17298.623};
 			azimut=45.102299;
-			id=27;
+			id=29;
 			side="EMPTY";
 			vehicle="Box_East_Wps_F";
 			skill=0.60000002;
@@ -587,7 +627,7 @@ class Mission
 		{
 			position[]={15185.097,17.926798,17291.676};
 			azimut=32.814602;
-			id=28;
+			id=30;
 			side="EMPTY";
 			vehicle="Land_HelipadCivil_F";
 			skill=0.60000002;
@@ -596,7 +636,7 @@ class Mission
 		class Item4
 		{
 			position[]={14824.022,17.916006,16395.48};
-			id=29;
+			id=31;
 			side="EMPTY";
 			vehicle="B_Heli_Attack_01_F";
 			skill=0.60000002;
@@ -605,7 +645,7 @@ class Mission
 		{
 			position[]={3658.5803,7.7473464,13359.208};
 			azimut=-47.951099;
-			id=30;
+			id=32;
 			side="EMPTY";
 			vehicle="Box_East_Wps_F";
 			skill=0.60000002;
@@ -616,7 +656,7 @@ class Mission
 		{
 			position[]={3661.4058,7.5134525,13369.591};
 			azimut=-60.2388;
-			id=31;
+			id=33;
 			side="EMPTY";
 			vehicle="Land_HelipadCivil_F";
 			skill=0.60000002;
@@ -626,7 +666,7 @@ class Mission
 		{
 			position[]={14618.681,17.91,16598.109};
 			azimut=44.953701;
-			id=32;
+			id=34;
 			side="EMPTY";
 			vehicle="Land_HelipadCivil_F";
 			skill=0.60000002;
@@ -636,7 +676,7 @@ class Mission
 		{
 			position[]={14597.095,17.91,16775.959};
 			azimut=135.394;
-			id=33;
+			id=35;
 			side="EMPTY";
 			vehicle="Box_East_Wps_F";
 			skill=0.60000002;
@@ -647,7 +687,7 @@ class Mission
 		{
 			position[]={15534.414,-0.019690225,15835.449};
 			azimut=44.953701;
-			id=34;
+			id=36;
 			side="EMPTY";
 			vehicle="Land_HelipadCivil_F";
 			skill=0.60000002;
@@ -657,7 +697,7 @@ class Mission
 		{
 			position[]={16246.394,25.764626,17319.801};
 			azimut=31.730301;
-			id=35;
+			id=37;
 			side="EMPTY";
 			vehicle="Land_HelipadCivil_F";
 			skill=0.60000002;
@@ -667,7 +707,7 @@ class Mission
 		{
 			position[]={22981.412,4.7023339,18858.539};
 			azimut=135.19;
-			id=36;
+			id=38;
 			side="EMPTY";
 			vehicle="Land_HelipadCivil_F";
 			skill=0.60000002;
@@ -677,11 +717,33 @@ class Mission
 		{
 			position[]={10625.924,15.548041,12336.061};
 			azimut=210.19099;
-			id=37;
+			id=39;
 			side="EMPTY";
 			vehicle="Box_East_Wps_F";
 			skill=0.60000002;
 			text="ML_Vendor_Box_Firearm";
+			init="clearItemCargoGlobal this; clearMagazineCargoGlobal this;  clearWeaponCargoGlobal this; this allowDamage false;";
+		};
+		class Item13
+		{
+			position[]={12339.989,24.306314,15672.52};
+			azimut=71.484398;
+			id=40;
+			side="EMPTY";
+			vehicle="Box_East_Wps_F";
+			skill=0.60000002;
+			text="ML_Vendor_Box_General";
+			init="clearItemCargoGlobal this; clearMagazineCargoGlobal this;  clearWeaponCargoGlobal this; this allowDamage false;";
+		};
+		class Item14
+		{
+			position[]={14035.58,25.325909,18760.059};
+			azimut=123.735;
+			id=41;
+			side="EMPTY";
+			vehicle="Box_East_Wps_F";
+			skill=0.60000002;
+			text="ML_Vendor_Box_VehicleParts";
 			init="clearItemCargoGlobal this; clearMagazineCargoGlobal this;  clearWeaponCargoGlobal this; this allowDamage false;";
 		};
 	};
@@ -778,7 +840,7 @@ class Mission
 			position[]={5957.2402,236.40225,20440.527};
 			name="Mafia_Area";
 			text="Mafia Controlled";
-			type="mil_warning";
+			type="loc_Rock";
 			colorName="ColorRed";
 			a=0.80000001;
 			b=0.80000001;
