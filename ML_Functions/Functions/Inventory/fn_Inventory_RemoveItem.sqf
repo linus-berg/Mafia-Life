@@ -3,7 +3,7 @@
 private ["_player", "_item", "_amount", "_assigned", "_items"];
 _player = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
 _item = [_this, 1, "", [""]] call BIS_fnc_param;
-_amount = [_this, 2, "", [0]] call BIS_fnc_param;
+_amount = [_this, 2, 0, [0]] call BIS_fnc_param;
 _assigned = (assignedItems _player);
 _items = (itemsWithMagazines _player);
 

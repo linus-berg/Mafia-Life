@@ -33,4 +33,6 @@ _return pushBack (getWeaponCargo _container);
 _return pushBack (getMagazineCargo _container);
 _return pushBack (getItemCargo _container);
 
+diag_log format ["Inventory Output: %1", _return];
+
 return _return

@@ -23,3 +23,6 @@ Paycheck = 500;
 ML_Items_Lethal = ["ML_Tyreiron"];
 ML_VendorCart    = [];
 ML_VendorTotal  = 0;
+
+_player addEventHandler ["AnimChanged", "([_this, false] call ML_fnc_Animation_Handle)"];
+_player addEventHandler ["AnimDone", "([_this, true] call ML_fnc_Animation_Handle)"];

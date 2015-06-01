@@ -11,6 +11,7 @@ if((count _gear) <= 0) exitWith {
   SystemChat "ERROR: No gear list provided."; 
   return false
 };
+diag_log _gear;
 _uniform = _gear select 0;
 _vest = _gear select 1;
 _backpack = _gear select 2;
@@ -41,10 +42,10 @@ if(_uniform != "") then {
   _uniform_i = _gear select 12;
   _container = uniformContainer _client;
   {
-    _container addWeaponCargo [_x, (_uniform_w select 1) select _forEachIndex];
+    _container addWeaponCargoGlobal [_x, (_uniform_w select 1) select _forEachIndex];
   } forEach (_uniform_w select 0);
   {
-    _container addMagazineCargo [_x, 
+    _container addMagazineCargoGlobal [_x, 
                                  (_uniform_m select 1) select _forEachIndex];
   } forEach (_uniform_m select 0);
   {
@@ -59,15 +60,15 @@ if(_backpack != "") then {
   _backpack_i = _gear select 15;
   _container = backpackContainer _client;
   {
-    _container addWeaponCargo [_x, 
+    _container addWeaponCargoGlobal [_x, 
                                (_backpack_w select 1) select _forEachIndex];
   } forEach (_backpack_w select 0);
   {
-    _container addMagazineCargo [_x, 
+    _container addMagazineCargoGlobal [_x, 
                                  (_backpack_m select 1) select _forEachIndex];
   } forEach (_backpack_m select 0);
   {
-    _container addItemCargo [_x, (_backpack_i select 1) select _forEachIndex];
+    _container addItemCargoGlobal [_x, (_backpack_i select 1) select _forEachIndex];
   } forEach (_backpack_i select 0);
 };
 
@@ -78,13 +79,13 @@ if(_vest != "") then {
   _vest_i = _gear select 18;
   _container = vestContainer _client;
   {
-    _container addWeaponCargo [_x, (_vest_w select 1) select _forEachIndex];
+    _container addWeaponCargoGlobal [_x, (_vest_w select 1) select _forEachIndex];
   } forEach (_vest_w select 0);
   {
-    _container addMagazineCargo [_x, (_vest_m select 1) select _forEachIndex];
+    _container addMagazineCargoGlobal [_x, (_vest_m select 1) select _forEachIndex];
   } forEach (_vest_m select 0);
   {
-    _container addItemCargo [_x, (_vest_i select 1) select _forEachIndex];
+    _container addItemCargoGlobal [_x, (_vest_i select 1) select _forEachIndex];
   } forEach (_vest_i select 0);
 };
 

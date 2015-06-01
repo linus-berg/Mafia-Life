@@ -20,14 +20,12 @@ void ML::CallExtension(char *output, const int &output_size,
   int Fnc_ID; 
   /* Default return */
   std::string returnArma("0"); 
-
   if ( Poco::NumberParser::tryParse(params.substr(0, 1), Fnc_ID) ) {
     /* Split string at first found ':'. */
     const std::string::size_type found(params.find(":"));
     const std::string param(params.substr(found + 1)); 
     /* Initialize RegEx variable. */
-    std::string RegEx; 
-
+    std::string RegEx;
     /* If function is a RegEx Check (2 or 3). */
     if ( Fnc_ID == 2 || Fnc_ID == 3 ) {
       if ( Fnc_ID == 2 ) {
@@ -67,7 +65,7 @@ void ML::CallExtension(char *output, const int &output_size,
         Logs Mafia Life variables and information to MafiaLife.log.
         (always returns 1)
       */
-      case 0: {
+      case 4: {
         LOG(INFO) << param;
         returnArma = "1";
         break;

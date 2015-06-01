@@ -33,6 +33,7 @@ class CfgMagazines {
     displayName = "Tyre iron";
     picture = "\ML_Images\Items\Inventory\Tyreiron.paa";
     descriptionShort = "Tyre iron, used only to change wheels, right?";
+    function = "TyreIron";
   };
   class ML_Item_Cigarette : ML_Item {
     displayName = "Cigarette";
@@ -44,6 +45,7 @@ class CfgMagazines {
     displayName = "Bundle of bandages";
     picture = "\ML_Images\Items\Inventory\Bandages.paa";
     descriptionShort = "What's up doc?";
+    function = "Bandages";
   };
   /* Drugs */
   class ML_Item_Cocaine : ML_Item {

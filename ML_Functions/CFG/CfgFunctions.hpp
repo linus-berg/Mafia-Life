@@ -14,11 +14,15 @@ class cfgFunctions {
     class Initialization {
       file = "ML_Functions\Functions\Initialization";
       class Initialization {
-        postInit = 1;
       };
     };
     //---
-
+    //---Animation---//
+    class Animation {
+      file = "ML_Functions\Functions\Animation";
+      class Animation_Handle {};
+    };
+    //---
     //---Notifications---//
     class Notifications {
       file = "ML_Functions\Functions\Notifications";
@@ -129,6 +133,11 @@ class cfgFunctions {
     class Item {
       file = "ML_Functions\Functions\Item";
       class Item_Handle {};
+    };
+    class Item_Functions {
+      file = "ML_Functions\Functions\Item\Functions";
+      class Item_TyreIron {};
+      class Item_Bandages {};
     };
     //---
 

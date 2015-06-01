@@ -1,4 +1,4 @@
-#define ML_LOG(MESSAGE) "ML_Client" callExtension format['0:%1', MESSAGE];
+#define ML_LOG(MESSAGE) "ML_Client" callExtension format['4:%1', MESSAGE];
 #define _VERSION_ getNumber( \
   configFile >> "CfgPatches" >> "ML_Core" >> "ClientVersion")
   

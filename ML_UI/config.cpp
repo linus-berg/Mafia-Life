@@ -65,7 +65,7 @@ class RscListBox {};
 class RscDisplayInventory {
   class controls {
     class GroundContainer : RscListBox {
-      onLBDblClick = "_this call ML_fnc_Item_Handle; diag_log _this;";
+      onLBDblClick = "_this call ML_fnc_Item_Handle;";
     };
   };
 };
