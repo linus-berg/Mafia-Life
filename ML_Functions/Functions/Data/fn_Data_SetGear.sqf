@@ -11,7 +11,7 @@ if((count _gear) <= 0) exitWith {
   SystemChat "ERROR: No gear list provided."; 
   return false
 };
-diag_log _gear;
+
 _uniform = _gear select 0;
 _vest = _gear select 1;
 _backpack = _gear select 2;

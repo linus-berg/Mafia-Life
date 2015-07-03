@@ -2,7 +2,6 @@
 ML_LOG("_______MAFIA LIFE V." + str _VERSION_ + "_______")
 enableSaving [false, false];
 
-diag_log "Started init";
 If (isServer)exitWith{};
 
 ML_LOG("Initializing Mafia Life Client")

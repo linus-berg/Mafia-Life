@@ -48,7 +48,6 @@ if ((_xaxis * _yaxis) > 0) then {
 
 if ([player, ["ML_Item_Wheel"]] call ML_fnc_Inventory_HasItem) then {
   _damage = (_car getHitPointDamage _selection);
-  diag_log format ["%1 : %2", _selection, _damage]; 
   if (_damage >= 1) then {
     closeDialog 0;
     _car setHitPointDamage [_selection, 0];
