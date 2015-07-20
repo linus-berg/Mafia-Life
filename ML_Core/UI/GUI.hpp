@@ -7,3 +7,4 @@
 #include "Quest_Log.hpp"
 #include "Register.hpp"
 #include "Family.hpp"
+#include "MailBox.hpp"

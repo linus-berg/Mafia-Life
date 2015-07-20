@@ -59,6 +59,24 @@ class cfgFunctions {
     };
     //---
 
+    //---Mail---//
+    class Mail {
+      file = "ML_Functions\Functions\Mail";
+      class Mail_Send {};
+      class Mail_Dialog {};
+      class Mail_Item {};
+      class Mail_LoadItems {};
+      class Mail_Inbox {};
+      class Mail_Select {};
+      class Mail_SetText {};
+      class Mail_GetAll {};
+      class Mail_SendMail {};
+      class Mail_TakeItem {};
+      class Mail_UpdateCurrent {};
+      class Mail_Sync {};
+    };
+    //---
+
     //---Account---//
     class Account {
       file = "ML_Functions\Functions\Account";

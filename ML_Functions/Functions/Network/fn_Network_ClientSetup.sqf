@@ -27,3 +27,11 @@
     (ObjectFromNetID (_this select 1));
   }
 ] call ML_fnc_Network_AddEvent;
+
+[
+  "ML_Network_Client_Mail_Open", 
+  {
+    player setVariable ["ML_Client_Mail", _this, true];
+    call ML_fnc_Mail_Dialog;
+  }
+] call ML_fnc_Network_AddEvent;

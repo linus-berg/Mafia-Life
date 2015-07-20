@@ -1,0 +1,297 @@
+////////////////////////////////////////////////////////
+// GUI EDITOR OUTPUT START (by Linnet, v1.063, #Xukesa)
+////////////////////////////////////////////////////////
+
+class InboxBG: IGUIBack
+{
+  idc = IDC_MAILBOX_INBOXBG;
+  text = $STR_A3__;
+  x = 0.298906 * safezoneW + safezoneX;
+  y = 0.269 * safezoneH + safezoneY;
+  w = 0.195937 * safezoneW;
+  h = 0.462 * safezoneH;
+};
+class MailBG: IGUIBack
+{
+  idc = IDC_MAILBOX_MAILBG;
+  text = $STR_A3__;
+  x = 0.505156 * safezoneW + safezoneX;
+  y = 0.269 * safezoneH + safezoneY;
+  w = 0.195937 * safezoneW;
+  h = 0.462 * safezoneH;
+};
+class SendMailTab: RscButton
+{
+  idc = IDC_MAILBOX_SENDMAILTAB;
+  text = "Send Mail"; //--- ToDo: Localize;
+  x = 0.355625 * safezoneW + safezoneX;
+  y = 0.731 * safezoneH + safezoneY;
+  w = 0.0515625 * safezoneW;
+  h = 0.033 * safezoneH;
+};
+class InboxTab: RscButton
+{
+  idc = IDC_MAILBOX_INBOXTAB;
+  text = "Inbox"; //--- ToDo: Localize;
+  x = 0.298906 * safezoneW + safezoneX;
+  y = 0.731 * safezoneH + safezoneY;
+  w = 0.0515625 * safezoneW;
+  h = 0.033 * safezoneH;
+};
+class Inbox: RscListbox
+{
+  idc = IDC_MAILBOX_INBOX;
+  x = 0.304062 * safezoneW + safezoneX;
+  y = 0.28 * safezoneH + safezoneY;
+  w = 0.185625 * safezoneW;
+  h = 0.44 * safezoneH;
+};
+class MailText: RscStructuredText
+{
+  idc = IDC_MAILBOX_MAILTEXT;
+  x = 0.510312 * safezoneW + safezoneX;
+  y = 0.357 * safezoneH + safezoneY;
+  w = 0.185625 * safezoneW;
+  h = 0.297 * safezoneH;
+};
+class From: RscText
+{
+  idc = IDC_MAILBOX_FROM;
+  text = "From:"; //--- ToDo: Localize;
+  x = 0.515469 * safezoneW + safezoneX;
+  y = 0.28 * safezoneH + safezoneY;
+  w = 0.113437 * safezoneW;
+  h = 0.022 * safezoneH;
+};
+class Subject: RscText
+{
+  idc = IDC_MAILBOX_SUBJECT;
+  text = "Subject:"; //--- ToDo: Localize;
+  x = 0.515469 * safezoneW + safezoneX;
+  y = 0.313 * safezoneH + safezoneY;
+  w = 0.113437 * safezoneW;
+  h = 0.022 * safezoneH;
+};
+class MailItem_1: RscPicture
+{
+  idc = IDC_MAILBOX_MAILITEM_1;
+  text = "#(argb,8,8,3)color(1,1,1,1)";
+  x = 0.515469 * safezoneW + safezoneX;
+  y = 0.665 * safezoneH + safezoneY;
+  w = 0.0309375 * safezoneW;
+  h = 0.055 * safezoneH;
+};
+class MailItem_2: RscPicture
+{
+  idc = IDC_MAILBOX_MAILITEM_2;
+  text = "#(argb,8,8,3)color(1,1,1,1)";
+  x = 0.551562 * safezoneW + safezoneX;
+  y = 0.665 * safezoneH + safezoneY;
+  w = 0.0309375 * safezoneW;
+  h = 0.055 * safezoneH;
+};
+class MailItem_3: RscPicture
+{
+  idc = IDC_MAILBOX_MAILITEM_3;
+  text = "#(argb,8,8,3)color(1,1,1,1)";
+  x = 0.587656 * safezoneW + safezoneX;
+  y = 0.665 * safezoneH + safezoneY;
+  w = 0.0309375 * safezoneW;
+  h = 0.055 * safezoneH;
+};
+class RscPicture_1204: RscPicture
+{
+  idc = IDC_MAILBOX_RSCPICTURE_1204;
+  text = "#(argb,8,8,3)color(1,1,1,1)";
+  x = 0.62375 * safezoneW + safezoneX;
+  y = 0.665 * safezoneH + safezoneY;
+  w = 0.0309375 * safezoneW;
+  h = 0.055 * safezoneH;
+};
+class RscPicture_1205: RscPicture
+{
+  idc = IDC_MAILBOX_RSCPICTURE_1205;
+  text = "#(argb,8,8,3)color(1,1,1,1)";
+  x = 0.659844 * safezoneW + safezoneX;
+  y = 0.665 * safezoneH + safezoneY;
+  w = 0.0309375 * safezoneW;
+  h = 0.055 * safezoneH;
+};
+////////////////////////////////////////////////////////
+// GUI EDITOR OUTPUT END
+////////////////////////////////////////////////////////
+
+
+
+
+
+
+/* #Sizyju
+$[
+  1.063,
+  ["MailBox",[["0","0","1","1"],"0.030","0.04","GUI_GRID"],0,1,0],
+  [2200,"InboxBG",[1,"$STR_A3__",["0.298906 * safezoneW + safezoneX","0.269 * safezoneH + safezoneY","0.195937 * safezoneW","0.462 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+  [1401,"",[1,"",["0.345312 * safezoneW + safezoneX","0.313 * safezoneH + safezoneY","0.144375 * safezoneW","0.022 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+  [1000,"",[1,"Subject:",["0.304062 * safezoneW + safezoneX","0.313 * safezoneH + safezoneY","0.0360937 * safezoneW","0.022 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+  [1001,"",[1,"",["0.652604 * safezoneW + safezoneX","0.315741 * safezoneH + safezoneY","0.04125 * safezoneW","0.055 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+  [1002,"",[1,"Mail:",["0.319531 * safezoneW + safezoneX","0.28 * safezoneH + safezoneY","0.020625 * safezoneW","0.022 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+  [1400,"",[1,"",["0.345312 * safezoneW + safezoneX","0.28 * safezoneH + safezoneY","0.144375 * safezoneW","0.022 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+  [1500,"ItemList",[1,"",["0.5 * safezoneW + safezoneX","0.489 * safezoneH + safezoneY","0.113437 * safezoneW","0.242 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+  [1402,"",[1,"",["0.304062 * safezoneW + safezoneX","0.346 * safezoneH + safezoneY","0.185625 * safezoneW","0.264 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+  [1600,"",[1,"Send",["0.427812 * safezoneW + safezoneX","0.698 * safezoneH + safezoneY","0.061875 * safezoneW","0.022 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+  [1403,"",[1,"Coins",["0.381406 * safezoneW + safezoneX","0.665 * safezoneH + safezoneY","0.108281 * safezoneW","0.022 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+  [1200,"",[1,"#(argb,8,8,3)color(1,1,1,1)",["0.306125 * safezoneW + safezoneX","0.698 * safezoneH + safezoneY","0.012375 * safezoneW","0.022 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+  [1004,"",[1,"Amount to send:",["0.306125 * safezoneW + safezoneX","0.665 * safezoneH + safezoneY","0.0773437 * safezoneW","0.022 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+  [1800,"",[1,"ToolBox",["0.304062 * safezoneW + safezoneX","0.621 * safezoneH + safezoneY","0.185625 * safezoneW","0.033 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+  [1003,"",[1,"Amount 100101011",["0.324166 * safezoneW + safezoneX","0.705296 * safezoneH + safezoneY","0.0979687 * safezoneW","0.011 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]]
+]
+*/
+
+
+
+////////////////////////////////////////////////////////
+// GUI EDITOR OUTPUT START (by Linnet, v1.063, #Fakoco)
+////////////////////////////////////////////////////////
+
+class InboxBG: IGUIBack
+{
+  idc = IDC_MAILBOX_INBOXBG;
+  text = $STR_A3__;
+  x = 0.298906 * safezoneW + safezoneX;
+  y = 0.269 * safezoneH + safezoneY;
+  w = 0.195937 * safezoneW;
+  h = 0.462 * safezoneH;
+};
+class RscEdit_1401: RscEdit
+{
+  idc = IDC_MAILBOX_RSCEDIT_1401;
+  x = 0.345312 * safezoneW + safezoneX;
+  y = 0.313 * safezoneH + safezoneY;
+  w = 0.144375 * safezoneW;
+  h = 0.022 * safezoneH;
+};
+class RscText_1000: RscText
+{
+  idc = IDC_MAILBOX_RSCTEXT_1000;
+  text = "Subject:"; //--- ToDo: Localize;
+  x = 0.304062 * safezoneW + safezoneX;
+  y = 0.313 * safezoneH + safezoneY;
+  w = 0.0360937 * safezoneW;
+  h = 0.022 * safezoneH;
+};
+class RscText_1001: RscText
+{
+  idc = IDC_MAILBOX_RSCTEXT_1001;
+  x = 0.652604 * safezoneW + safezoneX;
+  y = 0.315741 * safezoneH + safezoneY;
+  w = 0.04125 * safezoneW;
+  h = 0.055 * safezoneH;
+};
+class RscText_1002: RscText
+{
+  idc = IDC_MAILBOX_RSCTEXT_1002;
+  text = "UID:"; //--- ToDo: Localize;
+  x = 0.319531 * safezoneW + safezoneX;
+  y = 0.28 * safezoneH + safezoneY;
+  w = 0.020625 * safezoneW;
+  h = 0.022 * safezoneH;
+};
+class RscEdit_1400: RscEdit
+{
+  idc = IDC_MAILBOX_RSCEDIT_1400;
+  x = 0.345312 * safezoneW + safezoneX;
+  y = 0.28 * safezoneH + safezoneY;
+  w = 0.144375 * safezoneW;
+  h = 0.022 * safezoneH;
+};
+class ItemList: RscListbox
+{
+  idc = IDC_MAILBOX_ITEMLIST;
+  x = 0.5 * safezoneW + safezoneX;
+  y = 0.489 * safezoneH + safezoneY;
+  w = 0.113437 * safezoneW;
+  h = 0.242 * safezoneH;
+};
+class RscEdit_1402: RscEdit
+{
+  idc = IDC_MAILBOX_RSCEDIT_1402;
+  x = 0.304062 * safezoneW + safezoneX;
+  y = 0.346 * safezoneH + safezoneY;
+  w = 0.185625 * safezoneW;
+  h = 0.275 * safezoneH;
+};
+class RscButton_1600: RscButton
+{
+  idc = IDC_MAILBOX_RSCBUTTON_1600;
+  text = "Send"; //--- ToDo: Localize;
+  x = 0.427812 * safezoneW + safezoneX;
+  y = 0.698 * safezoneH + safezoneY;
+  w = 0.061875 * safezoneW;
+  h = 0.022 * safezoneH;
+};
+class RscEdit_1403: RscEdit
+{
+  idc = IDC_MAILBOX_RSCEDIT_1403;
+  text = "Coins"; //--- ToDo: Localize;
+  x = 0.306125 * safezoneW + safezoneX;
+  y = 0.665 * safezoneH + safezoneY;
+  w = 0.105187 * safezoneW;
+  h = 0.022 * safezoneH;
+};
+class RscPicture_1200: RscPicture
+{
+  idc = IDC_MAILBOX_RSCPICTURE_1200;
+  text = "#(argb,8,8,3)color(1,1,1,1)";
+  x = 0.306125 * safezoneW + safezoneX;
+  y = 0.698 * safezoneH + safezoneY;
+  w = 0.012375 * safezoneW;
+  h = 0.022 * safezoneH;
+};
+class RscText_1004: RscText
+{
+  idc = IDC_MAILBOX_RSCTEXT_1004;
+  text = "Amount to send:"; //--- ToDo: Localize;
+  x = 0.306125 * safezoneW + safezoneX;
+  y = 0.632 * safezoneH + safezoneY;
+  w = 0.105187 * safezoneW;
+  h = 0.022 * safezoneH;
+};
+class RscText_1003: RscText
+{
+  idc = IDC_MAILBOX_RSCTEXT_1003;
+  text = "Amount 100101011"; //--- ToDo: Localize;
+  x = 0.324687 * safezoneW + safezoneX;
+  y = 0.698 * safezoneH + safezoneY;
+  w = 0.099 * safezoneW;
+  h = 0.022 * safezoneH;
+};
+class RscCheckbox_2800: RscCheckbox
+{
+  idc = IDC_MAILBOX_RSCCHECKBOX_2800;
+  text = "COD"; //--- ToDo: Localize;
+  x = 0.4175 * safezoneW + safezoneX;
+  y = 0.665 * safezoneH + safezoneY;
+  w = 0.012375 * safezoneW;
+  h = 0.022 * safezoneH;
+};
+class RscText_1005: RscText
+{
+  idc = IDC_MAILBOX_RSCTEXT_1005;
+  text = "C.O.D"; //--- ToDo: Localize;
+  x = 0.436062 * safezoneW + safezoneX;
+  y = 0.665 * safezoneH + safezoneY;
+  w = 0.02475 * safezoneW;
+  h = 0.022 * safezoneH;
+};
+class RscText_1006: RscText
+{
+  idc = IDC_MAILBOX_RSCTEXT_1006;
+  text = "Postage: 30â‚¬"; //--- ToDo: Localize;
+  x = 0.4175 * safezoneW + safezoneX;
+  y = 0.632 * safezoneH + safezoneY;
+  w = 0.0680625 * safezoneW;
+  h = 0.022 * safezoneH;
+};
+////////////////////////////////////////////////////////
+// GUI EDITOR OUTPUT END
+////////////////////////////////////////////////////////
