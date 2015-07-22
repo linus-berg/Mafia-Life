@@ -32,29 +32,28 @@ class ML_StructText : RscStructuredText {
   size = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
 };
 
+class ML_ScrollBar {
+  colorActive[] = {1, 1, 1, 1};
+  colorDisabled[] = {1, 1, 1, 0.3};
+  width = 0;
+  height = 0;
+  scrollSpeed = 0.03;
+  arrowEmpty = "\ML_Images\GUI\arrow.paa";
+  arrowFull = "\ML_Images\GUI\arrow_active.paa";
+  border = "\A3\ui_f\data\gui\cfg\scrollbar\border_ca.paa";
+  thumb = "\ML_Images\GUI\thumb_ca.paa";
+  color[] = {1, 1, 1, 1};
+  shadow = 0;
+  autoScrollEnabled = 0;
+  autoScrollSpeed = -1;
+  autoScrollDelay = 5;
+  autoScrollRewind = 0;
+};
+
 class ML_ControlsGroup : RscControlsGroup {
-  class VScrollbar {
-    arrowEmpty = "\ML_Images\GUI\Scroll_Arrow.paa";
-    arrowFull = "\ML_Images\GUI\Scroll_ArrowActive.paa";
-    border = "\A3\ui_f\data\gui\cfg\scrollbar\border_ca.paa";
-    thumb = "\ML_Images\GUI\thumb_ca.paa";
-  };
-  class HScrollbar {
-    arrowEmpty = "\ML_Images\GUI\Scroll_Arrow.paa";
-    arrowFull = "\ML_Images\GUI\Scroll_ArrowActive.paa";
-    border = "\A3\ui_f\data\gui\cfg\scrollbar\border_ca.paa";
-    thumb = "\ML_Images\GUI\thumb_ca.paa";
-  };
-  class ScrollBar {
-    width = 0;
-    height = 0;
-    scrollSpeed = 0.03;
-    arrowEmpty = "\ML_Images\GUI\arrow.paa";
-    arrowFull = "\ML_Images\GUI\arrow_active.paa";
-    border = "\A3\ui_f\data\gui\cfg\scrollbar\border_ca.paa";
-    thumb = "\ML_Images\GUI\thumb_ca.paa";
-    color[] = {1, 1, 1, 1};
-  };
+  class VScrollbar : ML_ScrollBar {};
+  class HScrollbar : ML_ScrollBar {};
+  class Scrollbar : ML_Scrollbar {};
 };
 
 class ML_Button : RscButtonMenu {
@@ -86,3 +85,4 @@ class ML_Button : RscButtonMenu {
   tooltipColorBox[] = {1, 1, 1, 1};
   tooltipColorShade[] = {0, 0, 0, 0.65};
 };
+

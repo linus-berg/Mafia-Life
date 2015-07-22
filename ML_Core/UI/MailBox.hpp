@@ -30,7 +30,7 @@ class ML_Mail_Dialog {
       w = 0.0433125 * safezoneW;
       h = 0.033 * safezoneH;
     };
-    class SendMailTab : ML_ControlsGroup {
+    class SendMailTab : RscControlsGroup {
       idc = 2000;
       x = 0.29375 * safezoneW + safezoneX;
       y = 0.225 * safezoneH + safezoneY;
@@ -156,7 +156,7 @@ class ML_Mail_Dialog {
         };
       };
     };
-    class InboxTab : ML_ControlsGroup {
+    class InboxTab : RscControlsGroup {
       idc = 2001;
       x = 0.29375 * safezoneW + safezoneX;
       y = 0.225 * safezoneH + safezoneY;
@@ -185,6 +185,15 @@ class ML_Mail_Dialog {
           y = 0.335 * safezoneH + safezoneY;
           w = 0.185625 * safezoneW;
           h = 0.253 * safezoneH;
+          /*class Attributes {
+            font = "SegoePrint";
+          };*/
+          /*colorBackground[] = {
+            0,
+            0,
+            0,
+            0.3
+          };*/
         };
         class From : RscText {
           idc = IDC_MAILBOX_FROM;

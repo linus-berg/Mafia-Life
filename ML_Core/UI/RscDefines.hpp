@@ -161,8 +161,7 @@ class RscStructuredText
   type = 13;
   idc = -1;
   style = 0;
-  colorText[] = 
-  {
+  colorText[] = {
     1,
     1,
     1,
@@ -1327,25 +1326,25 @@ class RscButtonMenuCancel
   text = "Cancel";
 };
 
+class ScrollBar {
+  color[] = {1, 1, 1, 0.6};
+  colorActive[] = {1, 1, 1, 1};
+  colorDisabled[] = {1, 1, 1, 0.3};
+  thumb = "\A3\ui_f\data\gui\cfg\scrollbar\thumb_ca.paa";
+  arrowEmpty = "\A3\ui_f\data\gui\cfg\scrollbar\arrowEmpty_ca.paa";
+  arrowFull = "\A3\ui_f\data\gui\cfg\scrollbar\arrowFull_ca.paa";
+  border = "\A3\ui_f\data\gui\cfg\scrollbar\border_ca.paa";
+  shadow = 0;
+  scrollSpeed = 0.06;
+  width = 0;
+  height = 0;
+  autoScrollEnabled = 0;
+  autoScrollSpeed = -1;
+  autoScrollDelay = 5;
+  autoScrollRewind = 0;
+};
+
 class RscControlsGroup {
-  class VScrollbar {
-    color[] = {1, 1, 1, 1};
-    width = 0.021;
-    autoScrollEnabled = 1;
-    arrowEmpty = "\ML_Images\GUI\Scroll_Arrow.paa";
-    arrowFull = "\ML_Images\GUI\Scroll_ArrowActive.paa";
-    border = "\A3\ui_f\data\gui\cfg\scrollbar\border_ca.paa";
-    thumb = "\ML_Images\GUI\thumb_ca.paa";
-  };
-  class HScrollbar {
-    color[] = {1, 1, 1, 1};
-    height = 0.028;
-    arrowEmpty = "\ML_Images\GUI\Scroll_Arrow.paa";
-    arrowFull = "\ML_Images\GUI\Scroll_ArrowActive.paa";
-    border = "\A3\ui_f\data\gui\cfg\scrollbar\border_ca.paa";
-    thumb = "\ML_Images\GUI\thumb_ca.paa";
-  };
-  class Controls {};
   type = 15;
   idc = -1;
   x = 0;
@@ -1354,4 +1353,37 @@ class RscControlsGroup {
   h = 1;
   shadow = 0;
   style = 16;
+  
+  class VScrollbar : ScrollBar {
+    width = 0.021;
+    autoScrollEnabled = 1;
+  };
+  
+  class HScrollbar : ScrollBar {
+    height = 0.028;
+  };
+  
+  class Controls {};
+};
+
+class RscControlsGroupNoScrollbars : RscControlsGroup {
+  class VScrollbar : VScrollbar {
+    width = 0;
+  };
+  
+  class HScrollbar : HScrollbar {
+    height = 0;
+  };
+};
+
+class RscControlsGroupNoHScrollbars : RscControlsGroup {
+  class HScrollbar : HScrollbar {
+    height = 0;
+  };
+};
+
+class RscControlsGroupNoVScrollbars : RscControlsGroup {
+  class VScrollbar : VScrollbar {
+    width = 0;
+  };
 };
