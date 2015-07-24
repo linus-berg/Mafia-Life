@@ -37,8 +37,6 @@ class ML_Quest_Dialog {
       y = 0.313 * safezoneH + safezoneY;
       w = 0.165 * safezoneW;
       h = 0.33 * safezoneH;
-      class HScrollbar : ML_Scrollbar {};
-      class VScrollbar : ML_Scrollbar {};
       class controls {
         class ML_Quest_Text : ML_StructText {
           idc = IDC_QUEST_TEXT;

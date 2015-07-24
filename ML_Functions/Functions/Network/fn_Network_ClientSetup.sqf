@@ -35,3 +35,10 @@
     call ML_fnc_Mail_Dialog;
   }
 ] call ML_fnc_Network_AddEvent;
+
+[
+  "ML_Network_Client_Notification", 
+  {
+    _this call ML_fnc_Notify;
+  }
+] call ML_fnc_Network_AddEvent;

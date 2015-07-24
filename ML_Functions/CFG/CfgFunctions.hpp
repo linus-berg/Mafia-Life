@@ -27,6 +27,7 @@ class cfgFunctions {
     class Notifications {
       file = "ML_Functions\Functions\Notifications";
       class showNotification {};
+      class notify {};
     };
     //---
 

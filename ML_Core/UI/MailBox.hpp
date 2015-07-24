@@ -36,14 +36,35 @@ class ML_Mail_Dialog {
       y = 0.225 * safezoneH + safezoneY;
       w = 0.4125 * safezoneW;
       h = 0.495 * safezoneH;
+      class VScrollbar : ScrollBar {
+        scrollSpeed = 0;
+      };
+      
+      class HScrollbar : ScrollBar {
+        scrollSpeed = 0;
+      };
       class controls {
-        class Subject : RscEdit {
+        class Subject : ML_RscEdit {
           idc = IDC_MAILBOX_SUBJECT;
           x = 0.345312 * safezoneW + safezoneX;
           y = 0.313 * safezoneH + safezoneY;
           w = 0.144375 * safezoneW;
           h = 0.022 * safezoneH;
-          sizeEx = (((((safezoneW / safezoneH)min 1.2) / 1.2) / 25) * 0.7);
+          sizeEx = "(((((safezoneW / safezoneH)min 1.2) / 1.2) / 25) * 1)";
+          style = "0x00 + 0x40";
+          shadow = 2;
+          colorText[] = {
+            0.95,
+            0.95,
+            0.95,
+            1
+          };
+          colorBackground[] = {
+            0,
+            0,
+            0,
+            0.3
+          };
         };
         class SubjectTxt : RscText {
           idc = IDC_MAILBOX_SUBJECTTXT;
@@ -52,7 +73,7 @@ class ML_Mail_Dialog {
           y = 0.313 * safezoneH + safezoneY;
           w = 0.0360937 * safezoneW;
           h = 0.022 * safezoneH;
-          sizeEx = (((((safezoneW / safezoneH)min 1.2) / 1.2) / 25) * 0.7);
+          sizeEx = "(((((safezoneW / safezoneH)min 1.2) / 1.2) / 25) * 0.7)";
         };
         class UIDTxt : RscText {
           idc = IDC_MAILBOX_UIDTXT;
@@ -61,15 +82,14 @@ class ML_Mail_Dialog {
           y = 0.28 * safezoneH + safezoneY;
           w = 0.020625 * safezoneW;
           h = 0.022 * safezoneH;
-          sizeEx = (((((safezoneW / safezoneH)min 1.2) / 1.2) / 25) * 0.7);
+          sizeEx = "(((((safezoneW / safezoneH)min 1.2) / 1.2) / 25) * 0.7)";
         };
-        class UID : RscEdit {
+        class UID : Subject {
           idc = IDC_MAILBOX_UID;
           x = 0.345312 * safezoneW + safezoneX;
           y = 0.28 * safezoneH + safezoneY;
           w = 0.144375 * safezoneW;
           h = 0.022 * safezoneH;
-          sizeEx = (((((safezoneW / safezoneH)min 1.2) / 1.2) / 25) * 0.7);
         };
         class ItemList : RscListbox {
           idc = IDC_MAILBOX_ITEMLIST;
@@ -79,7 +99,7 @@ class ML_Mail_Dialog {
           h = 0.242 * safezoneH;
           onLBDblClick = "_this call ML_fnc_Mail_Item;";
         };
-        class Content : RscEdit {
+        class Content : Subject {
           style = 16;
           idc = IDC_MAILBOX_CONTENT;
           x = 0.304062 * safezoneW + safezoneX;
@@ -95,7 +115,7 @@ class ML_Mail_Dialog {
           w = 0.061875 * safezoneW;
           h = 0.022 * safezoneH;
         };
-        class Coins : RscEdit {
+        class Coins : Subject {
           idc = IDC_MAILBOX_COINS;
           text = "Coins";  //--- ToDo: Localize;
           x = 0.306125 * safezoneW + safezoneX;
@@ -118,7 +138,7 @@ class ML_Mail_Dialog {
           y = 0.632 * safezoneH + safezoneY;
           w = 0.105187 * safezoneW;
           h = 0.022 * safezoneH;
-          sizeEx = (((((safezoneW / safezoneH)min 1.2) / 1.2) / 25) * 0.7);
+          sizeEx = "(((((safezoneW / safezoneH)min 1.2) / 1.2) / 25) * 0.7)";
         };
         class InventoryCoinsTxt : RscText {
           idc = IDC_MAILBOX_ICOINSTXT;
@@ -127,7 +147,7 @@ class ML_Mail_Dialog {
           y = 0.698 * safezoneH + safezoneY;
           w = 0.099 * safezoneW;
           h = 0.022 * safezoneH;
-          sizeEx = (((((safezoneW / safezoneH)min 1.2) / 1.2) / 25) * 0.7);
+          sizeEx = "(((((safezoneW / safezoneH)min 1.2) / 1.2) / 25) * 0.7)";
         };
         class COD : RscCheckbox {
           idc = IDC_MAILBOX_COD;
@@ -162,6 +182,13 @@ class ML_Mail_Dialog {
       y = 0.225 * safezoneH + safezoneY;
       w = 0.4125 * safezoneW;
       h = 0.495 * safezoneH;
+      class VScrollbar : ScrollBar {
+        scrollSpeed = 0;
+      };
+      
+      class HScrollbar : ScrollBar {
+        scrollSpeed = 0;
+      };
       class controls {
         class MailBackground : IGUIBack {
           idc = IDC_MAILBOX_BACKGROUND;
@@ -185,16 +212,23 @@ class ML_Mail_Dialog {
           y = 0.335 * safezoneH + safezoneY;
           w = 0.185625 * safezoneW;
           h = 0.253 * safezoneH;
-          /*class Attributes {
+          class Attributes {
             font = "SegoePrint";
-          };*/
-          /*colorBackground[] = {
+          };
+        };
+        /*class MailContentBG : IGUIBack {
+          idc = 1919;
+          x = 0.510312 * safezoneW + safezoneX;
+          y = 0.335 * safezoneH + safezoneY;
+          w = 0.185625 * safezoneW;
+          h = 0.253 * safezoneH;
+          colorBackground[] = {
             0,
             0,
             0,
             0.3
-          };*/
-        };
+          };
+        };*/
         class From : RscText {
           idc = IDC_MAILBOX_FROM;
           text = "From:";  //--- ToDo: Localize;
@@ -225,7 +259,7 @@ class ML_Mail_Dialog {
           y = 0.28 * safezoneH + safezoneY;
           w = 0.182041 * safezoneW;
           h = 0.44 * safezoneH;
-          onLBSelChanged = "_this call ML_fnc_Mail_Select;"
+          onLBSelChanged = "_this call ML_fnc_Mail_Select;";
         };
       };
     };

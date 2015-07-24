@@ -51,9 +51,13 @@ class ML_ScrollBar {
 };
 
 class ML_ControlsGroup : RscControlsGroup {
-  class VScrollbar : ML_ScrollBar {};
-  class HScrollbar : ML_ScrollBar {};
-  class Scrollbar : ML_Scrollbar {};
+  class VScrollbar : ML_ScrollBar {
+    width = 0.021;
+    autoScrollEnabled = 1;
+  };
+  class HScrollbar : ML_ScrollBar {
+    height = 0.028;
+  };
 };
 
 class ML_Button : RscButtonMenu {
@@ -85,4 +89,3 @@ class ML_Button : RscButtonMenu {
   tooltipColorBox[] = {1, 1, 1, 1};
   tooltipColorShade[] = {0, 0, 0, 0.65};
 };
-
