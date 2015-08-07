@@ -1,6 +1,8 @@
 # Mafia-Life
 a life server set in the 60's.
 http://mafialife.net
+REQUIREMENTS:
+CBA A3
 ===============
 
 Work in progress towards a life server set in the 60's.
