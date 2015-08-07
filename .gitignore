@@ -7,12 +7,13 @@ Desktop.ini
 
 # Recycle Bin used on file shares
 $RECYCLE.BIN/
+/@ML_Addons/Addons/*.pbo
 # Windows Installer files
 *.cab
 *.msi
 *.msm
 *.msp
-
+*.pbo
 *.sublime-project
 *.sublime-workspace
 
