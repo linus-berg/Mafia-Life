@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addons>
+  <addon>ML_Core</addon>
+  <addon>ML_Fonts</addon>
+  <addon>ML_Functions</addon>
+  <addon>ML_Images</addon>
+  <addon>ML_Items</addon>
+  <addon>ML_Language</addon>
+  <addon>ML_Sounds</addon>
+  <addon>ML_UI</addon>
+  <addon>ML_Weapons</addon>
+</addons>

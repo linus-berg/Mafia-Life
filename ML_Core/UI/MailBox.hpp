@@ -191,7 +191,7 @@ class ML_Mail_Dialog {
       };
       class controls {
         class MailBackground : IGUIBack {
-          idc = IDC_MAILBOX_BACKGROUND;
+          idc = IDC_MAILBOX_BG;
           x = 0.504125 * safezoneW + safezoneX;
           y = 0.269 * safezoneH + safezoneY;
           w = 0.198 * safezoneW;
