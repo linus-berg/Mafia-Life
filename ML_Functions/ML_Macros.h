@@ -36,6 +36,7 @@
 #else
   #define CALL_F(fnc,vars) vars call fnc
 #endif
-
+//--SQL-- ML_SERVER_FNC
+#define GET_QUERY (missionNamespace getVariable (format["%1_queryFile", (_fnc_scriptName select [14])]))
 /* Redundant, only added to improve readability in the code. */
 #define return

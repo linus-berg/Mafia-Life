@@ -1,4 +1,10 @@
-#include <iostream>
+#include <Windows.h>
+#include <cstring>
+#include <Poco\NumberParser.h>
+#include <json\json.h>
+#include <fstream>
+#include <regex>
+#include <easylogging++.h>
 
 class ML{
 public:

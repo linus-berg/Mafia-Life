@@ -1,12 +1,6 @@
-#define ELPP_DEFAULT_LOG_FILE "MafiaLife\\Logs\\MafiaLife.log"
+#define ELPP_DEFAULT_LOG_FILE "MafiaLife/Logs/MafiaLife.log"
 
 #include "ML_Functions.h"
-#include <cstring>
-#include <Poco\NumberParser.h>
-#include <json\json.h>
-#include <fstream>
-#include <regex>
-#include <easylogging++.h>
 
 ELPP_INIT_EASYLOGGINGPP(
     new el::base::Storage(el::LogBuilderPtr(new el::base::DefaultLogBuilder()))
@@ -91,7 +85,7 @@ bool ML::RegEXCheck(std::string input, std::string RegEx) {
 std::string ML::ReadValue(std::string input) {
   Json::Value root;
   Json::Reader reader;
-  std::ifstream ML_Config("ML_Config.json", std::ifstream::binary);
+  std::ifstream ML_Config("MafiaLife/ML_Config.json", std::ifstream::binary);
 
   /* TODO: Parse multiple files for other configs, currently not needed. */
 
