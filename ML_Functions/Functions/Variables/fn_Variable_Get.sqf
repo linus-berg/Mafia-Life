@@ -11,7 +11,7 @@ _variable_value = if (isNil "_variable_value") then {
                   } else {
                     _variable_value
                   };
-_variable_value = if (typeName _variable_value != "ARRAY") then {
+_variable_value = if (!(_variable_value isEqualType [])) then {
                     [] 
                   } else {
                     _variable_value

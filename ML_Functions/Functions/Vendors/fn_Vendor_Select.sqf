@@ -16,7 +16,7 @@ if !(_permit <= 0) then {
 lbClear IDC_Vendor_INFO_LIST;
 lbAdd [IDC_Vendor_INFO_LIST, (_class call ML_fnc_Merchandise_GetName)];
 lbAdd [IDC_Vendor_INFO_LIST, format["Price: %1€", _price]];
-if (typeName _permit == "STRING") then { //Fix this
+if (_permit isEqualType "") then { //Fix this
   lbAdd [IDC_Vendor_INFO_LIST, format["Permit: %1", _permit]];
 };
 ctrlSetText [IDC_Vendor_INFO_IMAGE,

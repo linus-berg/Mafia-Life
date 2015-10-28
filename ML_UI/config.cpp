@@ -77,7 +77,7 @@ class RscDisplayMain : RscStandardDisplay {
       text = "Mafia Life (ALPHA)";
     };
     class GameLogo : RscPicture {
-      text = "\ML_Images\Logo\Mafia_Logo_ca.paa";
+      text = "\ML_Images\Logo\logo_ca.paa";
     };
     class ButtonPlay : RscButtonMenu {
       text = $STR_ML_GUI_PLAY;
@@ -106,7 +106,7 @@ class RscDisplayStart : RscStandardDisplay {
         };
 
         class Logo : RscPictureKeepAspect {
-          text = "\ML_Images\Logo\ML_Splash_Ca.paa";
+          text = "\ML_Images\Logo\logo_ca.paa";
         };
       };
     };
@@ -129,7 +129,7 @@ class RscDisplayNotFreeze : RscStandardDisplay {
         };
 
         class Logo : RscPictureKeepAspect {
-          text = "\ML_Images\Logo\ML_Splash_Ca.paa";
+          text = "\ML_Images\Logo\logo_ca.paa";
         };
       };
     };
@@ -151,7 +151,7 @@ class RscDisplayLoadMission : RscStandardDisplay {
           text = "\ML_Images\Backgrounds\mafia_bg_ca.paa";
         };
         class Logo : RscPictureKeepAspect {
-          text = "\ML_Images\Logo\ML_Splash_Ca.paa";
+          text = "\ML_Images\Logo\logo_ca.paa";
         };
       };
     };

@@ -44,7 +44,7 @@ class ML_User_Register {
     };
     class ML_User_Register_Logo : RscPicture {
       idc = IDC_USER_REGISTER_LOGO;
-      text = "\ML_Images\Logo\MafiaLife_ca.paa";
+      text = "\ML_Images\Logo\logo_ca.paa";
       x = 0.37625 * safezoneW + safezoneX;
       y = 0.379 * safezoneH + safezoneY;
       w = 0.113437 * safezoneW;

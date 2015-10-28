@@ -6,7 +6,7 @@ _number = parseNumber(_number);
 if (isNil "_number") exitWith {
   return 0
 };
-if (typeName _number != "SCALAR") exitWith {
+if (!(_number isEqualType 0)) exitWith {
   return 0
 };
 return _number

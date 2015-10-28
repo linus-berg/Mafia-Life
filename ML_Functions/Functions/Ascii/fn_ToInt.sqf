@@ -10,7 +10,7 @@ if (isNil "_value_number") exitWith {
   return 0
 };
 
-if (typeName _value_number != "SCALAR") exitWith {
+if (!(_value_number isEqualType 0)) exitWith {
   return 0
 };
 

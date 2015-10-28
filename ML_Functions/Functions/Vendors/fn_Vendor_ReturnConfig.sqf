@@ -3,7 +3,7 @@
 private["_cfg"];
 _cfg = _this;
 
-if (typeName _cfg != "CONFIG") exitWith {};
+if (!(_cfg isEqualType configFile)) exitWith {};
 if !(isText(_cfg)) exitWith {};
 
 return (missionNamespace getVariable (getText(_cfg)))
