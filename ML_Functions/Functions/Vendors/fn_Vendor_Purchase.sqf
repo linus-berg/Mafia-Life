@@ -3,7 +3,7 @@
 
 private["_Vendor_spawn", "_cart", "_total", "_coins"];
 _Vendor_spawn = (_this call ML_fnc_Vendor_GetSpawns);
-_cart = ML_VendorCart;
+_cart = call ML_fnc_Vendor_GetCart;
 _total = ML_VendorTotal;
 _coins = [player] call ML_fnc_Client_GetCoins;
 

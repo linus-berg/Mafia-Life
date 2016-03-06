@@ -18,7 +18,7 @@ if !(createDialog "Vendor_dialog") exitWith {
 
 playSound [(["Vendor", "Greetings"] call ML_fnc_Sound_Randomize), true];
 
-ML_VendorCart = [];
+call ML_fnc_Vendor_ClearCart;
 ML_VendorTotal = 0;
 _Vendor call ML_fnc_Vendor_SetCurrent;
 

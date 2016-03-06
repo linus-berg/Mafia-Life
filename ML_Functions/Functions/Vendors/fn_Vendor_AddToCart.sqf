@@ -9,7 +9,7 @@ _item = _info select 0;
 _permit = _info select 4;
 _price = [_this, 1, 0, [0]] call BIS_fnc_param;
 _amount = [_this, 2, 0, [0]] call BIS_fnc_param;
-_cur_cart = (count ML_VendorCart);
+_cur_cart = (count (call ML_fnc_Vendor_GetCart));
 
 if (_item == "") exitWith {
   systemChat "No item selected!"; 
@@ -37,7 +37,7 @@ if !(_permit call ML_fnc_Client_HasPermit) exitWith {
 };
 
 for "_i" from 1 to _amount do {
-  ML_VendorCart pushBack _item;
+  [_item] call ML_fnc_Vendor_SetCart;
   ML_VendorTotal = ML_VendorTotal + _price;
 
   _index = lbAdd [IDC_Vendor_CART_LIST, 

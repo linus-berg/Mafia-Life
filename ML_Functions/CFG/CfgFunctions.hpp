@@ -177,6 +177,9 @@ class cfgFunctions {
       class Vendor_GetSpawns {};
       class Vendor_SetupBuy {};
       class Vendor_Filter {};
+      class Vendor_ClearCart {};
+      class Vendor_SetCart {};
+      class Vendor_GetCart {};
     };
     //---
 
@@ -241,6 +244,7 @@ class cfgFunctions {
       file = "ML_Functions\Functions\Client\Actions";
       class Client_Kneecap {};
       class Client_Steal {};
+      class Client_Arrest {};
     };
     //---
 

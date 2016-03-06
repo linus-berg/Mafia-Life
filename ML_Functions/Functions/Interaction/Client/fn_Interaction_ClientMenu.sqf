@@ -21,7 +21,7 @@ if !(createDialog "ML_Interaction_dialog") exitWith {
 switch (side player) do {
   case west: {
     buttonSetAction [IDC_INTERACTION_ACTION_ARREST, 
-                     format["[%1, %2] call ML_fnc_Account_Deposit; 
+                     format["[%1, %2] call ML_fnc_Client_Arrest; 
                              closedialog 0;", _player, _target]];
 
     buttonSetAction [IDC_INTERACTION_ACTION_DETAIN, 

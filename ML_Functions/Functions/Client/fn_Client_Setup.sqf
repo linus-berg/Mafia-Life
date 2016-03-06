@@ -21,8 +21,8 @@ _player setVariable ["ML_RoleNumber", [Str _player, 4] call BIS_fnc_trimString,
 Paycheck = 500;
 
 ML_Items_Lethal = ["ML_Tyreiron"];
-ML_VendorCart    = [];
-ML_VendorTotal  = 0;
+_player setVariable ["ML_Vendor_Cart", [], true];
+_player setVariable ["ML_Vendor_CartTotal", 0, true];
 
 _player addEventHandler ["AnimChanged", "([_this, false] call ML_fnc_Animation_Handle)"];
 _player addEventHandler ["AnimDone", "([_this, true] call ML_fnc_Animation_Handle)"];

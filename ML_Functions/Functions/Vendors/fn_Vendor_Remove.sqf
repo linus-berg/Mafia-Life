@@ -10,7 +10,7 @@ if (_index == -1) exitWith {
 
 lbDelete [IDC_Vendor_CART_LIST, _index];
 systemChat format ["Index: %1 Price: %2", _index, _price];
-ML_VendorCart deleteAt _index;
+["", _index] call ML_fnc_Vendor_SetCart;
 ML_VendorTotal = ML_VendorTotal - _price;
 ctrlSetText [IDC_Vendor_TOTAL_COST, 
              format[(localize "STR_ML_Vendor_TOTAL"), strM(ML_VendorTotal)]];
