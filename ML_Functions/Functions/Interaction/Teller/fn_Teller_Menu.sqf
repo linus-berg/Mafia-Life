@@ -6,7 +6,7 @@ _this spawn {
   
   _player = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
   
-  if (!([_player] call ML_fnc_Client_Huma)) exitWith {};
+  if (!([_player] call ML_fnc_Client_Human)) exitWith {};
   if (_player != player) exitWith {};
 
   if (!createDialog "Account") exitWith {

@@ -39,6 +39,7 @@
 [
   "ML_Network_Client_Notification", 
   {
+    diag_log _this;
     _this call ML_fnc_Notify;
   }
 ] call ML_fnc_Network_AddEvent;

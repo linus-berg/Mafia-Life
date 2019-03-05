@@ -1,5 +1,6 @@
 #include "\ML_Functions\ML_Macros.h"
 ML_LOG("_______MAFIA LIFE V." + str _VERSION_ + "_______")
+//ML_LOG("_______SERVER VERSION: " + str _SERV_VERSION_ + "_______")
 enableSaving [false, false];
 
 If (isServer)exitWith{};

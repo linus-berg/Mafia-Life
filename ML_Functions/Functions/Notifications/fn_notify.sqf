@@ -26,7 +26,7 @@ _size = _args select 1;
 _type = _args select 2;
 _image = "\A3\ui_f\data\map\markers\military\warning_ca.paa";
 _text = format["<img image='%3' height='15'/> <t color='#%1' size=%4>%2</t>", _colour, _text, _image, _size];
-_text parseText(_text);
+_text = parseText(_text);
 switch (_type) do {
   case 1: {
     hintSilent _text;
@@ -36,5 +36,5 @@ switch (_type) do {
   };
 };
 
-[player, "Notification", _text] call BIS_fnc_createLogRecord;
+[player, "Notification", (_this select 0)] call BIS_fnc_createLogRecord;
 true

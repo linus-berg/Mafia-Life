@@ -2,7 +2,7 @@
 
 private ["_req", "_caller", "_complete", "_config"];
 
-_req = [_this, 0, 0, [[]]] call BIS_fnc_param;
+_req = [_this, 0, [], [[]]] call BIS_fnc_param;
 _caller = [_this, 1, 0, [ObjNull]] call BIS_fnc_param;
 _complete = false;
 _config = [];
